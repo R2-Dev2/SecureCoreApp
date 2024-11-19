@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SecureCoreR2Dev2
+namespace MainForms
 {
-    public partial class Form1 : Form
+    public partial class frmUsers : Form
     {
-        public Form1()
+        public frmUsers()
         {
             InitializeComponent();
         }

@@ -16,5 +16,13 @@ namespace LoginForms
         {
             InitializeComponent();
         }
+
+        private void frmValidationWrong_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblDeath.Refresh();
+            lblWarning.Refresh();
+            System.Threading.Thread.Sleep(5000);
+            Application.Exit();
+        }
     }
 }
