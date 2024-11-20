@@ -59,5 +59,15 @@ namespace LoginForms.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap darth_vader_scary {
+            get {
+                object obj = ResourceManager.GetObject("darth_vader_scary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

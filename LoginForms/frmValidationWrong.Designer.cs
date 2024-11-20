@@ -30,7 +30,6 @@ namespace LoginForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidationWrong));
             this.lblWarning = new System.Windows.Forms.Label();
             this.tmrWarning = new System.Windows.Forms.Timer(this.components);
             this.lblDeath = new System.Windows.Forms.Label();
@@ -65,7 +64,7 @@ namespace LoginForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::LoginForms.Properties.Resources.darth_vader_scary;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblDeath);
