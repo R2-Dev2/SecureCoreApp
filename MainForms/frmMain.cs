@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -66,21 +67,52 @@ namespace MainForms
 
         private void btnSpecies_Click(object sender, EventArgs e)
         {
-            showForm(new frmSpecies(), (Button)sender);
+            showForm("frmSpecies", (Button)sender);
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            showForm(new frmUsers(), (Button)sender);
+            showForm("frmUsers", (Button)sender);
         }
 
-        private void showForm(Form form, Button btn)
+        private Form activeForm (Control father, Type tipus)
         {
-            pnlPpal.Controls.Clear();
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            pnlPpal.Controls.Add(form);
-            form.Show();
+            // Aquí falta codi
+            foreach (Form control in father.Controls)
+            {
+                if (control.GetType() == tipus)
+                {
+                    return control;
+                }
+            }
+            return null;
+        }
+
+        private void showForm(string formName, Button btn)
+        {
+            // Carga el ensamblado y el tipo del formulario
+            string formClass = String.Format("MainForms.dll");
+            Assembly ensamblat = Assembly.LoadFrom(@formClass);
+            Object dllBD;
+
+            Type tipus;
+
+            string formType = String.Format("{0}.{1}", "MainForms", formName);
+            tipus = ensamblat.GetType(formType);
+
+            Form form = activeForm(pnlPpal, tipus);
+
+            if (form == null)
+            {
+                dllBD = Activator.CreateInstance(tipus);
+                form = ((Form)dllBD);
+                form.TopLevel = false;
+                pnlPpal.Controls.Add(form);
+                form.Show();
+            } else
+            {
+                form.BringToFront();
+            }
             setActiveColor((Button)btn);
         }
 

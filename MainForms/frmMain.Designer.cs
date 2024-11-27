@@ -37,13 +37,10 @@ namespace MainForms
             this.pnlStatus = new System.Windows.Forms.Panel();
             this.pbUser = new System.Windows.Forms.PictureBox();
             this.lblUsuari = new System.Windows.Forms.Label();
-            this.pnlPpal = new System.Windows.Forms.Panel();
-            this.pbBackGround = new System.Windows.Forms.PictureBox();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlPpal = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
-            this.pnlPpal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBackGround)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,10 +54,10 @@ namespace MainForms
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.ImageKey = "users.png";
             this.btnUsers.ImageList = this.imlButtons;
-            this.btnUsers.Location = new System.Drawing.Point(0, 80);
+            this.btnUsers.Location = new System.Drawing.Point(0, 100);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(0);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(175, 81);
+            this.btnUsers.Size = new System.Drawing.Size(197, 101);
             this.btnUsers.TabIndex = 1;
             this.btnUsers.Text = "Users";
             this.btnUsers.UseVisualStyleBackColor = false;
@@ -89,7 +86,7 @@ namespace MainForms
             this.btnSpecies.Location = new System.Drawing.Point(0, 0);
             this.btnSpecies.Margin = new System.Windows.Forms.Padding(0);
             this.btnSpecies.Name = "btnSpecies";
-            this.btnSpecies.Size = new System.Drawing.Size(175, 81);
+            this.btnSpecies.Size = new System.Drawing.Size(197, 101);
             this.btnSpecies.TabIndex = 0;
             this.btnSpecies.Text = "Species";
             this.btnSpecies.UseVisualStyleBackColor = false;
@@ -103,17 +100,19 @@ namespace MainForms
             this.pnlStatus.Controls.Add(this.lblUsuari);
             this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStatus.Location = new System.Drawing.Point(0, 0);
+            this.pnlStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(880, 38);
+            this.pnlStatus.Size = new System.Drawing.Size(990, 48);
             this.pnlStatus.TabIndex = 2;
             // 
             // pbUser
             // 
             this.pbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbUser.Location = new System.Drawing.Point(832, 0);
+            this.pbUser.Location = new System.Drawing.Point(936, 0);
+            this.pbUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(48, 38);
+            this.pbUser.Size = new System.Drawing.Size(54, 48);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUser.TabIndex = 1;
             this.pbUser.TabStop = false;
@@ -123,30 +122,11 @@ namespace MainForms
             // 
             this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuari.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuari.Location = new System.Drawing.Point(694, 0);
+            this.lblUsuari.Location = new System.Drawing.Point(781, 0);
             this.lblUsuari.Name = "lblUsuari";
-            this.lblUsuari.Size = new System.Drawing.Size(132, 38);
+            this.lblUsuari.Size = new System.Drawing.Size(148, 48);
             this.lblUsuari.TabIndex = 0;
             this.lblUsuari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlPpal
-            // 
-            this.pnlPpal.Controls.Add(this.pbBackGround);
-            this.pnlPpal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPpal.Location = new System.Drawing.Point(175, 38);
-            this.pnlPpal.Name = "pnlPpal";
-            this.pnlPpal.Size = new System.Drawing.Size(705, 469);
-            this.pnlPpal.TabIndex = 4;
-            // 
-            // pbBackGround
-            // 
-            this.pbBackGround.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbBackGround.Location = new System.Drawing.Point(0, 0);
-            this.pbBackGround.Name = "pbBackGround";
-            this.pbBackGround.Size = new System.Drawing.Size(705, 469);
-            this.pbBackGround.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbBackGround.TabIndex = 0;
-            this.pbBackGround.TabStop = false;
             // 
             // pnlMenu
             // 
@@ -155,27 +135,37 @@ namespace MainForms
             this.pnlMenu.Controls.Add(this.btnSpecies);
             this.pnlMenu.Controls.Add(this.btnUsers);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 38);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 48);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(175, 469);
+            this.pnlMenu.Size = new System.Drawing.Size(197, 586);
             this.pnlMenu.TabIndex = 3;
+            // 
+            // pnlPpal
+            // 
+            this.pnlPpal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPpal.Location = new System.Drawing.Point(197, 48);
+            this.pnlPpal.Name = "pnlPpal";
+            this.pnlPpal.Size = new System.Drawing.Size(793, 586);
+            this.pnlPpal.TabIndex = 1;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 507);
+            this.ClientSize = new System.Drawing.Size(990, 634);
             this.Controls.Add(this.pnlPpal);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlStatus);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Secure Core App";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.pnlStatus.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
-            this.pnlPpal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbBackGround)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -189,8 +179,7 @@ namespace MainForms
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnSpecies;
         private System.Windows.Forms.ImageList imlButtons;
-        private System.Windows.Forms.Panel pnlPpal;
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.PictureBox pbBackGround;
+        private System.Windows.Forms.FlowLayoutPanel pnlPpal;
     }
 }
