@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LoginForms;
 
-namespace MainForms
+namespace LoginForms
 {
     public partial class frmSplash : Form
     {
@@ -25,8 +26,8 @@ namespace MainForms
             {
                 timer.Stop();
 
-                // Login frmLogin = new Login();
-                // frmLogin.Show();
+                 frmLogin frm = new frmLogin();
+                 frm.Show();
 
                 this.Hide();
             }

@@ -141,7 +141,7 @@ namespace LoginForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(708, 416);
+            this.ClientSize = new System.Drawing.Size(663, 416);
             this.Controls.Add(this.lblTriesLeft);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblIncorrect);
@@ -155,6 +155,7 @@ namespace LoginForms
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBackGround)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

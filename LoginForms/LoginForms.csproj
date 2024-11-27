@@ -49,6 +49,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmValidationWrong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,14 +69,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{32f0f4dd-8ad5-4f3c-b52f-0ea6fe1c0fa2}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MainForms\MainForms.csproj">
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{6d724ee2-bb06-45ec-af04-0c871ef5d035}</Project>
+      <Name>Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmValidationWrong.resx">
       <DependentUpon>frmValidationWrong.cs</DependentUpon>
@@ -82,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\darth_vader_scary.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecureCoreSplash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

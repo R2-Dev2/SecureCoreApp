@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
+using DataAccess;
+using Utils;
 
 namespace LoginForms
 {
     public partial class frmLogin : Form
     {
-        readonly int MAX_TRIES = 3;
+        private readonly string tableName = "Users";
+        private readonly string DEFAULT_PWD = "12345aA";
+        private readonly int MAX_TRIES = 3;
+        private AccesADades accesADades;
         bool knownUser = false;
         int tries = 0;
         public frmLogin()
@@ -32,19 +37,32 @@ namespace LoginForms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             tries++;
-            if (txtUser.Text == "Sandy" && txtPwd.Text == "1234")
+            string username = txtUser.Text;
+            string userPassword = txtPwd.Text;
+            string query = $"SELECT password, salt FROM {this.tableName} WHERE username = '{username}'";
+            DataSet dts = accesADades.PortarPerConsulta(query);
+            if (dts.Tables[0].Rows.Count == 1)
             {
-                closeOpenedMain();
-                knownUser = true;
+                string salt = dts.Tables[0].Rows[0].Field<String>("salt");
+                string savedPassword = dts.Tables[0].Rows[0].Field<String>("password");
+                
+                if(HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
+                {
+                    if(userPassword == DEFAULT_PWD)
+                    {
+                        //TODO: Launch change password form
+                    }
+                    closeOpenedMain();
+                    knownUser = true;
 
-                //frmValidacioOk frmOk = new frmValidacioOk();
-                //frmOk.ShowDialog();
+                    //frmValidacioOk frmOk = new frmValidacioOk();
+                    //frmOk.ShowDialog();
+                    frmMain frmMain = new frmMain();
+                    frmMain.LoggedUser = txtUser.Text;
+                    frmMain.Show();
 
-                frmMain frmMain = new frmMain();
-                frmMain.LoggedUser = txtUser.Text;
-                frmMain.Show();
-
-                this.Close();
+                    this.Close();
+                }
             }
             else
             {
@@ -86,6 +104,11 @@ namespace LoginForms
         {
             frmValidationWrong frmValidationWrong = new frmValidationWrong();
             frmValidationWrong.ShowDialog();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            this.accesADades = new AccesADades("SecureCore");
         }
     }
 }

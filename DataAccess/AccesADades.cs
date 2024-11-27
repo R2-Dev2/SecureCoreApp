@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    class AccesADades
+    public class AccesADades
     {
         private string connectionString;
         private SqlConnection conn;
