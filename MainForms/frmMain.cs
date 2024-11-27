@@ -77,7 +77,6 @@ namespace MainForms
 
         private Form activeForm (Control father, Type tipus)
         {
-            // Aquí falta codi
             foreach (Form control in father.Controls)
             {
                 if (control.GetType() == tipus)
@@ -90,7 +89,6 @@ namespace MainForms
 
         private void showForm(string formName, Button btn)
         {
-            // Carga el ensamblado y el tipo del formulario
             string formClass = String.Format("MainForms.dll");
             Assembly ensamblat = Assembly.LoadFrom(@formClass);
             Object dllBD;
