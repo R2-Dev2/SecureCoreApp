@@ -121,4 +121,7 @@
   <data name="darth_vader_scary" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\darth_vader_scary.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SecureCoreSplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SecureCoreSplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -1,5 +1,5 @@
 ﻿
-namespace MainForms
+namespace LoginForms
 {
     partial class frmSplash
     {
@@ -64,7 +64,7 @@ namespace MainForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MainForms.Properties.Resources.SecureCoreSplash;
+            this.BackgroundImage = global::LoginForms.Properties.Resources.SecureCoreSplash;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(731, 414);
             this.Controls.Add(this.Percentatge);
