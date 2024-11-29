@@ -73,6 +73,26 @@ namespace LoginForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pistolaLaserEdit {
+            get {
+                object obj = ResourceManager.GetObject("pistolaLaserEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap projectilLaserEditat {
+            get {
+                object obj = ResourceManager.GetObject("projectilLaserEditat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SecureCoreSplash {
             get {
                 object obj = ResourceManager.GetObject("SecureCoreSplash", resourceCulture);
