@@ -104,13 +104,7 @@
     <None Include="Resources\SecureCoreSplash.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\proyectilLaser.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pistolaLaserEdit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\proyectilLaserEdit.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\projectilLaserEditat.png" />
