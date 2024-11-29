@@ -114,10 +114,16 @@ namespace MainForms
             setActiveColor((Button)btn);
         }
 
-        private void pbUser_Click(object sender, EventArgs e)
+        private void pbClose_Click(object sender, EventArgs e)
         {
-           // frmLoginOptions frmLoginOptions = new frmLoginOptions();
-           // frmLoginOptions.ShowDialog();
+            // frmLoginOptions frmLoginOptions = new frmLoginOptions();
+            // frmLoginOptions.ShowDialog();
+            DialogResult dialogResult = MessageBox.Show("Estas segur que vols tancar la sessió?", "Tancar Sessió", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+                Application.Exit();
+            }
         }
     }
 }
