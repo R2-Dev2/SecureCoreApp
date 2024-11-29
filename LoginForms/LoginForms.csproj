@@ -103,5 +103,11 @@
   <ItemGroup>
     <None Include="Resources\SecureCoreSplash.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pistolaLaserEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectilLaserEditat.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
