@@ -29,36 +29,12 @@ namespace MainForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitleForm = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblTitleForm
-            // 
-            this.lblTitleForm.AutoSize = true;
-            this.lblTitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitleForm.Location = new System.Drawing.Point(128, 198);
-            this.lblTitleForm.Name = "lblTitleForm";
-            this.lblTitleForm.Size = new System.Drawing.Size(501, 55);
-            this.lblTitleForm.TabIndex = 1;
-            this.lblTitleForm.Text = "FORMULARI USERS";
-            // 
-            // frmUsers
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblTitleForm);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmUsers";
             this.Text = "frmUsers";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitleForm;
     }
 }
