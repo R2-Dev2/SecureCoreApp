@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LoginForms;
 
-
 namespace SecureCoreR2Dev2
 {
     static class Program
