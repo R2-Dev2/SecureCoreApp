@@ -89,12 +89,5 @@
   <ItemGroup>
     <None Include="Resources\icon-cerrar-ventana.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{32f0f4dd-8ad5-4f3c-b52f-0ea6fe1c0fa2}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

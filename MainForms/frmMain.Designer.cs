@@ -33,19 +33,19 @@ namespace MainForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.imlButtons = new System.Windows.Forms.ImageList(this.components);
             this.pnlStatus = new System.Windows.Forms.Panel();
-            this.gbUserInfo = new System.Windows.Forms.GroupBox();
-            this.pbUsari = new System.Windows.Forms.PictureBox();
-            this.lblUsuari = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.lblUsuari = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSpecies = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.pnlPpal = new System.Windows.Forms.FlowLayoutPanel();
+            this.gbUserInfo = new System.Windows.Forms.GroupBox();
+            this.pbUsari = new System.Windows.Forms.PictureBox();
             this.pnlStatus.SuspendLayout();
-            this.gbUserInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            this.gbUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).BeginInit();
             this.SuspendLayout();
             // 
             // imlButtons
@@ -72,43 +72,6 @@ namespace MainForms
             this.pnlStatus.Size = new System.Drawing.Size(990, 48);
             this.pnlStatus.TabIndex = 2;
             // 
-            // gbUserInfo
-            // 
-            this.gbUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbUserInfo.BackColor = System.Drawing.Color.Teal;
-            this.gbUserInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.gbUserInfo.Controls.Add(this.pbUsari);
-            this.gbUserInfo.Controls.Add(this.lblUsuari);
-            this.gbUserInfo.Location = new System.Drawing.Point(733, 3);
-            this.gbUserInfo.Name = "gbUserInfo";
-            this.gbUserInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gbUserInfo.Size = new System.Drawing.Size(197, 45);
-            this.gbUserInfo.TabIndex = 2;
-            this.gbUserInfo.TabStop = false;
-            this.gbUserInfo.MouseHover += new System.EventHandler(this.gbUserInfo_MouseHover);
-            // 
-            // pbUsari
-            // 
-            this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbUsari.Location = new System.Drawing.Point(-2, 0);
-            this.pbUsari.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pbUsari.Name = "pbUsari";
-            this.pbUsari.Size = new System.Drawing.Size(54, 48);
-            this.pbUsari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsari.TabIndex = 3;
-            this.pbUsari.TabStop = false;
-            // 
-            // lblUsuari
-            // 
-            this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuari.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuari.Location = new System.Drawing.Point(49, -3);
-            this.lblUsuari.Name = "lblUsuari";
-            this.lblUsuari.Size = new System.Drawing.Size(148, 48);
-            this.lblUsuari.TabIndex = 0;
-            this.lblUsuari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // pbClose
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -122,6 +85,16 @@ namespace MainForms
             this.pbClose.TabIndex = 1;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
+            // lblUsuari
+            // 
+            this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuari.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuari.Location = new System.Drawing.Point(49, -3);
+            this.lblUsuari.Name = "lblUsuari";
+            this.lblUsuari.Size = new System.Drawing.Size(148, 48);
+            this.lblUsuari.TabIndex = 0;
+            this.lblUsuari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pnlMenu
             // 
@@ -175,14 +148,37 @@ namespace MainForms
             // 
             // pnlPpal
             // 
-            this.pnlPpal.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlPpal.BackgroundImage = global::MainForms.Properties.Resources.logo;
-            this.pnlPpal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlPpal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlPpal.Location = new System.Drawing.Point(197, 48);
             this.pnlPpal.Name = "pnlPpal";
             this.pnlPpal.Size = new System.Drawing.Size(793, 586);
             this.pnlPpal.TabIndex = 1;
+            // 
+            // gbUserInfo
+            // 
+            this.gbUserInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbUserInfo.BackColor = System.Drawing.Color.Teal;
+            this.gbUserInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.gbUserInfo.Controls.Add(this.pbUsari);
+            this.gbUserInfo.Controls.Add(this.lblUsuari);
+            this.gbUserInfo.Location = new System.Drawing.Point(733, 3);
+            this.gbUserInfo.Name = "gbUserInfo";
+            this.gbUserInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.gbUserInfo.Size = new System.Drawing.Size(197, 45);
+            this.gbUserInfo.TabIndex = 2;
+            this.gbUserInfo.TabStop = false;
+            // 
+            // pbUsari
+            // 
+            this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbUsari.Location = new System.Drawing.Point(-2, 0);
+            this.pbUsari.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbUsari.Name = "pbUsari";
+            this.pbUsari.Size = new System.Drawing.Size(54, 48);
+            this.pbUsari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsari.TabIndex = 3;
+            this.pbUsari.TabStop = false;
             // 
             // frmMain
             // 
@@ -200,11 +196,11 @@ namespace MainForms
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.pnlStatus.ResumeLayout(false);
-            this.gbUserInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
+            this.gbUserInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).EndInit();
             this.ResumeLayout(false);
 
         }

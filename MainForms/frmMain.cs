@@ -125,10 +125,5 @@ namespace MainForms
                 Application.Exit();
             }
         }
-
-        private void gbUserInfo_MouseHover(object sender, EventArgs e)
-        {
-            gbUserInfo.BackColor = Color.AliceBlue;
-        }
     }
 }
