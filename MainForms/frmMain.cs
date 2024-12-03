@@ -118,7 +118,7 @@ namespace MainForms
         {
             // frmLoginOptions frmLoginOptions = new frmLoginOptions();
             // frmLoginOptions.ShowDialog();
-            DialogResult dialogResult = MessageBox.Show("Estas segur que vols tancar la sessió?", "Tancar Sessió", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to close the session?", "Log out", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 //do something
