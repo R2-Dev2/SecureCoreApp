@@ -17,9 +17,7 @@ namespace Utils
         private static string pepper = ConfigurationManager.AppSettings["pepper"];
 
 
-        public static byte[] ComputeHash(string password, byte[] salt,
-                                           int iterations = HashingIterationsCount,
-                                           int hashByteSize = HashByteSize)
+        public static byte[] ComputeHash(string password, byte[] salt,int iterations = HashingIterationsCount,int hashByteSize = HashByteSize)
         {
             Rfc2898DeriveBytes hashGenerator = new Rfc2898DeriveBytes(password, salt);
             hashGenerator.IterationCount = iterations;
@@ -44,5 +42,6 @@ namespace Utils
             string userPasswordHash = BitConverter.ToString(computedHash);
             return passwordHash == userPasswordHash;
         }
+
     }
 }

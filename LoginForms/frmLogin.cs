@@ -37,44 +37,55 @@ namespace LoginForms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             tries++;
+
             string username = txtUser.Text;
             string userPassword = txtPwd.Text;
-            string query = $"SELECT password, salt FROM {this.tableName} WHERE username = '{username}'";
+            string query = $"SELECT idUser, password, salt FROM {this.tableName} WHERE username = '{username}'";
             DataSet dts = accesADades.PortarPerConsulta(query);
+
             if (dts.Tables[0].Rows.Count == 1)
             {
-                string salt = dts.Tables[0].Rows[0].Field<String>("salt");
-                string savedPassword = dts.Tables[0].Rows[0].Field<String>("password");
-                
-                if(HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
+                string idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
+                string savedPassword = dts.Tables[0].Rows[0]["password"].ToString();
+                if (userPassword == DEFAULT_PWD && savedPassword == DEFAULT_PWD)
                 {
-                    if(userPassword == DEFAULT_PWD)
+                    frmLoginChangePass frm = new frmLoginChangePass();
+                    frm.idUser = idUser;
+                    txtPwd.Clear();
+                    tries = 0;
+                    lblIncorrect.Hide();
+                    lblTriesLeft.Hide();
+                    frm.ShowDialog();
+
+                }
+                else
+                {
+                    string salt = dts.Tables[0].Rows[0]["salt"].ToString();
+                    if (HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
                     {
-                        //TODO: Launch change password form
+
+                        closeOpenedMain();
+                        knownUser = true;
+
+                        frmMain frmMain = new frmMain();
+                        frmMain.LoggedUser = txtUser.Text;
+                        frmMain.Show();
+
+                        this.Close();
                     }
-                    closeOpenedMain();
-                    knownUser = true;
-
-                    //frmValidacioOk frmOk = new frmValidacioOk();
-                    //frmOk.ShowDialog();
-                    frmMain frmMain = new frmMain();
-                    frmMain.LoggedUser = txtUser.Text;
-                    frmMain.Show();
-
-                    this.Close();
-                }
-            }
-            else
-            {
-                txtPwd.Clear();
-                lblIncorrect.Show();
-                int triesLeft = MAX_TRIES - tries;
-                lblTriesLeft.Text = triesLeft + " tries left.";
-                lblTriesLeft.Show();
-                if (tries >= MAX_TRIES)
-                {
-                    launchWarningMessage();
-                }
+                    else
+                    {
+                        txtPwd.Clear();
+                        lblIncorrect.Show();
+                        int triesLeft = MAX_TRIES - tries;
+                        lblTriesLeft.Text = triesLeft + " tries left.";
+                        lblTriesLeft.Show();
+                        if (tries >= MAX_TRIES)
+                        {
+                            launchWarningMessage();
+                        }
+                    }
+                } 
             }
         }
 
