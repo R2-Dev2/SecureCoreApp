@@ -35,10 +35,10 @@ namespace MainForms
             this.pnlStatus = new System.Windows.Forms.Panel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblUsuari = new System.Windows.Forms.Label();
-            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSpecies = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.pnlPpal = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlPpal = new System.Windows.Forms.Panel();
             this.gbUserInfo = new System.Windows.Forms.GroupBox();
             this.pbUsari = new System.Windows.Forms.PictureBox();
             this.pnlStatus.SuspendLayout();
@@ -212,8 +212,8 @@ namespace MainForms
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnSpecies;
         private System.Windows.Forms.ImageList imlButtons;
-        private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.FlowLayoutPanel pnlPpal;
+        private System.Windows.Forms.FlowLayoutPanel pnlMenu;
+        private System.Windows.Forms.Panel pnlPpal;
         private System.Windows.Forms.GroupBox gbUserInfo;
         private System.Windows.Forms.PictureBox pbUsari;
     }
