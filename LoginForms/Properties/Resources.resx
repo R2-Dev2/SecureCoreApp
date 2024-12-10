@@ -118,16 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="darth_vader_scary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darth_vader_scary.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pistolaLaserEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pistolaLaserEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SecureCoreSplash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SecureCoreSplash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="projectilLaserEditat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\projectilLaserEditat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darth_vader_scary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darth_vader_scary.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="validacioPendent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validacioPendent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pistolaLaserEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pistolaLaserEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="validacioEstatPrevi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validacioEstatPrevi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FonsLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FonsLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="validacioCorrecta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validacioCorrecta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="validacioIncorrecta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\validacioIncorrecta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

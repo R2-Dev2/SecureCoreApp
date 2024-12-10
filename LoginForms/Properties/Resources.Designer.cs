@@ -73,6 +73,16 @@ namespace LoginForms.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FonsLogin {
+            get {
+                object obj = ResourceManager.GetObject("FonsLogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pistolaLaserEdit {
             get {
                 object obj = ResourceManager.GetObject("pistolaLaserEdit", resourceCulture);
@@ -96,6 +106,46 @@ namespace LoginForms.Properties {
         internal static System.Drawing.Bitmap SecureCoreSplash {
             get {
                 object obj = ResourceManager.GetObject("SecureCoreSplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validacioCorrecta {
+            get {
+                object obj = ResourceManager.GetObject("validacioCorrecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validacioEstatPrevi {
+            get {
+                object obj = ResourceManager.GetObject("validacioEstatPrevi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validacioIncorrecta {
+            get {
+                object obj = ResourceManager.GetObject("validacioIncorrecta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap validacioPendent {
+            get {
+                object obj = ResourceManager.GetObject("validacioPendent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

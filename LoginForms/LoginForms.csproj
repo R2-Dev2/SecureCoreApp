@@ -118,5 +118,20 @@
   <ItemGroup>
     <None Include="Resources\projectilLaserEditat.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FonsLogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacioPendent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacioEstatPrevi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacioCorrecta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacioIncorrecta.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
