@@ -105,9 +105,11 @@ namespace MainForms
                 dllBD = Activator.CreateInstance(tipus);
                 form = ((Form)dllBD);
                 form.TopLevel = false;
+                form.Dock = DockStyle.Fill;
                 pnlPpal.Controls.Add(form);
                 form.Show();
-            } else
+            }
+            else
             {
                 form.BringToFront();
             }
@@ -121,8 +123,7 @@ namespace MainForms
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to close the session?", "Log out", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                //do something
-                Application.Exit();
+               Application.Exit();
             }
         }
     }
