@@ -21,6 +21,7 @@ namespace LoginForms
         private AccesADades accesADades;
         bool knownUser = false;
         int tries = 0;
+        int counter = 0;
         public frmLogin()
         {
             InitializeComponent();
@@ -37,47 +38,59 @@ namespace LoginForms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             tries++;
+            bool isValid = false;
             string username = txtUser.Text;
             string userPassword = txtPwd.Text;
-            string query = $"SELECT password, salt FROM {this.tableName} WHERE username = '{username}'";
+            string query = $"SELECT idUser, password, salt FROM {this.tableName} WHERE username = '{username}'";
             DataSet dts = accesADades.PortarPerConsulta(query);
+
             if (dts.Tables[0].Rows.Count == 1)
             {
-                string salt = dts.Tables[0].Rows[0].Field<String>("salt");
-                string savedPassword = dts.Tables[0].Rows[0].Field<String>("password");
                 
-                if(HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
+                pbvalidacio.Image = LoginForms.Properties.Resources.validacioEstatPrevi;
+                string idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
+                string savedPassword = dts.Tables[0].Rows[0]["password"].ToString();
+                if (userPassword == DEFAULT_PWD && savedPassword == DEFAULT_PWD)
                 {
-                    if(userPassword == DEFAULT_PWD)
-                    {
-                        //TODO: Launch change password form
-                    }
-                    closeOpenedMain();
-                    knownUser = true;
-
-                    //frmValidacioOk frmOk = new frmValidacioOk();
-                    //frmOk.ShowDialog();
-                    frmMain frmMain = new frmMain();
-                    frmMain.LoggedUser = txtUser.Text;
-                    frmMain.Show();
-
-                    this.Close();
+                    frmLoginChangePass frm = new frmLoginChangePass();
+                    frm.idUser = idUser;
+                    txtPwd.Clear();
+                    tries = 0;
+                    lblIncorrect.Hide();
+                    lblTriesLeft.Hide();
+                    frm.ShowDialog();
                 }
-            }
-            else
-            {
-                txtPwd.Clear();
-                lblIncorrect.Show();
-                int triesLeft = MAX_TRIES - tries;
-                lblTriesLeft.Text = triesLeft + " tries left.";
-                lblTriesLeft.Show();
-                if (tries >= MAX_TRIES)
+                else
                 {
-                    launchWarningMessage();
+                    string salt = dts.Tables[0].Rows[0]["salt"].ToString();
+                    if (HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
+                    {
+                        isValid = true;
+                        closeOpenedMain();
+                        knownUser = true;
+                        timerValidating.Start();
+                        
+                        pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
+                        lblVerificantNivell.Text = "Verificant nivell d'usuari.";
+                        lblBenvinguda.Text = $"Benvingut {txtUser.Text}!";
+                    }
+                }
+
+                if (!isValid)
+                {
+                    txtPwd.Clear();
+                    lblIncorrect.Show();
+                    int triesLeft = MAX_TRIES - tries;
+                    lblTriesLeft.Text = triesLeft + " tries left.";
+                    pbvalidacio.Image = LoginForms.Properties.Resources.validacioIncorrecta;
+                    lblTriesLeft.Show();
+                    if (tries >= MAX_TRIES)
+                    {
+                        launchWarningMessage();
+                    }
                 }
             }
         }
-
         private void closeOpenedMain()
         {
             bool isMain = false;
@@ -96,7 +109,6 @@ namespace LoginForms
                 frmMain main = (frmMain)form;
                 main.IsLogout = true;
             }
-
             form.Close();
         }
 
@@ -109,6 +121,35 @@ namespace LoginForms
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.accesADades = new AccesADades("SecureCore");
+        }
+
+        private void TimerValidating_Tick(object sender, EventArgs e)
+        {
+            counter++;
+            //progressBar.Visible = true;
+            //progressBar.Increment(10);
+
+            lblVerificantNivell.Text = "Verificant nivell d'usuari.";
+
+            if (counter % 2 == 0)
+            {
+                lblVerificantNivell.Text += ".";
+            }
+            else
+            {
+                lblVerificantNivell.Text += "..";
+            }
+
+            if (counter == 10)
+            {
+                timerValidating.Stop();
+
+                frmMain frmMain = new frmMain();
+                frmMain.LoggedUser = txtUser.Text;
+                frmMain.Show();
+
+                this.Close();
+            }
         }
     }
 }
