@@ -21,6 +21,7 @@ namespace LoginForms
         private AccesADades accesADades;
         bool knownUser = false;
         int tries = 0;
+        int counter = 0;
         public frmLogin()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace LoginForms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             tries++;
-
+            bool isValid = false;
             string username = txtUser.Text;
             string userPassword = txtPwd.Text;
             string query = $"SELECT idUser, password, salt FROM {this.tableName} WHERE username = '{username}'";
@@ -45,6 +46,8 @@ namespace LoginForms
 
             if (dts.Tables[0].Rows.Count == 1)
             {
+                
+                pbvalidacio.Image = LoginForms.Properties.Resources.validacioEstatPrevi;
                 string idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
                 string savedPassword = dts.Tables[0].Rows[0]["password"].ToString();
                 if (userPassword == DEFAULT_PWD && savedPassword == DEFAULT_PWD)
@@ -56,39 +59,38 @@ namespace LoginForms
                     lblIncorrect.Hide();
                     lblTriesLeft.Hide();
                     frm.ShowDialog();
-
                 }
                 else
                 {
                     string salt = dts.Tables[0].Rows[0]["salt"].ToString();
                     if (HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
                     {
-
+                        isValid = true;
                         closeOpenedMain();
                         knownUser = true;
-
-                        frmMain frmMain = new frmMain();
-                        frmMain.LoggedUser = txtUser.Text;
-                        frmMain.Show();
-
-                        this.Close();
+                        timerValidating.Start();
+                        
+                        pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
+                        lblVerificantNivell.Text = "Verificant nivell d'usuari.";
+                        lblBenvinguda.Text = $"Benvingut {txtUser.Text}!";
                     }
-                    else
+                }
+
+                if (!isValid)
+                {
+                    txtPwd.Clear();
+                    lblIncorrect.Show();
+                    int triesLeft = MAX_TRIES - tries;
+                    lblTriesLeft.Text = triesLeft + " tries left.";
+                    pbvalidacio.Image = LoginForms.Properties.Resources.validacioIncorrecta;
+                    lblTriesLeft.Show();
+                    if (tries >= MAX_TRIES)
                     {
-                        txtPwd.Clear();
-                        lblIncorrect.Show();
-                        int triesLeft = MAX_TRIES - tries;
-                        lblTriesLeft.Text = triesLeft + " tries left.";
-                        lblTriesLeft.Show();
-                        if (tries >= MAX_TRIES)
-                        {
-                            launchWarningMessage();
-                        }
+                        launchWarningMessage();
                     }
-                } 
+                }
             }
         }
-
         private void closeOpenedMain()
         {
             bool isMain = false;
@@ -107,7 +109,6 @@ namespace LoginForms
                 frmMain main = (frmMain)form;
                 main.IsLogout = true;
             }
-
             form.Close();
         }
 
@@ -120,6 +121,35 @@ namespace LoginForms
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.accesADades = new AccesADades("SecureCore");
+        }
+
+        private void TimerValidating_Tick(object sender, EventArgs e)
+        {
+            counter++;
+            //progressBar.Visible = true;
+            //progressBar.Increment(10);
+
+            lblVerificantNivell.Text = "Verificant nivell d'usuari.";
+
+            if (counter % 2 == 0)
+            {
+                lblVerificantNivell.Text += ".";
+            }
+            else
+            {
+                lblVerificantNivell.Text += "..";
+            }
+
+            if (counter == 10)
+            {
+                timerValidating.Stop();
+
+                frmMain frmMain = new frmMain();
+                frmMain.LoggedUser = txtUser.Text;
+                frmMain.Show();
+
+                this.Close();
+            }
         }
     }
 }
