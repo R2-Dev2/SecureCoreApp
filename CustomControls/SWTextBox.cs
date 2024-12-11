@@ -20,12 +20,12 @@ namespace CustomControls
         {
             this.SuspendLayout();
             // 
-            // SWTextbox
+            // SWTextBox
             // 
+            this.Font = new System.Drawing.Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
             this.Enter += new System.EventHandler(this.SWTextbox_Enter);
             this.Leave += new System.EventHandler(this.SWTextbox_Leave);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextbox_Validating);
-            this.Validated += new System.EventHandler(this.SWTextbox_Validated);
             this.ResumeLayout(false);
         }
         public enum TipusDada
@@ -34,37 +34,43 @@ namespace CustomControls
             Text,
             Codi
         }
-        private TipusDada _DadaPermesa;
-        public TipusDada DadaPermesa
+        private TipusDada _dadaPermesa;
+        public TipusDada dadaPermesa
         {
-            get { return _DadaPermesa; }
+            get { return _dadaPermesa; }
             set
             {
-                _DadaPermesa = value;
+                _dadaPermesa = value;
             }
         }
 
-        private bool _OpcionalitatDada;
-        public bool OpcionalDada
+        private bool _opcionalitatDada;
+        public bool opcionalDada
         {
-            get { return _OpcionalitatDada; }
-            set { _OpcionalitatDada = value; }
+            get { return _opcionalitatDada; }
+            set { _opcionalitatDada = value; }
         }
 
-        private string _NomControl;
-        public string NomControl
+        private string _columnName;
+        public string columnName
         {
-            get { return _NomControl; }
-            set { _NomControl = value; }
+            get { return _columnName; }
+            set { _columnName = value; }
         }
 
-        private bool _EsForeignKey;
-        public bool EsClauForana
+        private bool _isForeignKey;
+        public bool isForeignKey
         {
-            get { return _EsForeignKey; }
-            set { _EsForeignKey = value; }
+            get { return _isForeignKey; }
+            set { _isForeignKey = value; }
         }
 
+        private bool _requiered;
+        public bool required
+        {
+            get { return _requiered; }
+            set { _requiered = value; }
+        }
 
         private void SWTextbox_Leave(object sender, EventArgs e)
         {
@@ -80,7 +86,7 @@ namespace CustomControls
         {
             bool validacio = false;
 
-            if (this.DadaPermesa == TipusDada.Nombre)
+            if (this.dadaPermesa == TipusDada.Nombre)
             {
                 Regex nombre = new Regex(@"^\d+$");
                 if (nombre.IsMatch(this.Text))
@@ -88,7 +94,7 @@ namespace CustomControls
                     validacio = true;
                 }
             }
-            else if (this.DadaPermesa == TipusDada.Codi)
+            else if (this.dadaPermesa == TipusDada.Codi)
             {
                 Regex text = new Regex(@"^[A-Z^AEIOU]{4}-\d{3}/[13579]{1}[AEIOU]{1}$");
                 if (text.IsMatch(this.Text))
@@ -104,26 +110,6 @@ namespace CustomControls
             if (!validacio)
             {
                 this.Clear();
-            }
-        }
-
-        private void SWTextbox_Validated(object sender, EventArgs e)
-        {
-            if (NomControl != null)
-            {
-                Form frm = this.FindForm();
-                foreach (Control ctr in frm.Controls)
-                {
-                    if (ctr is TextBox)
-                    {
-                        TextBox txtBox = (TextBox)ctr;
-
-                        if (txtBox.Name == NomControl)
-                        {
-                            txtBox.Text = this.Text;
-                        }
-                    }
-                }
             }
         }
     }
