@@ -107,14 +107,15 @@ namespace DataAccess
         private SqlCommand GeneraConsultaCerca(string tableName, Dictionary<string, string> values)
         {
             SqlCommand command = conn.CreateCommand();
-            string query = $"SELECT * FROM {tableName} WHERE";
+            string query = $"SELECT * FROM {tableName}";
             command.CommandType = CommandType.Text;
 
             bool isFirst = true;
-            foreach(var entry in values)
+            foreach (var entry in values)
             {
                 if (isFirst)
                 {
+                    query += " WHERE";
                     isFirst = false;
                 }
                 else
