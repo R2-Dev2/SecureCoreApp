@@ -35,8 +35,8 @@ namespace LoginForms
             this.lblPwd = new System.Windows.Forms.Label();
             this.txtPasswordValidacio = new System.Windows.Forms.TextBox();
             this.lblRepeat = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbBackground = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIncorrect
@@ -112,18 +112,17 @@ namespace LoginForms
             this.lblRepeat.TabIndex = 20;
             this.lblRepeat.Text = "Repeat new password";
             // 
-            // pictureBox1
+            // pbBackground
             // 
-            this.pictureBox1.BackgroundImage = global::LoginForms.Properties.Resources.FonsLogin;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::LoginForms.Properties.Resources.FonsLogin;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(940, 601);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbBackground.BackgroundImage = global::LoginForms.Properties.Resources.FonsLogin;
+            this.pbBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbBackground.Image = global::LoginForms.Properties.Resources.FonsLogin;
+            this.pbBackground.Location = new System.Drawing.Point(0, 0);
+            this.pbBackground.Name = "pbBackground";
+            this.pbBackground.Size = new System.Drawing.Size(940, 601);
+            this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackground.TabIndex = 22;
+            this.pbBackground.TabStop = false;
             // 
             // frmLoginChangePass
             // 
@@ -137,13 +136,13 @@ namespace LoginForms
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.lblPwd);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLoginChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLoginChangePasscs";
             this.Load += new System.EventHandler(this.frmLoginChangePass_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +155,6 @@ namespace LoginForms
         private System.Windows.Forms.Label lblPwd;
         private System.Windows.Forms.TextBox txtPasswordValidacio;
         private System.Windows.Forms.Label lblRepeat;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbBackground;
     }
 }
