@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 
 namespace CustomControls
 {
-    class SWTextBox : TextBox
+    public class SWTextBox : TextBox
     {
         public SWTextBox()
         {
