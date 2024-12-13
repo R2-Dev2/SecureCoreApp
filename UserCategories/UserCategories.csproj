@@ -43,24 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmuserCategories.cs">
+    <Compile Include="frmUsCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmuserCategories.Designer.cs">
-      <DependentUpon>frmuserCategories.cs</DependentUpon>
+    <Compile Include="frmUsCategory.Designer.cs">
+      <DependentUpon>frmUsCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="frmuserCategories.resx">
-      <DependentUpon>frmuserCategories.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MainForms\MainForms.csproj">
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmUsCategory.resx">
+      <DependentUpon>frmUsCategory.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
