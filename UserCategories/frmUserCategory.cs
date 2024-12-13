@@ -27,10 +27,5 @@ namespace UserCategories
             dtgDades.Columns["DescCategory"].HeaderText = "Description";
             dtgDades.Columns["AccessLevel"].HeaderText = "Access Level";
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
