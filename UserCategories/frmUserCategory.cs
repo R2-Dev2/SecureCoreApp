@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
+
 namespace UserCategories
 {
     public partial class frmUserCategory : frmBase
@@ -18,14 +19,18 @@ namespace UserCategories
             this.Title = "User Categories";
             tableName = "UserCategories";
             query = $"SELECT * FROM {tableName}";
-
         }
         private void frmUserCategory_Load(object sender, EventArgs e)
         {
             dtgDades.Columns["idUserCategory"].Visible = false;
-            dtgDades.Columns["CodeCategory"].HeaderText = "Code Category";
-            dtgDades.Columns["DescCategory"].HeaderText = "Desc Category";
-            dtgDades.Columns["AccessLevel"].HeaderText = "Acces Level";
+            dtgDades.Columns["CodeCategory"].HeaderText = "Code";
+            dtgDades.Columns["DescCategory"].HeaderText = "Description";
+            dtgDades.Columns["AccessLevel"].HeaderText = "Access Level";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
