@@ -43,7 +43,7 @@ namespace UserCategories
             this.tbCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.tbCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCode.isForeignKey = false;
-            this.tbCode.Location = new System.Drawing.Point(210, 187);
+            this.tbCode.Location = new System.Drawing.Point(133, 187);
             this.tbCode.Name = "tbCode";
             this.tbCode.opcionalDada = false;
             this.tbCode.required = false;
@@ -57,7 +57,7 @@ namespace UserCategories
             this.tbDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.tbDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDesc.isForeignKey = false;
-            this.tbDesc.Location = new System.Drawing.Point(210, 299);
+            this.tbDesc.Location = new System.Drawing.Point(133, 299);
             this.tbDesc.Name = "tbDesc";
             this.tbDesc.opcionalDada = false;
             this.tbDesc.required = false;
@@ -71,7 +71,7 @@ namespace UserCategories
             this.tbAccesLev.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.tbAccesLev.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccesLev.isForeignKey = false;
-            this.tbAccesLev.Location = new System.Drawing.Point(592, 187);
+            this.tbAccesLev.Location = new System.Drawing.Point(523, 187);
             this.tbAccesLev.Name = "tbAccesLev";
             this.tbAccesLev.opcionalDada = false;
             this.tbAccesLev.required = false;
