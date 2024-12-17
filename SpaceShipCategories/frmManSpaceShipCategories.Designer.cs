@@ -29,39 +29,39 @@ namespace SpaceShipCategories
         /// </summary>
         private void InitializeComponent()
         {
-            this.swTextBox1 = new CustomControls.SWTextBox();
-            this.swTextBox2 = new CustomControls.SWTextBox();
+            this.txtCodeShip = new CustomControls.SWTextBox();
+            this.txtDescShip = new CustomControls.SWTextBox();
             this.lblDescShip = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // swTextBox1
+            // txtCodeShip
             // 
-            this.swTextBox1.columnName = null;
-            this.swTextBox1.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swTextBox1.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.isForeignKey = false;
-            this.swTextBox1.Location = new System.Drawing.Point(180, 177);
-            this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.opcionalDada = false;
-            this.swTextBox1.required = false;
-            this.swTextBox1.Size = new System.Drawing.Size(278, 41);
-            this.swTextBox1.TabIndex = 22;
-            this.swTextBox1.Tag = "CodeSpaceShipCategory";
+            this.txtCodeShip.columnName = null;
+            this.txtCodeShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.txtCodeShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodeShip.isForeignKey = false;
+            this.txtCodeShip.Location = new System.Drawing.Point(180, 177);
+            this.txtCodeShip.Name = "txtCodeShip";
+            this.txtCodeShip.opcionalDada = false;
+            this.txtCodeShip.required = false;
+            this.txtCodeShip.Size = new System.Drawing.Size(278, 41);
+            this.txtCodeShip.TabIndex = 22;
+            this.txtCodeShip.Tag = "CodeSpaceShipCategory";
             // 
-            // swTextBox2
+            // txtDescShip
             // 
-            this.swTextBox2.columnName = null;
-            this.swTextBox2.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swTextBox2.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox2.isForeignKey = false;
-            this.swTextBox2.Location = new System.Drawing.Point(253, 250);
-            this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.opcionalDada = false;
-            this.swTextBox2.required = false;
-            this.swTextBox2.Size = new System.Drawing.Size(278, 41);
-            this.swTextBox2.TabIndex = 23;
-            this.swTextBox2.Tag = "DescSpaceShipCategory";
+            this.txtDescShip.columnName = null;
+            this.txtDescShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.txtDescShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescShip.isForeignKey = false;
+            this.txtDescShip.Location = new System.Drawing.Point(253, 250);
+            this.txtDescShip.Name = "txtDescShip";
+            this.txtDescShip.opcionalDada = false;
+            this.txtDescShip.required = false;
+            this.txtDescShip.Size = new System.Drawing.Size(278, 41);
+            this.txtDescShip.TabIndex = 23;
+            this.txtDescShip.Tag = "DescSpaceShipCategory";
             // 
             // lblDescShip
             // 
@@ -92,12 +92,12 @@ namespace SpaceShipCategories
             this.ClientSize = new System.Drawing.Size(1185, 958);
             this.Controls.Add(this.lblCode);
             this.Controls.Add(this.lblDescShip);
-            this.Controls.Add(this.swTextBox2);
-            this.Controls.Add(this.swTextBox1);
+            this.Controls.Add(this.txtDescShip);
+            this.Controls.Add(this.txtCodeShip);
             this.Name = "frmManSpaceShipCategories";
             this.Text = "frmManSpaceShipCategories";
-            this.Controls.SetChildIndex(this.swTextBox1, 0);
-            this.Controls.SetChildIndex(this.swTextBox2, 0);
+            this.Controls.SetChildIndex(this.txtCodeShip, 0);
+            this.Controls.SetChildIndex(this.txtDescShip, 0);
             this.Controls.SetChildIndex(this.lblDescShip, 0);
             this.Controls.SetChildIndex(this.lblCode, 0);
             this.ResumeLayout(false);
@@ -107,8 +107,8 @@ namespace SpaceShipCategories
 
         #endregion
 
-        private CustomControls.SWTextBox swTextBox1;
-        private CustomControls.SWTextBox swTextBox2;
+        private CustomControls.SWTextBox txtCodeShip;
+        private CustomControls.SWTextBox txtDescShip;
         private System.Windows.Forms.Label lblDescShip;
         private System.Windows.Forms.Label lblCode;
     }
