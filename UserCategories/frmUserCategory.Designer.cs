@@ -71,7 +71,7 @@ namespace UserCategories
             this.tbAccesLev.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.tbAccesLev.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbAccesLev.isForeignKey = false;
-            this.tbAccesLev.Location = new System.Drawing.Point(523, 187);
+            this.tbAccesLev.Location = new System.Drawing.Point(589, 187);
             this.tbAccesLev.Name = "tbAccesLev";
             this.tbAccesLev.opcionalDada = false;
             this.tbAccesLev.required = false;
@@ -100,7 +100,7 @@ namespace UserCategories
             // lblAccLev
             // 
             this.lblAccLev.AutoSize = true;
-            this.lblAccLev.Location = new System.Drawing.Point(518, 139);
+            this.lblAccLev.Location = new System.Drawing.Point(584, 139);
             this.lblAccLev.Name = "lblAccLev";
             this.lblAccLev.Size = new System.Drawing.Size(140, 25);
             this.lblAccLev.TabIndex = 27;
