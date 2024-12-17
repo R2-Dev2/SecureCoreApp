@@ -1,7 +1,7 @@
 ﻿
-namespace MainForms
+namespace UserCategories
 {
-    partial class frmUsers
+    partial class frmuserCategoriesMan
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace MainForms
         {
             this.SuspendLayout();
             // 
-            // frmUsers
+            // frmuserCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 943);
-            this.Name = "frmUsers";
-            this.Text = "frmUsers";
-            this.Load += new System.EventHandler(this.frmUsers_Load);
+            this.ClientSize = new System.Drawing.Size(1147, 960);
+            this.Name = "frmuserCategories";
+            this.Text = "frmuserCategories";
+            this.Load += new System.EventHandler(this.frmuserCategories_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

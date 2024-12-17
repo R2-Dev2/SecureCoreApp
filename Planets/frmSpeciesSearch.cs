@@ -7,31 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MainForms;
 
-namespace MainForms
+namespace Planets
 {
-    public partial class frmSpecies : frmBase
+    public partial class frmSpeciesSearch : frmSearch
     {
-
-        public frmSpecies()
+        public frmSpeciesSearch()
         {
             InitializeComponent();
-            this.Title = "Species";
+            this.connectionString = "SecureCore";
             this.tableName = "Species";
-            this.codeTable = "CodeSpecie";
+            this.title = "Search Species";
         }
-
         protected override void ConfigurarDataGrid()
         {
             base.ConfigurarDataGrid();
             dtgDades.Columns["idSpecie"].Visible = false;
-            dtgDades.Columns["CodeSpecie"].HeaderText = "Codi";
-            dtgDades.Columns["DescSpecie"].HeaderText = "Descripció";
-        }
-
-        private void frmSpecies_Load(object sender, EventArgs e)
-        {
-
+            dtgDades.Columns["CodeSpecie"].HeaderText = "Code";
+            dtgDades.Columns["DescSpecie"].HeaderText = "Description";
         }
     }
 }

@@ -103,6 +103,99 @@ namespace DataAccess
             cmd.Dispose();
             conn.Close();
         }
+
+        private SqlCommand GeneraConsultaCerca(string tableName, Dictionary<string, string> values)
+        {
+            SqlCommand command = conn.CreateCommand();
+            string query = $"SELECT * FROM {tableName} WHERE 1 = 1";
+            command.CommandType = CommandType.Text;
+
+            foreach (var entry in values)
+            {
+                query += $" AND {entry.Key} = '{entry.Value}'";
+                command.Parameters.Add(new SqlParameter(entry.Key, entry.Value));
+            }
+            query += ";";
+            command.CommandText = query;
+
+            return command;
+        }
+
+        private SqlCommand GeneraConsultaStoredProcedure(string procedure)
+        {
+            SqlCommand command = conn.CreateCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = procedure;
+            return command;
+        }
+
+        public DataSet ExecutaCerca(string tableName, Dictionary<string, string> values)
+        {
+            DataSet dts = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = GeneraConsultaCerca(tableName, values);
+            adapter.SelectCommand = command;
+
+            conn.Open();
+            adapter.Fill(dts);
+            conn.Close();
+
+            return dts;
+        }
+
+        public void ExecutaStoredProcedure(string procedure)
+        {
+            SqlCommand command = GeneraConsultaStoredProcedure(procedure);
+            ExecutaTransaccioNonQuery(command);
+        }
+
+        private int ExecutaTransaccioNonQuery(SqlCommand command)
+        {
+            int modificats = -1;
+
+            conn.Open();
+            SqlTransaction sqlTran = conn.BeginTransaction();
+
+            command.Transaction = sqlTran;
+            try
+            {
+                modificats = command.ExecuteNonQuery();
+                sqlTran.Commit();
+            }
+            catch(Exception)
+            {
+                sqlTran.Rollback();   
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return modificats;
+        }
+
+        private void ExecutaTransaccioEscalar(SqlCommand command)
+        {
+            int result = -1;
+            conn.Open();
+            SqlTransaction sqlTran = conn.BeginTransaction();
+            
+            command.Transaction = sqlTran;
+            try
+            {
+                result = (int) command.ExecuteScalar();
+                sqlTran.Commit();
+            }
+            catch (Exception)
+            {
+                sqlTran.Rollback();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
 
