@@ -82,7 +82,6 @@ namespace MainForms
             this.Controls.Add(this.txtCodeSpec);
             this.Name = "frmSpecies";
             this.Text = "frmSpecies";
-            this.Load += new System.EventHandler(this.frmSpecies_Load);
             this.Controls.SetChildIndex(this.txtCodeSpec, 0);
             this.Controls.SetChildIndex(this.txtDescSpecie, 0);
             this.Controls.SetChildIndex(this.lblCodeSpec, 0);

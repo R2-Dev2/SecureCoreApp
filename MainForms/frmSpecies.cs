@@ -20,18 +20,12 @@ namespace MainForms
             this.tableName = "Species";
             this.codeTable = "CodeSpecie";
         }
-
         protected override void ConfigurarDataGrid()
         {
             base.ConfigurarDataGrid();
             dtgDades.Columns["idSpecie"].Visible = false;
             dtgDades.Columns["CodeSpecie"].HeaderText = "Codi";
             dtgDades.Columns["DescSpecie"].HeaderText = "Descripció";
-        }
-
-        private void frmSpecies_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
