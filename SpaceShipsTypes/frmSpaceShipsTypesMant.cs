@@ -16,7 +16,7 @@ namespace SpaceShipsTypes
         public frmSpaceShipsTypesMant()
         {
             InitializeComponent();
-            this.Title = "SpaceShip Types Management";
+            this.title = "SpaceShip Types Management";
             this.tableName = "SpaceShipTypes";
             this.codeTable = "CodeSpaceShipType";
         }

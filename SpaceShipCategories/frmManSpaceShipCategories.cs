@@ -17,7 +17,7 @@ namespace SpaceShipCategories
         public frmManSpaceShipCategories()
         {
             InitializeComponent();
-            this.Title = "SpaceShip Categories";
+            this.title = "SpaceShip Categories";
             this.tableName = "SpaceShipCategories";
             this.codeTable = "CodeSpaceShipCategory";
         }
