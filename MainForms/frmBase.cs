@@ -25,21 +25,18 @@ namespace MainForms
 
         private bool isNewRow = false;
         private bool isRowAdded = false;
-        private bool isBinded = false;
-        private int invalidRowIndex;
 
-        private string title;
+        private string _title;
 
-        public string Title
+        public string title
         {
-            get { return title; }
+            get { return _title; }
             set { 
-                title = value;
-                lblTitle.Text = title;
+                _title = value;
+                lblTitle.Text = _title;
                 lblTitle.Refresh();
             }
         }
-
 
         public frmBase()
         {
@@ -52,24 +49,18 @@ namespace MainForms
             dtgDades.RowHeadersVisible = false;
         }
 
-
         protected void BindDades()
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is SWTextBox)
+                if (ctrl is SWTextBox swTxt)
                 {
-                    SWTextBox swTxt = (SWTextBox)ctrl;
+                    swTxt = (SWTextBox)ctrl;
                     swTxt.DataBindings.Clear();
                     swTxt.DataBindings.Add("Text", dts.Tables[0], swTxt.columnName);
-                    if (swTxt.isForeignKey)
-                    {
-                      //  swTxt.TextChanged += new EventHandler(this.ValidateTextBox);
-                    }
                     swTxt.Validated += new EventHandler(this.ValidateTextBox);
                 }
             }
-            isBinded = true;
         }
 
         protected void ClearBindings(bool isNew)
@@ -87,34 +78,13 @@ namespace MainForms
                     swTxt.Validated -= new EventHandler(this.ValidateTextBox);
                 }
             }
-            isBinded = false;
         }
         protected void ValidateTextBox(object sender, EventArgs e)
         {
-            if (isBinded)
+            if (!isNewRow)
             {
                 ((TextBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
             }
-        }
-
-        protected bool ValidateAllControls(EventArgs e)
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if(ctrl is SWTextBox swTextBox)
-                {
-                    ValidateTextBox(swTextBox, e);
-                    if (swTextBox.required && string.IsNullOrEmpty(swTextBox.Text))
-                    {
-                        lblError.Visible = true;
-                       /// dtgDades.Enabled = false;
-                        return false;
-                    }
-                }
-            }
-         //   dtgDades.Enabled = true;
-            lblError.Visible = false;
-            return true;
         }
 
         protected void AddNewRow()
@@ -145,15 +115,7 @@ namespace MainForms
         private void PortarDades()
         {
             dts = accesADades.PortarTaula(tableName);
-            dtgDades.RowValidating -= dtgDades_RowValidating;
-            try
-            {
-                dtgDades.DataSource = dts.Tables[tableName];
-            }
-            finally
-            {
-                dtgDades.RowValidating += dtgDades_RowValidating;
-            }
+            dtgDades.DataSource = dts.Tables[tableName];
             BindDades();
         }
 
@@ -185,11 +147,6 @@ namespace MainForms
 
         private void btnDesar_Click(object sender, EventArgs e)
         {
-            if (!validateRows(e))
-            {
-                return;
-            }
-
             if (isNewRow)
             {
                 AddNewRow();
@@ -207,12 +164,6 @@ namespace MainForms
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            if (!ValidateAllControls(e))
-            {
-                ClearBindings(false);
-                return;
-            }
-
             if (isNewRow)
             {
                 AddNewRow();
@@ -233,10 +184,6 @@ namespace MainForms
                 AddNewRow();
                 BindDades();
             }
-            //else if (!isBinded)
-            //{
-            //    BindDades();
-            //}
         }
 
         private void pbClose_Click(object sender, EventArgs e)
@@ -244,41 +191,5 @@ namespace MainForms
             this.Close();
         }
 
-        private void dtgDades_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
-        {
-            //if (!ValidateAllControls(e))
-            //{
-            //    ClearBindings(false);
-            //    dtgDades.CausesValidation = false;
-            //    this.invalidRowIndex = e.RowIndex;
-            //}
-            //else
-            //{
-            //    if (!isBinded)
-            //    {
-            //        dtgDades.ClearSelection();
-            //        dtgDades.Rows[e.RowIndex].Selected = true;
-            //        BindDades();
-            //        ValidateAllControls(e);
-            //    }
-            //}
-            //dtgDades.CausesValidation = true;
-        }
-
-        private bool validateRows(EventArgs e)
-        {
-            foreach(DataGridViewRow dr in dtgDades.Rows)
-            {
-                int index = dr.Index;
-                dtgDades.ClearSelection();
-                dtgDades.Rows[index].Selected = true;
-                //Como cambio los controles? ask guti :=)
-                if (!ValidateAllControls(e))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
     }
 }

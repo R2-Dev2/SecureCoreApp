@@ -61,7 +61,6 @@ namespace MainForms
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(611, 269);
             this.dtgDades.TabIndex = 1;
-            this.dtgDades.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgDades_RowValidating);
             this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgSpecies_SelectionChanged);
             // 
             // btnUpdate

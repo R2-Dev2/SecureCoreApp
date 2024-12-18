@@ -37,7 +37,6 @@ namespace MainForms
             }
         }
 
-
         public frmSearch()
         {
             InitializeComponent();
@@ -77,11 +76,6 @@ namespace MainForms
                         dict.Add(swTxt.columnName, swTxt.Text);
                     }
                 }
-                else if(ctrl is SWCodi)
-                {
-                    //TODO afegir gestió SWCodi
-                }
-
             }
         }
 
