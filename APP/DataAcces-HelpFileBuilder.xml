@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataAccess</name>
+    </assembly>
+    <members>
+        <member name="T:DataAccess.AccesADades">
+            <summary>
+            This class contains all the functions used by the program to perform queries and execute them against the DB.
+            </summary>
+        </member>
+        <member name="M:DataAccess.AccesADades.#ctor(System.String)">
+            <summary>
+            This function establishes a connection to the DB.
+            </summary>
+            <param name="connectionString">Connection info is required</param>
+        </member>
+        <member name="M:DataAccess.AccesADades.Connectar">
+            <summary>
+            This function gets the information for the connection and creates a new connection.
+            </summary>
+        </member>
+        <member name="M:DataAccess.AccesADades.PortarTaula(System.String)">
+            <summary>
+            This function returns all information contained in the selected table
+            </summary>
+            <param name="nomTaula">Name of the table to be consulted</param>
+            <returns>DataSet with table contents</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.PortarPerConsulta(System.String)">
+            <summary>
+            This function will return the information resulting from the query that we pass to it
+            </summary>
+            <param name="query">SQL Query</param>
+            <returns>DataSet with the resulting data</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.PortarPerConsulta(System.String,System.String)">
+            <summary>
+            This function overloads the previous one in order to add as parameter the table name
+            </summary>
+            <param name="query">SQL Query</param>
+            <param name="nomTaula">Name of the table to be consultede</param>
+            <returns>DataSet with the resulting data</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.Actualitzar(System.String,System.Data.DataSet)">
+            <summary>
+            This function updates the modified data in the database. 
+            </summary>
+            <param name="query">Original SQL query</param>
+            <param name="dts">Data</param>
+            <returns>Number of rows affected</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.Executa(System.String)">
+            <summary>
+            This function executes the query received as parameter
+            </summary>
+            <param name="query">SQL Query</param>
+        </member>
+        <member name="M:DataAccess.AccesADades.GeneraConsultaCerca(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            This function generates a query that has as a condition that contains the provided values
+            </summary>
+            <param name="tableName">Name of the table to be consulted</param>
+            <param name="values">Values to be contained in the query</param>
+            <returns>Structured SQL query</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.GeneraConsultaStoredProcedure(System.String)">
+            <summary>
+            This function will return a sql query using the name of a procedure stored in the database.
+            </summary>
+            <param name="procedure">Name of the procedure stored in the DB</param>
+            <returns>Structured SQL query</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.ExecutaCerca(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            This function uses the function of GeneraConsultaConsultaCerca() to perform a query that has as a condition and contains the provided values
+            </summary>
+            <param name="tableName">Name of the table to be consulted</param>
+            <param name="values">Values to be contained in the query</param>
+            <returns>DataSet with the resulting data</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.ExecutaStoredProcedure(System.String)">
+            <summary>
+            This function executes a procedure that is stored in the database.
+            </summary>
+            <param name="procedure">Name of the procedure stored in the DB</param>
+        </member>
+        <member name="M:DataAccess.AccesADades.ExecutaTransaccioNonQuery(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            This function executes a SQL Query and returns the number of rows affected.
+            </summary>
+            <param name="command">Structured SQL Query</param>
+            <returns>Number of rows affected</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.ExecutaTransaccioEscalar(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            This function executes a SQL Query that returns a number (Example: Count).
+            </summary>
+            <param name="command">Structured SQL Query</param>
+        </member>
+    </members>
+</doc>
