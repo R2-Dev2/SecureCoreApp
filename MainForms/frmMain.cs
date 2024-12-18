@@ -74,10 +74,6 @@ namespace MainForms
         {
             showForm("frmUsers", (Button)sender);
         }
-        private void btnSpaceShipsTypes_Click(object sender, EventArgs e)
-        {
-            showForm("frmSpaceShipsTypesMant", (Button)sender);
-        }
 
         private Form activeForm (Control father, Type tipus)
         {
