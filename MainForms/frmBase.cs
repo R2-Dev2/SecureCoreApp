@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DataAccess;
+using CustomControls;
 
 namespace MainForms
 {
@@ -25,18 +26,17 @@ namespace MainForms
         private bool isNewRow = false;
         private bool isRowAdded = false;
 
-        private string title;
+        private string _title;
 
-        public string Title
+        public string title
         {
-            get { return title; }
+            get { return _title; }
             set { 
-                title = value;
-                lblTitle.Text = title;
+                _title = value;
+                lblTitle.Text = _title;
                 lblTitle.Refresh();
             }
         }
-
 
         public frmBase()
         {
@@ -49,29 +49,33 @@ namespace MainForms
             dtgDades.RowHeadersVisible = false;
         }
 
-
         protected void BindDades()
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is SWTextBox swTxt)
                 {
-                    ctrl.DataBindings.Clear();
-                    ctrl.DataBindings.Add("Text", dts.Tables[0], ctrl.Tag.ToString());
-                    ctrl.Validated += new EventHandler(this.ValidateTextBox);
+                    swTxt = (SWTextBox)ctrl;
+                    swTxt.DataBindings.Clear();
+                    swTxt.DataBindings.Add("Text", dts.Tables[0], swTxt.columnName);
+                    swTxt.Validated += new EventHandler(this.ValidateTextBox);
                 }
             }
         }
 
-        protected void ClearBindings()
+        protected void ClearBindings(bool isNew)
         {
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is SWTextBox)
                 {
-                    ctrl.DataBindings.Clear();
-                    ctrl.Text = "";
-                    ctrl.Validated -= new EventHandler(this.ValidateTextBox);
+                    SWTextBox swTxt = (SWTextBox)ctrl;
+                    swTxt.DataBindings.Clear();
+                    if (isNew)
+                    {
+                        swTxt.Text = "";
+                    }
+                    swTxt.Validated -= new EventHandler(this.ValidateTextBox);
                 }
             }
         }
@@ -83,14 +87,6 @@ namespace MainForms
             }
         }
 
-        protected void ValidateComboBox(object sender, EventArgs e)
-        {
-            if (!isNewRow)
-            {
-                ((ComboBox)sender).DataBindings[0].BindingManagerBase.EndCurrentEdit();
-            }
-        }
-
         protected void AddNewRow()
         {
             isNewRow = false;
@@ -99,9 +95,17 @@ namespace MainForms
 
             foreach (Control ctrl in this.Controls)
             {
-                if (ctrl is TextBox)
+                if (ctrl is SWTextBox)
                 {
-                    row[ctrl.Tag.ToString()] = ctrl.Text;
+                    SWTextBox swTxt = (SWTextBox)ctrl;
+                    try
+                    {
+                        row[swTxt.columnName] = swTxt.Text;
+                    }
+                    catch (Exception)
+                    {
+                        row[swTxt.columnName] = int.Parse(swTxt.Text);
+                    }
                 }
             }
 
@@ -117,11 +121,11 @@ namespace MainForms
 
         private void FocusOnCodeTable()
         {
-            foreach (Control ctrl in this.Controls)
+            if (this.codeTable != null)
             {
-                if (ctrl is TextBox && ctrl.Tag != null)
+                foreach (Control ctrl in this.Controls)
                 {
-                    if (ctrl.Tag.ToString().Equals(codeTable))
+                    if (ctrl is SWTextBox swTextBox && swTextBox.columnName == codeTable)
                     {
                         ctrl.Focus();
                         return;
@@ -165,7 +169,7 @@ namespace MainForms
                 AddNewRow();
             }
 
-            ClearBindings();
+            ClearBindings(true);
 
             isNewRow = true;
             isRowAdded = true;
@@ -186,5 +190,6 @@ namespace MainForms
         {
             this.Close();
         }
+
     }
 }

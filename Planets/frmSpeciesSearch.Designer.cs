@@ -63,7 +63,6 @@ namespace Planets
             this.swtxtDescSpec.isForeignKey = false;
             this.swtxtDescSpec.Location = new System.Drawing.Point(203, 178);
             this.swtxtDescSpec.Name = "swtxtDescSpec";
-            this.swtxtDescSpec.opcionalDada = false;
             this.swtxtDescSpec.required = false;
             this.swtxtDescSpec.Size = new System.Drawing.Size(100, 29);
             this.swtxtDescSpec.TabIndex = 6;
@@ -76,7 +75,6 @@ namespace Planets
             this.swtxtCodeSpec.isForeignKey = false;
             this.swtxtCodeSpec.Location = new System.Drawing.Point(203, 130);
             this.swtxtCodeSpec.Name = "swtxtCodeSpec";
-            this.swtxtCodeSpec.opcionalDada = false;
             this.swtxtCodeSpec.required = false;
             this.swtxtCodeSpec.Size = new System.Drawing.Size(100, 29);
             this.swtxtCodeSpec.TabIndex = 5;

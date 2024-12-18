@@ -135,6 +135,6 @@ namespace MainForms
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.PictureBox pbClose;
+        protected System.Windows.Forms.PictureBox pbClose;
     }
 }

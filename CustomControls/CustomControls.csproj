@@ -47,6 +47,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWCodi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SWCodi.Designer.cs">
+      <DependentUpon>SWCodi.cs</DependentUpon>
+    </Compile>
     <Compile Include="SWLaunchForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -55,9 +61,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SWCodi.resx">
+      <DependentUpon>SWCodi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SWLaunchForm.resx">
       <DependentUpon>SWLaunchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SWTextBox.resx">
+      <DependentUpon>SWTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{32f0f4dd-8ad5-4f3c-b52f-0ea6fe1c0fa2}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

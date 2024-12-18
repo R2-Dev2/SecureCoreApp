@@ -22,11 +22,13 @@ namespace CustomControls
             // 
             // SWTextBox
             // 
-            this.Font = new System.Drawing.Font("Cambria", 10.8F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextChanged += new System.EventHandler(this.SWTextBox_TextChanged);
             this.Enter += new System.EventHandler(this.SWTextbox_Enter);
             this.Leave += new System.EventHandler(this.SWTextbox_Leave);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.SWTextbox_Validating);
             this.ResumeLayout(false);
+
         }
         public enum TipusDada
         {
@@ -44,13 +46,6 @@ namespace CustomControls
             }
         }
 
-        private bool _opcionalitatDada;
-        public bool opcionalDada
-        {
-            get { return _opcionalitatDada; }
-            set { _opcionalitatDada = value; }
-        }
-
         private string _columnName;
         public string columnName
         {
@@ -65,12 +60,21 @@ namespace CustomControls
             set { _isForeignKey = value; }
         }
 
-        private bool _requiered;
+        private bool _required;
         public bool required
         {
-            get { return _requiered; }
-            set { _requiered = value; }
+            get { return _required; }
+            set { _required = value; }
         }
+
+        private string _codiSW;
+
+        public string codiSW
+        {
+            get { return _codiSW; }
+            set { _codiSW = value; }
+        }
+
 
         private void SWTextbox_Leave(object sender, EventArgs e)
         {
@@ -110,6 +114,25 @@ namespace CustomControls
             if (!validacio)
             {
                 this.Clear();
+            }
+        }
+
+        private void SWTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (isForeignKey)
+            {
+                if(codiSW != null)
+                {
+                    Form frm = this.FindForm();
+                    foreach(Control ctrl in frm.Controls)
+                    {
+                        if(ctrl.Name == codiSW && ctrl is SWCodi swcodi)
+                        {
+                            swcodi.UpdateFromId(this.Text);
+                            return;
+                        }
+                    }
+                }
             }
         }
     }

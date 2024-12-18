@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<topic id="da8277fc-f965-4ffe-80cb-5b87eb9c071d" revisionNumber="1">
+	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<introduction>
+			<para>This is the documentation file where you can find all the information about the DataAcces library.</para>
+		</introduction>
+
+		<section>
+			<title>Getting Started</title>
+			<content>
+				<para>To start, you must add the DataAcces library to your project and configure the <legacyBold>connection to your database</legacyBold>. Once that is done you can start calling the methods to receive the data. The following default items are included in this project:</para>
+
+				<list class="bullet">
+					<listItem>
+						<para><localUri>AccesADades.AccesADadest</localUri> - Sets the necessary configuration to be able to connect to the database.</para>
+					</listItem>
+
+					<listItem>
+						<para><localUri>AccesADades.Actualitzar</localUri> - Updates database values </para>
+					</listItem>
+
+					 <listItem>
+						<para><localUri>AccesADades.Executa</localUri> - Executes SQL Query in Databases.</para>
+					</listItem>
+				</list>
+
+				<para>See the <legacyBold>DataAcces</legacyBold> in the menu for documentation on how to use all the functions contained in the<legacyBold> DataAcces library</legacyBold></para>
+			</content>
+		</section>
+
+		<relatedTopics>
+			<link xlink:href="9c4c80d6-f0e6-46aa-9af8-c2453155f9d4" />
+		</relatedTopics>
+	</developerConceptualDocument>
+</topic>
