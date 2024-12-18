@@ -1,18 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="da8277fc-f965-4ffe-80cb-5b87eb9c071d" visible="True" isDefault="true" isSelected="true" title="Welcome to the [TODO: Add project name]">
+  <Topic id="da8277fc-f965-4ffe-80cb-5b87eb9c071d" visible="True" isDefault="true" isSelected="true" title="Technical Documentation - Data Acces">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
-  </Topic>
-  <Topic id="9c4c80d6-f0e6-46aa-9af8-c2453155f9d4" visible="True" isExpanded="true" title="Version History">
-    <HelpKeywords>
-      <HelpKeyword index="K" term="version, history" />
-    </HelpKeywords>
-    <Topic id="119d3b48-c469-4832-b56a-b7af0ea2c895" visible="True" title="Version 1.0.0.0">
-      <HelpKeywords>
-        <HelpKeyword index="K" term="version, 1.0.0.0" />
-      </HelpKeywords>
-    </Topic>
   </Topic>
 </Topics>
