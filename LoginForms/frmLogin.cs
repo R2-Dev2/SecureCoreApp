@@ -41,12 +41,11 @@ namespace LoginForms
             bool isValid = false;
             string username = txtUser.Text;
             string userPassword = txtPwd.Text;
-            string query = $"SELECT idUser, password, salt FROM {this.tableName} WHERE username = '{username}'";
+            string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE username = '{username}' AND u.idUserCategory = uc.idUserCategory";
             DataSet dts = accesADades.PortarPerConsulta(query);
 
             if (dts.Tables[0].Rows.Count == 1)
             {
-                
                 pbvalidacio.Image = LoginForms.Properties.Resources.validacioEstatPrevi;
                 string idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
                 string savedPassword = dts.Tables[0].Rows[0]["password"].ToString();
@@ -69,25 +68,27 @@ namespace LoginForms
                         closeOpenedMain();
                         knownUser = true;
                         timerValidating.Start();
-                        
+
+                        lblTriesLeft.Visible = false;
+                        lblIncorrect.Visible = false;
                         pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
-                        lblVerificantNivell.Text = "Verificant nivell d'usuari.";
-                        lblBenvinguda.Text = $"Benvingut {txtUser.Text}!";
+                        lblVerificantNivell.Text = "Verifying user access.";
+                        lblBenvinguda.Text = $"Welcome, {txtUser.Text}!";
                     }
                 }
+            }
 
-                if (!isValid)
+            if (!isValid)
+            {
+                txtPwd.Clear();
+                lblIncorrect.Visible = true;
+                int triesLeft = MAX_TRIES - tries;
+                lblTriesLeft.Text = triesLeft + " tries left.";
+                pbvalidacio.Image = LoginForms.Properties.Resources.validacioIncorrecta;
+                lblTriesLeft.Visible = true;
+                if (tries >= MAX_TRIES)
                 {
-                    txtPwd.Clear();
-                    lblIncorrect.Show();
-                    int triesLeft = MAX_TRIES - tries;
-                    lblTriesLeft.Text = triesLeft + " tries left.";
-                    pbvalidacio.Image = LoginForms.Properties.Resources.validacioIncorrecta;
-                    lblTriesLeft.Show();
-                    if (tries >= MAX_TRIES)
-                    {
-                        launchWarningMessage();
-                    }
+                    launchWarningMessage();
                 }
             }
         }
@@ -126,10 +127,8 @@ namespace LoginForms
         private void TimerValidating_Tick(object sender, EventArgs e)
         {
             counter++;
-            //progressBar.Visible = true;
-            //progressBar.Increment(10);
 
-            lblVerificantNivell.Text = "Verificant nivell d'usuari.";
+            lblVerificantNivell.Text = "Verifying user access.";
 
             if (counter % 2 == 0)
             {
