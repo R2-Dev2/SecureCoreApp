@@ -43,7 +43,6 @@ namespace SpaceShipCategories
             this.txtCodeShip.isForeignKey = false;
             this.txtCodeShip.Location = new System.Drawing.Point(180, 177);
             this.txtCodeShip.Name = "txtCodeShip";
-            this.txtCodeShip.opcionalDada = false;
             this.txtCodeShip.required = false;
             this.txtCodeShip.Size = new System.Drawing.Size(278, 41);
             this.txtCodeShip.TabIndex = 22;
@@ -57,7 +56,6 @@ namespace SpaceShipCategories
             this.txtDescShip.isForeignKey = false;
             this.txtDescShip.Location = new System.Drawing.Point(253, 250);
             this.txtDescShip.Name = "txtDescShip";
-            this.txtDescShip.opcionalDada = false;
             this.txtDescShip.required = false;
             this.txtDescShip.Size = new System.Drawing.Size(278, 41);
             this.txtDescShip.TabIndex = 23;

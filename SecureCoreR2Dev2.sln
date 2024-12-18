@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipCategories", "Spac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRanks", "UserRanks\UserRanks.csproj", "{7BB05C3D-8634-411D-8D1B-34F992D47DE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipsTypes", "SpaceShipsTypes\SpaceShipsTypes.csproj", "{4E8C0295-0D5E-4722-B61C-0F10D4033977}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{7BB05C3D-8634-411D-8D1B-34F992D47DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BB05C3D-8634-411D-8D1B-34F992D47DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BB05C3D-8634-411D-8D1B-34F992D47DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8C0295-0D5E-4722-B61C-0F10D4033977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8C0295-0D5E-4722-B61C-0F10D4033977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8C0295-0D5E-4722-B61C-0F10D4033977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8C0295-0D5E-4722-B61C-0F10D4033977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

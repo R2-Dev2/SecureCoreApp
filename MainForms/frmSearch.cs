@@ -20,6 +20,9 @@ namespace MainForms
 
         protected string connectionString;
         protected string tableName;
+        protected string controlId;
+        protected Form originalForm;
+        protected string idName;
 
         private string _title;
 
@@ -32,14 +35,6 @@ namespace MainForms
                 lblTitle.Text = _title;
                 lblTitle.Refresh();
             }
-        }
-
-        private DataRow _selectedValue;
-
-        public DataRow selectedValue
-        {
-            get { return _selectedValue; }
-            set { _selectedValue = value; }
         }
 
         public frmSearch()
@@ -81,7 +76,6 @@ namespace MainForms
                         dict.Add(swTxt.columnName, swTxt.Text);
                     }
                 }
-                //TODO afegir gestió SWCodi
             }
         }
 
@@ -89,9 +83,28 @@ namespace MainForms
         {
             if(dts != null)
             {
-                selectedValue = dts.Tables[0].Rows[dtgDades.CurrentRow.Index];
+                if(dtgDades.SelectedRows.Count > 0)
+                {
+                    string selectedValueId = dts.Tables[0].Rows[dtgDades.CurrentRow.Index][0].ToString();
+                    UpdateControlId(selectedValueId);
+                }
             }
             this.Close();
+        }
+
+        private void UpdateControlId(string id)
+        {
+            if (controlId != null)
+            {
+                foreach (Control ctrl in this.originalForm.Controls)
+                {
+                    if (ctrl.Name == controlId && ctrl is SWCodi swCodi)
+                    {
+                        swCodi.UpdateIdTextBox(id);
+                        return;
+                    }
+                }
+            }
         }
 
         private void frmSearch_Load(object sender, EventArgs e)
