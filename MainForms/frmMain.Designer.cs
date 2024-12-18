@@ -41,7 +41,6 @@ namespace MainForms
             this.btnSpecies = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.pnlPpal = new System.Windows.Forms.Panel();
-            this.btnSpaceShipsTypes = new System.Windows.Forms.Button();
             this.pnlStatus.SuspendLayout();
             this.gbUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).BeginInit();
@@ -128,7 +127,6 @@ namespace MainForms
             this.pnlMenu.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlMenu.Controls.Add(this.btnSpecies);
             this.pnlMenu.Controls.Add(this.btnUsers);
-            this.pnlMenu.Controls.Add(this.btnSpaceShipsTypes);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 38);
             this.pnlMenu.Name = "pnlMenu";
@@ -181,25 +179,6 @@ namespace MainForms
             this.pnlPpal.Size = new System.Drawing.Size(705, 469);
             this.pnlPpal.TabIndex = 1;
             // 
-            // btnSpaceShipsTypes
-            // 
-            this.btnSpaceShipsTypes.AutoSize = true;
-            this.btnSpaceShipsTypes.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnSpaceShipsTypes.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnSpaceShipsTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSpaceShipsTypes.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpaceShipsTypes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpaceShipsTypes.ImageKey = "(ninguno)";
-            this.btnSpaceShipsTypes.ImageList = this.imlButtons;
-            this.btnSpaceShipsTypes.Location = new System.Drawing.Point(0, 162);
-            this.btnSpaceShipsTypes.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSpaceShipsTypes.Name = "btnSpaceShipsTypes";
-            this.btnSpaceShipsTypes.Size = new System.Drawing.Size(175, 81);
-            this.btnSpaceShipsTypes.TabIndex = 2;
-            this.btnSpaceShipsTypes.Text = "SpaceShip Types";
-            this.btnSpaceShipsTypes.UseVisualStyleBackColor = false;
-            this.btnSpaceShipsTypes.Click += new System.EventHandler(this.btnSpaceShipsTypes_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,6 +214,5 @@ namespace MainForms
         private System.Windows.Forms.Panel pnlPpal;
         private System.Windows.Forms.GroupBox gbUserInfo;
         private System.Windows.Forms.PictureBox pbUsari;
-        private System.Windows.Forms.Button btnSpaceShipsTypes;
     }
 }

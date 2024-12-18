@@ -93,19 +93,14 @@ namespace MainForms
 
         private void showForm(string formName, Button btn)
         {
-            string formClass = String.Format("MainForms");
-            if(formName == "frmSpaceShipsTypesMant")
-            {
-                formClass = "SpaceShipsTypes";
-            }
-            Assembly ensamblat = Assembly.LoadFrom($@"{formClass}.dll");
+            string formClass = String.Format("MainForms.dll");
+            Assembly ensamblat = Assembly.LoadFrom(@formClass);
             Object dllBD;
 
             Type tipus;
 
-        //    string formType = String.Format("{0}.{1}", "MainForms", formName);
-            tipus = ensamblat.GetType($"{formClass}.{formName}");
-         //   tipus = ensamblat.GetType(formType);
+            string formType = String.Format("{0}.{1}", "MainForms", formName);
+            tipus = ensamblat.GetType(formType);
 
             Form form = activeForm(pnlPpal, tipus);
 
