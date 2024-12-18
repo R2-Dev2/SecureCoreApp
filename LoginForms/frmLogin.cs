@@ -44,7 +44,6 @@ namespace LoginForms
             string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE username = '{username}' AND u.idUserCategory = uc.idUserCategory";
             DataSet dts = accesADades.PortarPerConsulta(query);
 
-            // TODO: Controlar que si l'usuari no existeix es notifiqui 
             if (dts.Tables[0].Rows.Count == 1)
             {
                 pbvalidacio.Image = LoginForms.Properties.Resources.validacioEstatPrevi;
