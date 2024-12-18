@@ -36,6 +36,7 @@ namespace MainForms
             this.btnNew = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
@@ -60,10 +61,12 @@ namespace MainForms
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(611, 269);
             this.dtgDades.TabIndex = 1;
+            this.dtgDades.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dtgDades_RowValidating);
             this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgSpecies_SelectionChanged);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.CausesValidation = false;
             this.btnUpdate.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(587, 547);
             this.btnUpdate.Name = "btnUpdate";
@@ -98,7 +101,7 @@ namespace MainForms
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(730, 0);
+            this.pbClose.Location = new System.Drawing.Point(731, 0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 23);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,12 +109,25 @@ namespace MainForms
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(70, 234);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(296, 20);
+            this.lblError.TabIndex = 22;
+            this.lblError.Text = "One or more mandatory fields are blank";
+            this.lblError.Visible = false;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(755, 606);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnNew);
@@ -133,6 +149,7 @@ namespace MainForms
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.PictureBox pbClose;
+        protected System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.Label lblError;
     }
 }
