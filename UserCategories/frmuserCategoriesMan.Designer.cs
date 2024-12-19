@@ -1,7 +1,7 @@
 ﻿
 namespace UserCategories
 {
-    partial class frmuserCategoriesMan
+    partial class frmUserCategoriesMan
     {
         /// <summary>
         /// Required designer variable.

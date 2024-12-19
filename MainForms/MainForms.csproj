@@ -94,6 +94,10 @@
       <Project>{32f0f4dd-8ad5-4f3c-b52f-0ea6fe1c0fa2}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{6d724ee2-bb06-45ec-af04-0c871ef5d035}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CustomControls\CustomControls.csproj">
