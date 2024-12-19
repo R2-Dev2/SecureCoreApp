@@ -11,9 +11,9 @@ using MainForms;
 
 namespace UserCategories
 {
-    public partial class frmuserCategoriesMan : frmBase
+    public partial class frmUserCategoriesMan : frmBase
     {
-        public frmuserCategoriesMan()
+        public frmUserCategoriesMan()
         {
             InitializeComponent();
             this.title = "User Categories";

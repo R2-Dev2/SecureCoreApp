@@ -126,16 +126,16 @@ namespace MainForms
             this.pnlMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.pnlMenu.Location = new System.Drawing.Point(0, 38);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(181, 469);
+            this.pnlMenu.Size = new System.Drawing.Size(233, 469);
             this.pnlMenu.TabIndex = 3;
             // 
             // pnlPpal
             // 
             this.pnlPpal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPpal.Location = new System.Drawing.Point(181, 38);
+            this.pnlPpal.Location = new System.Drawing.Point(233, 38);
             this.pnlPpal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPpal.Name = "pnlPpal";
-            this.pnlPpal.Size = new System.Drawing.Size(699, 469);
+            this.pnlPpal.Size = new System.Drawing.Size(647, 469);
             this.pnlPpal.TabIndex = 1;
             // 
             // frmMain

@@ -36,19 +36,22 @@ namespace CustomControls
             // 
             // lblTextBtn
             // 
-            this.lblTextBtn.AutoSize = true;
+            this.lblTextBtn.Font = new System.Drawing.Font("Cambria", 11.8F, System.Drawing.FontStyle.Bold);
             this.lblTextBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTextBtn.Location = new System.Drawing.Point(200, 90);
+            this.lblTextBtn.Location = new System.Drawing.Point(72, 20);
+            this.lblTextBtn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTextBtn.Name = "lblTextBtn";
-            this.lblTextBtn.Size = new System.Drawing.Size(0, 25);
+            this.lblTextBtn.Size = new System.Drawing.Size(155, 62);
             this.lblTextBtn.TabIndex = 6;
+            this.lblTextBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTextBtn.Click += new System.EventHandler(this.lblTextBtn_Click);
             // 
             // pbImage
             // 
-            this.pbImage.Location = new System.Drawing.Point(21, 24);
+            this.pbImage.Location = new System.Drawing.Point(2, 20);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(115, 91);
+            this.pbImage.Size = new System.Drawing.Size(66, 62);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 5;
             this.pbImage.TabStop = false;
@@ -56,17 +59,18 @@ namespace CustomControls
             // 
             // SWLaunchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.lblTextBtn);
             this.Controls.Add(this.pbImage);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.Name = "SWLaunchForm";
-            this.Size = new System.Drawing.Size(263, 142);
+            this.Size = new System.Drawing.Size(231, 104);
             this.Click += new System.EventHandler(this.SWLaunchForm_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
