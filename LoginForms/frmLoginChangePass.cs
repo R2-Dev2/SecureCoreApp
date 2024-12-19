@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using DataAccess;
 using MainForms;
 using Utils;
+using System.Text.RegularExpressions;
 
 namespace LoginForms
 {
@@ -60,6 +61,18 @@ namespace LoginForms
             }
         }
 
+        private bool verificarContrasenyaNova(string novaContrasenya)
+        {
+            bool isvalid = false;
+
+            if ((novaContrasenya.Length >= 8) && (password.Any(char.IsUpper) && password.Any(char.IsLower)) && Regex.IsMatch(password, @"[!@#$%^&*(),.?""{}|<>]"))
+            {
+                isvalid = true;
+            }
+
+            return isvalid;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPwd.Text) || string.IsNullOrWhiteSpace(txtPasswordValidacio.Text))
@@ -69,10 +82,16 @@ namespace LoginForms
             else if (txtPwd.Text == txtPasswordValidacio.Text)
             {
                 password = txtPwd.Text;
+                bool isValidPassword = verificarContrasenyaNova(password);
+                if (isValidPassword)
+                {
+                    ActualitzarContrasenya(password);
+                    this.Close();
+                } else
+                {
+                    MessageBox.Show(string.Format("La nova contrasenya no compleix els requisits: \n· Minim 8 caracters \n· Contenir Majuscules i Minuscules \n· Contenir caracters especials ({0})", @"[!@#$%^&*(),.?""{}|<>]"));
+                }
 
-                ActualitzarContrasenya(password);
-
-                this.Close();
             }
             else
             {
