@@ -16,7 +16,7 @@ namespace UserRanks
         public frmManUserRanks()
         {
             InitializeComponent();
-            this.Title = "User Ranks";
+            this.title = "User Ranks";
             this.tableName = "UserRanks";
             this.codeTable = "CodeRank";
         }
