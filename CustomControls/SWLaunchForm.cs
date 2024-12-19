@@ -17,10 +17,12 @@ namespace CustomControls
         private string form;
         private string description;
         private Image imagebtn;
+        private Panel panel;
 
-        public SWLaunchForm()
+        public SWLaunchForm(Panel panel)
         {
             InitializeComponent();
+            this.panel = panel;
         }
 
         public string Library
@@ -69,7 +71,33 @@ namespace CustomControls
             tipus = ensamblat.GetType($"{this.Library}.{this.Form}");
             dllBD = Activator.CreateInstance(tipus);
 
-            ((Form)dllBD).Show();
+            Form form = activeForm(panel, tipus);
+
+            if (form == null)
+            {
+                dllBD = Activator.CreateInstance(tipus);
+                form = ((Form)dllBD);
+                form.TopLevel = false;
+                form.Dock = DockStyle.Fill;
+                panel.Controls.Add(form);
+                form.Show();
+            }
+            else
+            {
+                form.BringToFront();
+            }
+        }
+
+        private Form activeForm(Control father, Type tipus)
+        {
+            foreach (Form control in father.Controls)
+            {
+                if (control.GetType() == tipus)
+                {
+                    return control;
+                }
+            }
+            return null;
         }
 
         private void pbImage_Click(object sender, EventArgs e)

@@ -8,22 +8,20 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CustomControls;
+using Utils;
+using DataAccess;
 
 namespace MainForms
 {
     public partial class frmMain : Form
     {
+        private AccesADades accesADades;
         string loggedUser;
         bool isLogout = false;
-        public string LoggedUser
-        {
-            get => loggedUser;
-            set
-            {
-                loggedUser = value;
-                loadUserInfo();
-            }
-        }
+        private DataSet dts;
+
+        public string LoggedUser { get => loggedUser; set => loggedUser = value; }
 
         public bool IsLogout { get => isLogout; set => isLogout = value; }
 
@@ -32,19 +30,32 @@ namespace MainForms
             InitializeComponent();
         }
 
-        private void loadUserInfo()
+        private void LoadUserInfo()
         {
             lblUsuari.Text = loggedUser;
             Refresh();
             //obtener imagen de bbdd
         }
 
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+
+        private void AddFormsList()
         {
-            if (!isLogout)
+            foreach (DataRow row in dts.Tables[0].Rows)
             {
-                Application.Exit();
-            }
+                try
+                {
+                    SWLaunchForm swLaunchForm = new SWLaunchForm(pnlPpal);
+                    swLaunchForm.Library = row["namespace"].ToString();
+                    swLaunchForm.Form = row["formName"].ToString();
+                    swLaunchForm.Description = row["description"].ToString();
+                    swLaunchForm.ImageBtn = ImageUtils.GetImageFromUrl(row["image"].ToString());
+                    //swLaunchForm.Dock = DockStyle.Fill;
+
+                    pnlMenu.Controls.Add(swLaunchForm);
+                }
+                catch (Exception) { }
+
+            };
         }
 
         private void setActiveColor(Button btn)
@@ -65,16 +76,6 @@ namespace MainForms
             }
         }
 
-        private void btnSpecies_Click(object sender, EventArgs e)
-        {
-            showForm("frmSpecies", (Button)sender);
-        }
-
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
-            showForm("frmUsers", (Button)sender);
-        }
-
         private Form activeForm (Control father, Type tipus)
         {
             foreach (Form control in father.Controls)
@@ -89,31 +90,55 @@ namespace MainForms
 
         private void showForm(string formName, Button btn)
         {
-            string formClass = String.Format("MainForms.dll");
-            Assembly ensamblat = Assembly.LoadFrom(@formClass);
-            Object dllBD;
+            // El codi que pertany a aquest apartat està en el SWLaunchForm
+            //string formClass = String.Format("MainForms.dll");
+            //Assembly ensamblat = Assembly.LoadFrom(@formClass);
+            //Object dllBD;
 
-            Type tipus;
+            //Type tipus;
 
-            string formType = String.Format("{0}.{1}", "MainForms", formName);
-            tipus = ensamblat.GetType(formType);
+            //string formType = String.Format("{0}.{1}", "MainForms", formName);
+            //tipus = ensamblat.GetType(formType);
 
-            Form form = activeForm(pnlPpal, tipus);
+            // Aquest apartat s'ha de mantenir aquí després de realitzar el click
+            //Form form = activeForm(pnlPpal, tipus);
 
-            if (form == null)
+            //if (form == null)
+            //{
+            //    dllBD = Activator.CreateInstance(tipus);
+            //    form = ((Form)dllBD);
+            //    form.TopLevel = false;
+            //    form.Dock = DockStyle.Fill;
+            //    pnlPpal.Controls.Add(form);
+            //    form.Show();
+            //}
+            //else
+            //{
+            //    form.BringToFront();
+            //}
+            //setActiveColor((Button)btn);
+        }
+
+        private void GetOptions()
+        {
+            dts = accesADades.PortarPerConsulta("Select * FROM userOptions");
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            accesADades = new AccesADades("SecureCore");
+            LoadUserInfo();
+            GetOptions();
+            AddFormsList();
+            
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!isLogout)
             {
-                dllBD = Activator.CreateInstance(tipus);
-                form = ((Form)dllBD);
-                form.TopLevel = false;
-                form.Dock = DockStyle.Fill;
-                pnlPpal.Controls.Add(form);
-                form.Show();
+                Application.Exit();
             }
-            else
-            {
-                form.BringToFront();
-            }
-            setActiveColor((Button)btn);
         }
 
         private void pbClose_Click(object sender, EventArgs e)
