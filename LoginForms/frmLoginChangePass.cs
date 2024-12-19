@@ -61,16 +61,29 @@ namespace LoginForms
             }
         }
 
-        private bool verificarContrasenyaNova(string novaContrasenya)
+        private string verificarContrasenyaNova(string novaContrasenya)
         {
-            bool isvalid = false;
+            string messageError = string.Empty;
 
-            if ((novaContrasenya.Length >= 8) && (password.Any(char.IsUpper) && password.Any(char.IsLower)) && Regex.IsMatch(password, @"[!@#$%^&*(),.?""{}|<>]"))
+            if(novaContrasenya.Length < 8)
             {
-                isvalid = true;
+                messageError = "Must be more or equal to 8 characters";
+            } else { 
+
+                if (!Regex.IsMatch(novaContrasenya, @"^(?=.*[A-Z])(?=.*[a-z])"))
+                {
+                    messageError = "Must contain upper and lower case letters";
+                } else
+                {
+                    if (!Regex.IsMatch(novaContrasenya, @"[\W_]"))
+                    {
+                        messageError = "Must contain at least one special character";
+                    }
+                }
+
             }
 
-            return isvalid;
+            return messageError;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -82,16 +95,16 @@ namespace LoginForms
             else if (txtPwd.Text == txtPasswordValidacio.Text)
             {
                 password = txtPwd.Text;
-                bool isValidPassword = verificarContrasenyaNova(password);
-                if (isValidPassword)
+                string passwordCheckError = verificarContrasenyaNova(password);
+                if (passwordCheckError == string.Empty)
                 {
                     ActualitzarContrasenya(password);
                     this.Close();
                 } else
                 {
-                    MessageBox.Show(string.Format("La nova contrasenya no compleix els requisits: \n· Minim 8 caracters \n· Contenir Majuscules i Minuscules \n· Contenir caracters especials ({0})", @"[!@#$%^&*(),.?""{}|<>]"));
+                    lblIncorrect.Visible = true;
+                    lblIncorrect.Text = passwordCheckError;
                 }
-
             }
             else
             {
