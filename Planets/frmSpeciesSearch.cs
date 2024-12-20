@@ -13,12 +13,13 @@ namespace Planets
 {
     public partial class frmSpeciesSearch : frmSearch
     {
-        public frmSpeciesSearch()
+        public frmSpeciesSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.connectionString = "SecureCore";
             this.tableName = "Species";
             this.title = "Search Species";
+            this.controlId = controlId;
+            this.originalForm = originalForm;
         }
         protected override void ConfigurarDataGrid()
         {
