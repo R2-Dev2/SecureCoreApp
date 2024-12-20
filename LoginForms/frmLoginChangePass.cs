@@ -67,7 +67,7 @@ namespace LoginForms
 
             if(novaContrasenya.Length < 8)
             {
-                messageError = "Must be more or equal to 8 characters";
+                messageError = "Must be at least 8 characters";
             } else { 
 
                 if (!Regex.IsMatch(novaContrasenya, @"^(?=.*[A-Z])(?=.*[a-z])"))
@@ -108,6 +108,7 @@ namespace LoginForms
             }
             else
             {
+                lblIncorrect.Text = "Passwords do not match";
                 lblIncorrect.Visible = true;
             }
         }
