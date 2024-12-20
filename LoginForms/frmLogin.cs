@@ -18,6 +18,7 @@ namespace LoginForms
         private readonly string tableName = "Users";
         private readonly string DEFAULT_PWD = "12345aA";
         private readonly int MAX_TRIES = 3;
+        private string accessLevel;
         private AccesADades accesADades;
         bool knownUser = false;
         int tries = 0;
@@ -44,7 +45,6 @@ namespace LoginForms
             string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE username = '{username}' AND u.idUserCategory = uc.idUserCategory";
             DataSet dts = accesADades.PortarPerConsulta(query);
 
-            // TODO: Controlar que si l'usuari no existeix es notifiqui 
             if (dts.Tables[0].Rows.Count == 1)
             {
                 pbvalidacio.Image = LoginForms.Properties.Resources.validacioEstatPrevi;
@@ -75,6 +75,7 @@ namespace LoginForms
                         pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
                         lblVerificantNivell.Text = "Verifying user access.";
                         lblBenvinguda.Text = $"Welcome, {txtUser.Text}!";
+                        accessLevel = dts.Tables[0].Rows[0]["AccessLevel"].ToString();
                     }
                 }
             }
@@ -146,6 +147,7 @@ namespace LoginForms
 
                 frmMain frmMain = new frmMain();
                 frmMain.LoggedUser = txtUser.Text;
+                frmMain.RangeOption = accessLevel;
                 frmMain.Show();
 
                 this.Close();
