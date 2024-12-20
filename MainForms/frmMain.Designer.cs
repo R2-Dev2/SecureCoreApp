@@ -87,6 +87,7 @@ namespace MainForms
             // pbUsari
             // 
             this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbUsari.BackColor = System.Drawing.Color.DarkCyan;
             this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbUsari.Location = new System.Drawing.Point(-2, 0);
             this.pbUsari.Name = "pbUsari";
@@ -98,6 +99,7 @@ namespace MainForms
             // lblUsuari
             // 
             this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuari.BackColor = System.Drawing.Color.DarkCyan;
             this.lblUsuari.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuari.Location = new System.Drawing.Point(44, -2);
             this.lblUsuari.Name = "lblUsuari";

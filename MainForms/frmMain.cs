@@ -18,10 +18,13 @@ namespace MainForms
     {
         private AccesADades accesADades;
         string loggedUser;
+        string rangeOption;
         bool isLogout = false;
         private DataSet dts;
 
         public string LoggedUser { get => loggedUser; set => loggedUser = value; }
+
+        public string RangeOption { get => rangeOption; set => rangeOption = value; }
 
         public bool IsLogout { get => isLogout; set => isLogout = value; }
 
@@ -58,7 +61,7 @@ namespace MainForms
             };
         }
 
-        private void setActiveColor(Button btn)
+        private void setActiveColor(Button btn) // unused 
         {
             foreach (Control ctrl in pnlMenu.Controls)
             {
@@ -76,52 +79,9 @@ namespace MainForms
             }
         }
 
-        private Form activeForm (Control father, Type tipus)
-        {
-            foreach (Form control in father.Controls)
-            {
-                if (control.GetType() == tipus)
-                {
-                    return control;
-                }
-            }
-            return null;
-        }
-
-        private void showForm(string formName, Button btn)
-        {
-            // El codi que pertany a aquest apartat està en el SWLaunchForm
-            //string formClass = String.Format("MainForms.dll");
-            //Assembly ensamblat = Assembly.LoadFrom(@formClass);
-            //Object dllBD;
-
-            //Type tipus;
-
-            //string formType = String.Format("{0}.{1}", "MainForms", formName);
-            //tipus = ensamblat.GetType(formType);
-
-            // Aquest apartat s'ha de mantenir aquí després de realitzar el click
-            //Form form = activeForm(pnlPpal, tipus);
-
-            //if (form == null)
-            //{
-            //    dllBD = Activator.CreateInstance(tipus);
-            //    form = ((Form)dllBD);
-            //    form.TopLevel = false;
-            //    form.Dock = DockStyle.Fill;
-            //    pnlPpal.Controls.Add(form);
-            //    form.Show();
-            //}
-            //else
-            //{
-            //    form.BringToFront();
-            //}
-            //setActiveColor((Button)btn);
-        }
-
         private void GetOptions()
         {
-            dts = accesADades.PortarPerConsulta("Select * FROM userOptions");
+            dts = accesADades.PortarPerConsulta($"Select * FROM userOptions WHERE rangeOption <= {rangeOption}");
         }
 
         private void frmMain_Load(object sender, EventArgs e)
