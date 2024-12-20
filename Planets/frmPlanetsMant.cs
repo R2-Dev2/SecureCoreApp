@@ -16,7 +16,7 @@ namespace Planets
         public frmPlanetsMant()
         {
             InitializeComponent();
-            this.title = "Planets";
+            this.title = "Planets Manteniment";
             this.tableName = "Planets";
             this.codeTable = "CodePlanet";
         }
