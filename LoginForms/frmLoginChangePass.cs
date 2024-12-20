@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using DataAccess;
 using MainForms;
 using Utils;
+using System.Text.RegularExpressions;
 
 namespace LoginForms
 {
@@ -60,6 +61,31 @@ namespace LoginForms
             }
         }
 
+        private string verificarContrasenyaNova(string novaContrasenya)
+        {
+            string messageError = string.Empty;
+
+            if(novaContrasenya.Length < 8)
+            {
+                messageError = "Must be at least 8 characters";
+            } else { 
+
+                if (!Regex.IsMatch(novaContrasenya, @"^(?=.*[A-Z])(?=.*[a-z])"))
+                {
+                    messageError = "Must contain upper and lower case letters";
+                } else
+                {
+                    if (!Regex.IsMatch(novaContrasenya, @"[\W_]"))
+                    {
+                        messageError = "Must contain at least one special character";
+                    }
+                }
+
+            }
+
+            return messageError;
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPwd.Text) || string.IsNullOrWhiteSpace(txtPasswordValidacio.Text))
@@ -69,13 +95,20 @@ namespace LoginForms
             else if (txtPwd.Text == txtPasswordValidacio.Text)
             {
                 password = txtPwd.Text;
-
-                ActualitzarContrasenya(password);
-
-                this.Close();
+                string passwordCheckError = verificarContrasenyaNova(password);
+                if (passwordCheckError == string.Empty)
+                {
+                    ActualitzarContrasenya(password);
+                    this.Close();
+                } else
+                {
+                    lblIncorrect.Visible = true;
+                    lblIncorrect.Text = passwordCheckError;
+                }
             }
             else
             {
+                lblIncorrect.Text = "Passwords do not match";
                 lblIncorrect.Visible = true;
             }
         }
