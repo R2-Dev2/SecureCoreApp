@@ -84,28 +84,30 @@ namespace SpaceShipsTypes
             // 
             // swtxtCategory
             // 
+            this.swtxtCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swtxtCategory.codiSW = "swcodCategory";
             this.swtxtCategory.columnName = "idSpaceShipCategory";
             this.swtxtCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
-            this.swtxtCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtCategory.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCategory.isForeignKey = true;
-            this.swtxtCategory.Location = new System.Drawing.Point(280, 179);
+            this.swtxtCategory.Location = new System.Drawing.Point(280, 183);
             this.swtxtCategory.Name = "swtxtCategory";
             this.swtxtCategory.required = true;
-            this.swtxtCategory.Size = new System.Drawing.Size(100, 29);
+            this.swtxtCategory.Size = new System.Drawing.Size(70, 16);
             this.swtxtCategory.TabIndex = 31;
             // 
             // swtxtFiliation
             // 
+            this.swtxtFiliation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.swtxtFiliation.codiSW = "swcodFiliation";
             this.swtxtFiliation.columnName = "idFiliation";
             this.swtxtFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
-            this.swtxtFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtFiliation.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtFiliation.isForeignKey = true;
-            this.swtxtFiliation.Location = new System.Drawing.Point(266, 135);
+            this.swtxtFiliation.Location = new System.Drawing.Point(266, 142);
             this.swtxtFiliation.Name = "swtxtFiliation";
             this.swtxtFiliation.required = true;
-            this.swtxtFiliation.Size = new System.Drawing.Size(100, 29);
+            this.swtxtFiliation.Size = new System.Drawing.Size(70, 16);
             this.swtxtFiliation.TabIndex = 30;
             // 
             // swcodCategory
@@ -167,14 +169,14 @@ namespace SpaceShipsTypes
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 613);
+            this.Controls.Add(this.swcodFiliation);
+            this.Controls.Add(this.swcodCategory);
             this.Controls.Add(this.swtxtCategory);
             this.Controls.Add(this.swtxtFiliation);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblFiliation);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.lblCode);
-            this.Controls.Add(this.swcodCategory);
-            this.Controls.Add(this.swcodFiliation);
             this.Controls.Add(this.swtxtDesc);
             this.Controls.Add(this.swtxtCode);
             this.Name = "frmSpaceShipsTypesMant";
@@ -182,14 +184,14 @@ namespace SpaceShipsTypes
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCode, 0);
             this.Controls.SetChildIndex(this.swtxtDesc, 0);
-            this.Controls.SetChildIndex(this.swcodFiliation, 0);
-            this.Controls.SetChildIndex(this.swcodCategory, 0);
             this.Controls.SetChildIndex(this.lblCode, 0);
             this.Controls.SetChildIndex(this.lblDesc, 0);
             this.Controls.SetChildIndex(this.lblFiliation, 0);
             this.Controls.SetChildIndex(this.lblCategory, 0);
             this.Controls.SetChildIndex(this.swtxtFiliation, 0);
             this.Controls.SetChildIndex(this.swtxtCategory, 0);
+            this.Controls.SetChildIndex(this.swcodCategory, 0);
+            this.Controls.SetChildIndex(this.swcodFiliation, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
