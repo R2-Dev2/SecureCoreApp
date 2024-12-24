@@ -22,46 +22,54 @@
         </member>
         <member name="M:DataAccess.AccesADades.PortarTaula(System.String)">
             <summary>
-            This function returns all information contained in the selected table
+            This function returns all data contained in a table
             </summary>
             <param name="nomTaula">Name of the table to be consulted</param>
             <returns>DataSet with table contents</returns>
         </member>
         <member name="M:DataAccess.AccesADades.PortarPerConsulta(System.String)">
             <summary>
-            This function will return the information resulting from the query that we pass to it
+            This function will return the information resulting from executing the given query
             </summary>
-            <param name="query">SQL Query</param>
+            <param name="query">SQL Query in plain text</param>
             <returns>DataSet with the resulting data</returns>
         </member>
         <member name="M:DataAccess.AccesADades.PortarPerConsulta(System.String,System.String)">
             <summary>
-            This function overloads the previous one in order to add as parameter the table name
+            This function overloads PortarPerConsulta(string query) in order to add the name that the returned DataTable will have
             </summary>
-            <param name="query">SQL Query</param>
-            <param name="nomTaula">Name of the table to be consultede</param>
-            <returns>DataSet with the resulting data</returns>
+            <param name="query">SQL Query in plain text</param>
+            <param name="nomTaula">Name that the returned table will have</param>
+            <returns>DataSet with the DataTable</returns>
         </member>
         <member name="M:DataAccess.AccesADades.Actualitzar(System.String,System.Data.DataSet)">
             <summary>
-            This function updates the modified data in the database. 
+            This function updates the database with the modified DataSet. 
             </summary>
-            <param name="query">Original SQL query</param>
-            <param name="dts">Data</param>
+            <param name="query">Original DataSet SQL query in plain Text</param>
+            <param name="dts">DataSet with changes</param>
             <returns>Number of rows affected</returns>
         </member>
         <member name="M:DataAccess.AccesADades.Executa(System.String)">
             <summary>
             This function executes the query received as parameter
             </summary>
-            <param name="query">SQL Query</param>
+            <param name="query">SQL Query in plain text</param>
         </member>
         <member name="M:DataAccess.AccesADades.GeneraConsultaCerca(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            This function generates a query that has as a condition that contains the provided values
+            This function generates a SqlCommand query that returns all values from the table matching the parameters
             </summary>
-            <param name="tableName">Name of the table to be consulted</param>
-            <param name="values">Values to be contained in the query</param>
+            <param name="tableName">Name of the table to be queried</param>
+            <param name="values">Parameters to be checked in the query</param>
+            <returns>Structured SQL query</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.GeneraConsultaCercaQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            This function generates a SqlCommand adding parameters to a given query in plain text
+            </summary>
+            <param name="query">Main query in plain text. Must contain at least one condition (i.e. WHERE 1 = 1)</param>
+            <param name="values">Parameters to be checked in the query</param>
             <returns>Structured SQL query</returns>
         </member>
         <member name="M:DataAccess.AccesADades.GeneraConsultaStoredProcedure(System.String)">
@@ -73,9 +81,17 @@
         </member>
         <member name="M:DataAccess.AccesADades.ExecutaCerca(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            This function uses the function of GeneraConsultaConsultaCerca() to perform a query that has as a condition and contains the provided values
+            This function uses the function of GeneraConsultaConsultaCerca() to perform a query with the given parameters
             </summary>
             <param name="tableName">Name of the table to be consulted</param>
+            <param name="values">Values to be contained in the query</param>
+            <returns>DataSet with the resulting data</returns>
+        </member>
+        <member name="M:DataAccess.AccesADades.ExecutaCercaQuery(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            This function uses the function of GeneraConsultaConsultaCercaQuery() to perform a query with the given parameters
+            </summary>
+            <param name="query">Main query in plain Text</param>
             <param name="values">Values to be contained in the query</param>
             <returns>DataSet with the resulting data</returns>
         </member>
