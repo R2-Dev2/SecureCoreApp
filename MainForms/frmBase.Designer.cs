@@ -54,6 +54,7 @@ namespace MainForms
             this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDades.Location = new System.Drawing.Point(73, 262);
+            this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
             this.dtgDades.ReadOnly = true;
             this.dtgDades.RowHeadersVisible = false;
@@ -115,9 +116,9 @@ namespace MainForms
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(70, 234);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(296, 20);
+            this.lblError.Size = new System.Drawing.Size(387, 20);
             this.lblError.TabIndex = 22;
-            this.lblError.Text = "One or more mandatory fields are blank";
+            this.lblError.Text = "One or more mandatory fields are blank or incorrect";
             this.lblError.Visible = false;
             // 
             // frmBase
