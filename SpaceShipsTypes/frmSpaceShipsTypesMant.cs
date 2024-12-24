@@ -29,6 +29,5 @@ namespace SpaceShipsTypes
             dtgDades.Columns["CodeSpaceShipType"].HeaderText = "Code";
             dtgDades.Columns["DescSpaceShipType"].HeaderText = "Description";
         }
-
     }
 }
