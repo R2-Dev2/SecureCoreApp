@@ -49,6 +49,12 @@
     <Compile Include="frmPlanetsMant.Designer.cs">
       <DependentUpon>frmPlanetsMant.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpaceShipTypesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpaceShipTypesSearch.Designer.cs">
+      <DependentUpon>frmSpaceShipTypesSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSpeciesSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmPlanetsMant.resx">
       <DependentUpon>frmPlanetsMant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpaceShipTypesSearch.resx">
+      <DependentUpon>frmSpaceShipTypesSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSpeciesSearch.resx">
       <DependentUpon>frmSpeciesSearch.cs</DependentUpon>

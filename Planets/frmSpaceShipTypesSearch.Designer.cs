@@ -1,7 +1,7 @@
 ﻿
-namespace Sectors
+namespace Planets
 {
-    partial class frmSectorSearch
+    partial class frmSpaceShipTypesSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -36,11 +36,15 @@ namespace Sectors
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
+            // pbClose
+            // 
+            this.pbClose.Location = new System.Drawing.Point(1096, 0);
+            // 
             // lblCodeSpec
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(212, 208);
+            this.lblCodeSpec.Location = new System.Drawing.Point(219, 211);
             this.lblCodeSpec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(79, 33);
@@ -51,7 +55,7 @@ namespace Sectors
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(134, 288);
+            this.lblDescSpecie.Location = new System.Drawing.Point(141, 291);
             this.lblDescSpecie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(167, 33);
@@ -61,11 +65,11 @@ namespace Sectors
             // swtxtDescPlan
             // 
             this.swtxtDescPlan.codiSW = null;
-            this.swtxtDescPlan.columnName = "DescSector";
+            this.swtxtDescPlan.columnName = "DescSpaceShipType";
             this.swtxtDescPlan.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescPlan.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescPlan.isForeignKey = false;
-            this.swtxtDescPlan.Location = new System.Drawing.Point(297, 274);
+            this.swtxtDescPlan.Location = new System.Drawing.Point(304, 277);
             this.swtxtDescPlan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtDescPlan.Name = "swtxtDescPlan";
             this.swtxtDescPlan.required = false;
@@ -75,28 +79,28 @@ namespace Sectors
             // swtxtCodePlan
             // 
             this.swtxtCodePlan.codiSW = null;
-            this.swtxtCodePlan.columnName = "CodeSector";
+            this.swtxtCodePlan.columnName = "CodeSpaceShipType";
             this.swtxtCodePlan.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodePlan.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodePlan.isForeignKey = false;
-            this.swtxtCodePlan.Location = new System.Drawing.Point(297, 199);
+            this.swtxtCodePlan.Location = new System.Drawing.Point(304, 202);
             this.swtxtCodePlan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtCodePlan.Name = "swtxtCodePlan";
             this.swtxtCodePlan.required = false;
             this.swtxtCodePlan.Size = new System.Drawing.Size(148, 41);
             this.swtxtCodePlan.TabIndex = 23;
             // 
-            // frmSectorSearch
+            // frmSpaceShipTypesSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 945);
+            this.ClientSize = new System.Drawing.Size(1102, 969);
             this.Controls.Add(this.lblCodeSpec);
             this.Controls.Add(this.lblDescSpecie);
             this.Controls.Add(this.swtxtDescPlan);
             this.Controls.Add(this.swtxtCodePlan);
-            this.Name = "frmSectorSearch";
-            this.Text = "frmSectorSearch";
+            this.Name = "frmSpaceShipTypesSearch";
+            this.Text = "frmSpaceShipTypesSearch";
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCodePlan, 0);
             this.Controls.SetChildIndex(this.swtxtDescPlan, 0);

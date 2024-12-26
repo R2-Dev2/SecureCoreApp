@@ -52,6 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{bd887f3c-b07f-45f9-a60c-46a0c4003966}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MainForms\MainForms.csproj">
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
