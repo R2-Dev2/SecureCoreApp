@@ -49,6 +49,12 @@
     <Compile Include="frmUserCategoriesMan.Designer.cs">
       <DependentUpon>frmUserCategoriesMan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserSearch.Designer.cs">
+      <DependentUpon>frmUserSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
