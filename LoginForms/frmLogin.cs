@@ -42,7 +42,7 @@ namespace LoginForms
             tries++;
             bool isValid = false;
             dict.Clear();
-            dict.Add("username", txtUser.Text);
+            dict.Add("Login", txtUser.Text);
             
             string userPassword = txtPwd.Text;
             string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE u.idUserCategory = uc.idUserCategory";
