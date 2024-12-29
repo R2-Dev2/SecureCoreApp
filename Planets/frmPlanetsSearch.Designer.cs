@@ -334,20 +334,20 @@ namespace Planets
         private System.Windows.Forms.Label lblCodeSpec;
         private System.Windows.Forms.Label lblDescSpecie;
         private CustomControls.SWTextBox swtxtDescPlan;
-        public CustomControls.SWTextBox swtxtCodePlan;
         private System.Windows.Forms.Label lblLong;
-        public CustomControls.SWTextBox swTxtLong;
         private System.Windows.Forms.Label lblLat;
-        public CustomControls.SWTextBox swTxtLat;
         private System.Windows.Forms.Label lblparsecs;
-        public CustomControls.SWTextBox swTxtparsecs;
         private System.Windows.Forms.Label lblPlanetPicture;
-        public CustomControls.SWTextBox swTxtPlanetPicture;
         private System.Windows.Forms.Label lblIPPlanet;
-        public CustomControls.SWTextBox swTxtIPPlanet;
         private System.Windows.Forms.Label lblPortPlanet;
-        public CustomControls.SWTextBox swTxtPortPlanet;
         private System.Windows.Forms.Label lblPortPlanet1;
-        public CustomControls.SWTextBox swTxtPortPlanet1;
+        private CustomControls.SWTextBox swTxtLong;
+        private CustomControls.SWTextBox swTxtLat;
+        private CustomControls.SWTextBox swTxtparsecs;
+        private CustomControls.SWTextBox swTxtPlanetPicture;
+        private CustomControls.SWTextBox swTxtIPPlanet;
+        private CustomControls.SWTextBox swTxtPortPlanet;
+        private CustomControls.SWTextBox swTxtPortPlanet1;
+        private CustomControls.SWTextBox swtxtCodePlan;
     }
 }
