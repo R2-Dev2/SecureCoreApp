@@ -36,6 +36,5 @@ namespace UserCategories
             dtgDades.Columns["Password"].Visible = false;
             dtgDades.Columns["Salt"].Visible = false;
         }
-
     }
 }
