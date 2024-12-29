@@ -49,11 +49,20 @@
     <Compile Include="frmUserCategoriesMan.Designer.cs">
       <DependentUpon>frmUserCategoriesMan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserRankSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRankSearch.Designer.cs">
+      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmUserCategoriesMan.resx">
       <DependentUpon>frmUserCategoriesMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRankSearch.resx">
+      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
