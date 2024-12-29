@@ -42,22 +42,20 @@ namespace SpaceShipsTypes
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbClose
-            // 
-            this.pbClose.Location = new System.Drawing.Point(680, 0);
-            // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCode.Location = new System.Drawing.Point(71, 92);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(41, 17);
+            this.lblCode.Size = new System.Drawing.Size(48, 20);
             this.lblCode.TabIndex = 26;
             this.lblCode.Text = "Code";
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.Location = new System.Drawing.Point(289, 97);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(79, 17);
@@ -67,6 +65,7 @@ namespace SpaceShipsTypes
             // lblFiliation
             // 
             this.lblFiliation.AutoSize = true;
+            this.lblFiliation.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiliation.Location = new System.Drawing.Point(71, 138);
             this.lblFiliation.Name = "lblFiliation";
             this.lblFiliation.Size = new System.Drawing.Size(56, 17);
@@ -76,6 +75,7 @@ namespace SpaceShipsTypes
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.Location = new System.Drawing.Point(71, 179);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(65, 17);
@@ -147,7 +147,7 @@ namespace SpaceShipsTypes
             this.swtxtDesc.isForeignKey = false;
             this.swtxtDesc.Location = new System.Drawing.Point(388, 90);
             this.swtxtDesc.Name = "swtxtDesc";
-            this.swtxtDesc.required = true;
+            this.swtxtDesc.required = false;
             this.swtxtDesc.Size = new System.Drawing.Size(199, 29);
             this.swtxtDesc.TabIndex = 23;
             // 
