@@ -27,7 +27,7 @@ namespace UserCategories
             dtgDades.Columns["idUserCategory"].Visible = false;
             dtgDades.Columns["CodeCategory"].HeaderText = "Code";
             dtgDades.Columns["DescCategory"].HeaderText = "Description";
-            dtgDades.Columns["AccessLevel"].Visible = false;
+            dtgDades.Columns["AccessLevel"].HeaderText = "Access Level";
         }
     }
 }
