@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceShipsTypes", "SpaceShi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sectors", "Sectors\Sectors.csproj", "{E32F9873-72F8-4322-9FA9-5542087C54E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{E32F9873-72F8-4322-9FA9-5542087C54E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E32F9873-72F8-4322-9FA9-5542087C54E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E32F9873-72F8-4322-9FA9-5542087C54E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
