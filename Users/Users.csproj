@@ -55,6 +55,12 @@
     <Compile Include="frmUserMan.Designer.cs">
       <DependentUpon>frmUserMan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserSearch.Designer.cs">
+      <DependentUpon>frmUserSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserMan.resx">
       <DependentUpon>frmUserMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserSearch.resx">
+      <DependentUpon>frmUserSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

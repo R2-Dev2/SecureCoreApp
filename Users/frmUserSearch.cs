@@ -25,15 +25,15 @@ namespace UserCategories
         {
             base.ConfigurarDataGrid();
             dtgDades.Columns["idUsers"].Visible = false;
-            dtgDades.Columns["CodeUser"].HeaderText = "Code";
-            dtgDades.Columns["UserName"].HeaderText = "User Name";
-            dtgDades.Columns["Login"].Visible = false;
-            dtgDades.Columns["Password"].Visible = false;
             dtgDades.Columns["idUserRank"].Visible = false;
             dtgDades.Columns["idUserCategory"].Visible = false;
-            dtgDades.Columns["Photo"].Visible = false;
             dtgDades.Columns["idPlanet"].Visible = false;
             dtgDades.Columns["idSpecie"].Visible = false;
+            dtgDades.Columns["CodeUser"].HeaderText = "Code";
+            dtgDades.Columns["UserName"].HeaderText = "User Name";
+            dtgDades.Columns["Login"].HeaderText = "Login";
+            dtgDades.Columns["Photo"].Visible = false;
+            dtgDades.Columns["Password"].Visible = false;
             dtgDades.Columns["Salt"].Visible = false;
         }
 
