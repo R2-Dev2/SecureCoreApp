@@ -30,13 +30,13 @@ namespace Planets
             dtgDades.Columns["idFiliation"].Visible = false;
             dtgDades.Columns["CodePlanet"].HeaderText = "Code";
             dtgDades.Columns["DescPlanet"].HeaderText = "Description";
-            dtgDades.Columns["long"].Visible = false;
-            dtgDades.Columns["lat"].Visible = false;
-            dtgDades.Columns["parsecs"].Visible = false;
-            dtgDades.Columns["PlanetPicture"].Visible = false;
-            dtgDades.Columns["IPPlanet"].Visible = false;
-            dtgDades.Columns["PortPlanet"].Visible = false;
-            dtgDades.Columns["PortPlanet1"].Visible = false;
+            dtgDades.Columns["long"].HeaderText = "Long";
+            dtgDades.Columns["lat"].HeaderText = "Lat";
+            dtgDades.Columns["parsecs"].HeaderText = "Parsecs";
+            dtgDades.Columns["PlanetPicture"].HeaderText = "Planet Picture";
+            dtgDades.Columns["IPPlanet"].HeaderText = "IP Planet";
+            dtgDades.Columns["PortPlanet"].HeaderText = "Port Planet";
+            dtgDades.Columns["PortPlanet1"].HeaderText = "Port Planet1";
         }
     }
 }
