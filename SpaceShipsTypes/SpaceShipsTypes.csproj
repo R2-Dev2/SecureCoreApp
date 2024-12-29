@@ -61,6 +61,12 @@
     <Compile Include="frmSpaceShipsTypesMant.Designer.cs">
       <DependentUpon>frmSpaceShipsTypesMant.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpaceShipTypesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpaceShipTypesSearch.Designer.cs">
+      <DependentUpon>frmSpaceShipTypesSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSpaceShipsTypesMant.resx">
       <DependentUpon>frmSpaceShipsTypesMant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpaceShipTypesSearch.resx">
+      <DependentUpon>frmSpaceShipTypesSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
