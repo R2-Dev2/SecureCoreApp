@@ -20,6 +20,7 @@ namespace LoginForms
         private readonly int MAX_TRIES = 3;
         private string accessLevel;
         private AccesADades accesADades;
+        private Dictionary<string, string> dict = new Dictionary<string, string>();
         bool knownUser = false;
         int tries = 0;
         int counter = 0;
@@ -40,10 +41,12 @@ namespace LoginForms
         {
             tries++;
             bool isValid = false;
-            string username = txtUser.Text;
+            dict.Clear();
+            dict.Add("username", txtUser.Text);
+            
             string userPassword = txtPwd.Text;
-            string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE username = '{username}' AND u.idUserCategory = uc.idUserCategory";
-            DataSet dts = accesADades.PortarPerConsulta(query);
+            string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE u.idUserCategory = uc.idUserCategory";
+            DataSet dts = accesADades.ExecutaCercaQuery(query, dict);
 
             if (dts.Tables[0].Rows.Count == 1)
             {
@@ -75,7 +78,7 @@ namespace LoginForms
                         pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
                         lblVerificantNivell.Text = "Verifying user access.";
                         lblBenvinguda.Text = $"Welcome, {txtUser.Text}!";
-                        accessLevel = dts.Tables[0].Rows[0]["AccessLevel"].ToString();
+                        this.accessLevel = dts.Tables[0].Rows[0]["AccessLevel"].ToString();
                     }
                 }
             }
@@ -88,6 +91,7 @@ namespace LoginForms
                 lblTriesLeft.Text = triesLeft + " tries left.";
                 pbvalidacio.Image = LoginForms.Properties.Resources.validacioIncorrecta;
                 lblTriesLeft.Visible = true;
+                txtPwd.Focus();
                 if (tries >= MAX_TRIES)
                 {
                     launchWarningMessage();

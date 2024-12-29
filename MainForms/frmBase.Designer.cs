@@ -54,6 +54,7 @@ namespace MainForms
             this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDades.Location = new System.Drawing.Point(73, 262);
+            this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
             this.dtgDades.ReadOnly = true;
             this.dtgDades.RowHeadersVisible = false;
@@ -97,10 +98,10 @@ namespace MainForms
             // 
             // pbClose
             // 
-            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
             this.pbClose.Location = new System.Drawing.Point(731, 0);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 23);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,15 +116,16 @@ namespace MainForms
             this.lblError.ForeColor = System.Drawing.Color.Red;
             this.lblError.Location = new System.Drawing.Point(70, 234);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(296, 20);
+            this.lblError.Size = new System.Drawing.Size(387, 20);
             this.lblError.TabIndex = 22;
-            this.lblError.Text = "One or more mandatory fields are blank";
+            this.lblError.Text = "One or more mandatory fields are blank or incorrect";
             this.lblError.Visible = false;
             // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(755, 606);
             this.Controls.Add(this.lblError);
