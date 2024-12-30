@@ -19,12 +19,14 @@ namespace MainForms
         private AccesADades accesADades;
         string loggedUser;
         string rangeOption;
+        string photoUrl;
         bool isLogout = false;
         private DataSet dts;
 
         public string LoggedUser { get => loggedUser; set => loggedUser = value; }
 
         public string RangeOption { get => rangeOption; set => rangeOption = value; }
+        public string PhotoUrl { get => photoUrl; set => photoUrl = value; }
 
         public bool IsLogout { get => isLogout; set => isLogout = value; }
 
@@ -37,7 +39,16 @@ namespace MainForms
         {
             lblUsuari.Text = loggedUser;
             Refresh();
-            //obtener imagen de bbdd
+            Image img;
+            if (!string.IsNullOrEmpty(this.photoUrl))
+            {
+                img = ImageUtils.GetImageFromUrl(this.photoUrl);
+                if(img is null)
+                {
+                    img = pbUsari.ErrorImage;
+                }
+                pbUsari.Image = img;
+            }          
         }
 
 
@@ -52,7 +63,6 @@ namespace MainForms
                     swLaunchForm.Form = row["formName"].ToString();
                     swLaunchForm.Description = row["description"].ToString();
                     swLaunchForm.ImageBtn = ImageUtils.GetImageFromUrl(row["image"].ToString());
-                    //swLaunchForm.Dock = DockStyle.Fill;
 
                     pnlMenu.Controls.Add(swLaunchForm);
                 }
