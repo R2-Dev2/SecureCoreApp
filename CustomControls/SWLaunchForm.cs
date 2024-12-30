@@ -70,9 +70,8 @@ namespace CustomControls
             Type tipus;
 
             tipus = ensamblat.GetType($"{this.Library}.{this.Form}");
-            dllBD = Activator.CreateInstance(tipus);
-
-            Form form = activeForm(panel, tipus);
+            
+            Form form = ActiveForm(panel, tipus);
 
             if (form == null)
             {
@@ -83,13 +82,10 @@ namespace CustomControls
                 panel.Controls.Add(form);
                 form.Show();
             }
-            else
-            {
-                form.BringToFront();
-            }
+            form.BringToFront();
         }
 
-        private Form activeForm(Control father, Type tipus)
+        private Form ActiveForm(Control father, Type tipus)
         {
             foreach (Form control in father.Controls)
             {
