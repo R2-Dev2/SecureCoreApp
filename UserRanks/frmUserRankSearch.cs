@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
 
-namespace UserCategories
+namespace UserRanks
 {
     public partial class frmUserRankSearch : frmSearch
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace UserCategories
+namespace UserRanks
 {
     partial class frmUserRankSearch
     {
@@ -36,18 +36,13 @@ namespace UserCategories
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbClose
-            // 
-            this.pbClose.Location = new System.Drawing.Point(1197, 0);
-            // 
             // lblCodeSpec
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(216, 213);
-            this.lblCodeSpec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 138);
             this.lblCodeSpec.Name = "lblCodeSpec";
-            this.lblCodeSpec.Size = new System.Drawing.Size(79, 33);
+            this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
             this.lblCodeSpec.Text = "Code";
             // 
@@ -55,10 +50,9 @@ namespace UserCategories
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(140, 284);
-            this.lblDescSpecie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 195);
             this.lblDescSpecie.Name = "lblDescSpecie";
-            this.lblDescSpecie.Size = new System.Drawing.Size(167, 33);
+            this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
             this.lblDescSpecie.Text = "Description";
             // 
@@ -69,11 +63,10 @@ namespace UserCategories
             this.swtxtDescRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescRank.isForeignKey = false;
-            this.swtxtDescRank.Location = new System.Drawing.Point(315, 279);
-            this.swtxtDescRank.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swtxtDescRank.Location = new System.Drawing.Point(169, 191);
             this.swtxtDescRank.Name = "swtxtDescRank";
             this.swtxtDescRank.required = false;
-            this.swtxtDescRank.Size = new System.Drawing.Size(148, 41);
+            this.swtxtDescRank.Size = new System.Drawing.Size(251, 29);
             this.swtxtDescRank.TabIndex = 24;
             // 
             // swtxtCodeUserRank
@@ -83,18 +76,17 @@ namespace UserCategories
             this.swtxtCodeUserRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeUserRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeUserRank.isForeignKey = false;
-            this.swtxtCodeUserRank.Location = new System.Drawing.Point(301, 204);
-            this.swtxtCodeUserRank.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swtxtCodeUserRank.Location = new System.Drawing.Point(169, 134);
             this.swtxtCodeUserRank.Name = "swtxtCodeUserRank";
             this.swtxtCodeUserRank.required = false;
-            this.swtxtCodeUserRank.Size = new System.Drawing.Size(148, 41);
+            this.swtxtCodeUserRank.Size = new System.Drawing.Size(130, 29);
             this.swtxtCodeUserRank.TabIndex = 23;
             // 
             // frmUserRankSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 886);
+            this.ClientSize = new System.Drawing.Size(677, 633);
             this.Controls.Add(this.lblCodeSpec);
             this.Controls.Add(this.lblDescSpecie);
             this.Controls.Add(this.swtxtDescRank);
@@ -117,6 +109,6 @@ namespace UserCategories
         private System.Windows.Forms.Label lblCodeSpec;
         private System.Windows.Forms.Label lblDescSpecie;
         private CustomControls.SWTextBox swtxtDescRank;
-        public CustomControls.SWTextBox swtxtCodeUserRank;
+        private CustomControls.SWTextBox swtxtCodeUserRank;
     }
 }

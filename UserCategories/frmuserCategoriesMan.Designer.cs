@@ -42,7 +42,7 @@ namespace UserCategories
             // 
             this.lblCodeCategory.AutoSize = true;
             this.lblCodeCategory.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeCategory.Location = new System.Drawing.Point(69, 128);
+            this.lblCodeCategory.Location = new System.Drawing.Point(109, 166);
             this.lblCodeCategory.Name = "lblCodeCategory";
             this.lblCodeCategory.Size = new System.Drawing.Size(48, 20);
             this.lblCodeCategory.TabIndex = 36;
@@ -52,7 +52,7 @@ namespace UserCategories
             // 
             this.lblDescUserCategory.AutoSize = true;
             this.lblDescUserCategory.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescUserCategory.Location = new System.Drawing.Point(69, 175);
+            this.lblDescUserCategory.Location = new System.Drawing.Point(57, 220);
             this.lblDescUserCategory.Name = "lblDescUserCategory";
             this.lblDescUserCategory.Size = new System.Drawing.Size(100, 20);
             this.lblDescUserCategory.TabIndex = 35;
@@ -60,13 +60,10 @@ namespace UserCategories
             // 
             // swDescCategory
             // 
-            this.swDescCategory.codiSW = null;
             this.swDescCategory.columnName = "DescCategory";
             this.swDescCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swDescCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescCategory.isForeignKey = false;
-            this.swDescCategory.Location = new System.Drawing.Point(172, 168);
-            this.swDescCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.swDescCategory.Location = new System.Drawing.Point(172, 216);
             this.swDescCategory.Name = "swDescCategory";
             this.swDescCategory.required = false;
             this.swDescCategory.Size = new System.Drawing.Size(187, 29);
@@ -75,16 +72,13 @@ namespace UserCategories
             // 
             // swCodeCategory
             // 
-            this.swCodeCategory.codiSW = null;
             this.swCodeCategory.columnName = "CodeCategory";
             this.swCodeCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swCodeCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeCategory.isForeignKey = false;
-            this.swCodeCategory.Location = new System.Drawing.Point(123, 121);
-            this.swCodeCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.swCodeCategory.Location = new System.Drawing.Point(172, 157);
             this.swCodeCategory.Name = "swCodeCategory";
             this.swCodeCategory.required = true;
-            this.swCodeCategory.Size = new System.Drawing.Size(187, 29);
+            this.swCodeCategory.Size = new System.Drawing.Size(101, 29);
             this.swCodeCategory.TabIndex = 33;
             this.swCodeCategory.Tag = "CodeCategory";
             // 
@@ -92,7 +86,7 @@ namespace UserCategories
             // 
             this.lblAccesLevel.AutoSize = true;
             this.lblAccesLevel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccesLevel.Location = new System.Drawing.Point(381, 128);
+            this.lblAccesLevel.Location = new System.Drawing.Point(51, 278);
             this.lblAccesLevel.Name = "lblAccesLevel";
             this.lblAccesLevel.Size = new System.Drawing.Size(106, 20);
             this.lblAccesLevel.TabIndex = 38;
@@ -100,13 +94,10 @@ namespace UserCategories
             // 
             // swAccessLevel
             // 
-            this.swAccessLevel.codiSW = null;
             this.swAccessLevel.columnName = "AccessLevel";
             this.swAccessLevel.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
-            this.swAccessLevel.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swAccessLevel.isForeignKey = false;
-            this.swAccessLevel.Location = new System.Drawing.Point(490, 121);
-            this.swAccessLevel.Margin = new System.Windows.Forms.Padding(2);
+            this.swAccessLevel.Location = new System.Drawing.Point(172, 274);
             this.swAccessLevel.Name = "swAccessLevel";
             this.swAccessLevel.required = true;
             this.swAccessLevel.Size = new System.Drawing.Size(187, 29);
@@ -117,14 +108,13 @@ namespace UserCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 613);
+            this.ClientSize = new System.Drawing.Size(786, 706);
             this.Controls.Add(this.lblAccesLevel);
             this.Controls.Add(this.swAccessLevel);
             this.Controls.Add(this.lblCodeCategory);
             this.Controls.Add(this.lblDescUserCategory);
             this.Controls.Add(this.swDescCategory);
             this.Controls.Add(this.swCodeCategory);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUserCategoriesMan";
             this.Text = "frmuserCategories";
             this.Load += new System.EventHandler(this.frmuserCategories_Load);

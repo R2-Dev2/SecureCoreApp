@@ -38,13 +38,10 @@ namespace SpaceShipCategories
             // 
             // swCodeShip
             // 
-            this.swCodeShip.codiSW = null;
             this.swCodeShip.columnName = "CodeSpaceShipCategory";
             this.swCodeShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swCodeShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeShip.isForeignKey = false;
             this.swCodeShip.Location = new System.Drawing.Point(125, 113);
-            this.swCodeShip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.swCodeShip.Name = "swCodeShip";
             this.swCodeShip.required = true;
             this.swCodeShip.Size = new System.Drawing.Size(187, 29);
@@ -53,13 +50,10 @@ namespace SpaceShipCategories
             // 
             // swDescShip
             // 
-            this.swDescShip.codiSW = null;
             this.swDescShip.columnName = "DescSpaceShipCategory";
             this.swDescShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swDescShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescShip.isForeignKey = false;
             this.swDescShip.Location = new System.Drawing.Point(177, 160);
-            this.swDescShip.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.swDescShip.Name = "swDescShip";
             this.swDescShip.required = false;
             this.swDescShip.Size = new System.Drawing.Size(187, 29);
@@ -90,12 +84,11 @@ namespace SpaceShipCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 613);
+            this.ClientSize = new System.Drawing.Size(786, 706);
             this.Controls.Add(this.lblCodeShip);
             this.Controls.Add(this.lblDescShip);
             this.Controls.Add(this.swDescShip);
             this.Controls.Add(this.swCodeShip);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmManSpaceShipCategories";
             this.Text = "frmManSpaceShipCategories";
             this.Controls.SetChildIndex(this.pbClose, 0);
