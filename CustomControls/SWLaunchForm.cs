@@ -62,7 +62,6 @@ namespace CustomControls
             }
         }
 
-        // TODO Fix one click error
         private void SWLaunchForm_Click(object sender, EventArgs e)
         {
             Assembly ensamblat = Assembly.LoadFrom($@"{this.Library}.dll");
