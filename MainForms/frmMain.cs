@@ -61,24 +61,6 @@ namespace MainForms
             };
         }
 
-        private void setActiveColor(Button btn) // unused 
-        {
-            foreach (Control ctrl in pnlMenu.Controls)
-            {
-                if (ctrl is Button)
-                {
-                    if (ctrl.Name == btn.Name)
-                    {
-                        ctrl.BackColor = Color.CadetBlue;
-                    }
-                    else
-                    {
-                        ctrl.BackColor = Color.PowderBlue;
-                    }
-                }
-            }
-        }
-
         private void GetOptions()
         {
             dts = accesADades.PortarPerConsulta($"Select * FROM userOptions WHERE rangeOption <= {rangeOption}");

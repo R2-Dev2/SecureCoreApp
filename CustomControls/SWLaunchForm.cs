@@ -82,6 +82,7 @@ namespace CustomControls
                 form.Show();
             }
             form.BringToFront();
+            SetActiveColor();
         }
 
         private Form ActiveForm(Control father, Type tipus)
@@ -94,6 +95,25 @@ namespace CustomControls
                 }
             }
             return null;
+        }
+
+        private void SetActiveColor() 
+        {
+            Form frm = this.FindForm();
+            foreach (Control ctrl in frm.Controls)
+            {
+                if(ctrl is FlowLayoutPanel flowLayoutPanel)
+                {
+                    foreach (Control ctrlPanel in flowLayoutPanel.Controls)
+                    {
+                        if (ctrlPanel is SWLaunchForm swLauncher)
+                        {
+                            swLauncher.BackColor = Color.PowderBlue;
+                        }
+                    }
+                }
+            }
+            this.BackColor = Color.CadetBlue;
         }
 
         private void pbImage_Click(object sender, EventArgs e)
