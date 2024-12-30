@@ -21,7 +21,7 @@ namespace MainForms
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -53,12 +53,12 @@ namespace MainForms
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDades.Location = new System.Drawing.Point(97, 224);
+            this.dtgDades.Location = new System.Drawing.Point(43, 280);
             this.dtgDades.Name = "dtgDades";
             this.dtgDades.ReadOnly = true;
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
-            this.dtgDades.Size = new System.Drawing.Size(534, 270);
+            this.dtgDades.Size = new System.Drawing.Size(588, 270);
             this.dtgDades.TabIndex = 0;
             this.dtgDades.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDades_CellContentDoubleClick);
             // 
@@ -74,7 +74,7 @@ namespace MainForms
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(534, 165);
+            this.btnSearch.Location = new System.Drawing.Point(534, 220);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(97, 39);
             this.btnSearch.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace MainForms
             // btnSelect
             // 
             this.btnSelect.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelect.Location = new System.Drawing.Point(534, 514);
+            this.btnSelect.Location = new System.Drawing.Point(534, 569);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(97, 39);
             this.btnSelect.TabIndex = 4;
@@ -98,7 +98,7 @@ namespace MainForms
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(727, 0);
+            this.pbClose.Location = new System.Drawing.Point(653, 0);
             this.pbClose.Margin = new System.Windows.Forms.Padding(0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 23);
@@ -113,7 +113,7 @@ namespace MainForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(751, 584);
+            this.ClientSize = new System.Drawing.Size(677, 633);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnSearch);
