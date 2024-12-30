@@ -58,8 +58,10 @@ namespace Users
             // 
             // swtxtUserName
             // 
+            this.swtxtUserName.codiSW = null;
             this.swtxtUserName.columnName = "UserName";
             this.swtxtUserName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtUserName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtUserName.isForeignKey = false;
             this.swtxtUserName.Location = new System.Drawing.Point(170, 230);
             this.swtxtUserName.Name = "swtxtUserName";
@@ -69,8 +71,10 @@ namespace Users
             // 
             // swtxtCode
             // 
+            this.swtxtCode.codiSW = null;
             this.swtxtCode.columnName = "CodeUser";
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
             this.swtxtCode.Location = new System.Drawing.Point(170, 180);
             this.swtxtCode.Name = "swtxtCode";

@@ -40,16 +40,15 @@ namespace UserCategories
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(1071, 0);
+            this.pbClose.Location = new System.Drawing.Point(734, 0);
             // 
             // lblCodeSpec
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(217, 203);
-            this.lblCodeSpec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeSpec.Location = new System.Drawing.Point(85, 126);
             this.lblCodeSpec.Name = "lblCodeSpec";
-            this.lblCodeSpec.Size = new System.Drawing.Size(79, 33);
+            this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
             this.lblCodeSpec.Text = "Code";
             // 
@@ -57,10 +56,9 @@ namespace UserCategories
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(139, 277);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserName.Location = new System.Drawing.Point(39, 177);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(155, 33);
+            this.lblUserName.Size = new System.Drawing.Size(94, 20);
             this.lblUserName.TabIndex = 26;
             this.lblUserName.Text = "User Name";
             // 
@@ -71,11 +69,10 @@ namespace UserCategories
             this.swTxtUserName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtUserName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtUserName.isForeignKey = false;
-            this.swTxtUserName.Location = new System.Drawing.Point(302, 269);
-            this.swTxtUserName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTxtUserName.Location = new System.Drawing.Point(164, 173);
             this.swTxtUserName.Name = "swTxtUserName";
             this.swTxtUserName.required = false;
-            this.swTxtUserName.Size = new System.Drawing.Size(148, 41);
+            this.swTxtUserName.Size = new System.Drawing.Size(148, 29);
             this.swTxtUserName.TabIndex = 24;
             // 
             // swtxtCode
@@ -85,21 +82,19 @@ namespace UserCategories
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
-            this.swtxtCode.Location = new System.Drawing.Point(302, 194);
-            this.swtxtCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swtxtCode.Location = new System.Drawing.Point(164, 122);
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = false;
-            this.swtxtCode.Size = new System.Drawing.Size(148, 41);
+            this.swtxtCode.Size = new System.Drawing.Size(148, 29);
             this.swtxtCode.TabIndex = 23;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(522, 203);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Location = new System.Drawing.Point(81, 228);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(87, 33);
+            this.lblLogin.Size = new System.Drawing.Size(52, 20);
             this.lblLogin.TabIndex = 28;
             this.lblLogin.Text = "Login";
             // 
@@ -110,18 +105,17 @@ namespace UserCategories
             this.swTxtLogin.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtLogin.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtLogin.isForeignKey = false;
-            this.swTxtLogin.Location = new System.Drawing.Point(607, 194);
-            this.swTxtLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTxtLogin.Location = new System.Drawing.Point(164, 225);
             this.swTxtLogin.Name = "swTxtLogin";
             this.swTxtLogin.required = false;
-            this.swTxtLogin.Size = new System.Drawing.Size(148, 41);
+            this.swTxtLogin.Size = new System.Drawing.Size(148, 29);
             this.swTxtLogin.TabIndex = 27;
             // 
             // frmUserSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 869);
+            this.ClientSize = new System.Drawing.Size(758, 633);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.swTxtLogin);
             this.Controls.Add(this.lblCodeSpec);

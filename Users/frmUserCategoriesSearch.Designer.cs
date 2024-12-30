@@ -42,7 +42,7 @@ namespace UserCategories
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(97, 146);
+            this.lblCodeSpec.Location = new System.Drawing.Point(97, 125);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
@@ -52,7 +52,7 @@ namespace UserCategories
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(45, 190);
+            this.lblDescSpecie.Location = new System.Drawing.Point(45, 179);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
@@ -60,10 +60,12 @@ namespace UserCategories
             // 
             // swtxtDesc
             // 
+            this.swtxtDesc.codiSW = null;
             this.swtxtDesc.columnName = "DescCategory";
             this.swtxtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDesc.isForeignKey = false;
-            this.swtxtDesc.Location = new System.Drawing.Point(174, 186);
+            this.swtxtDesc.Location = new System.Drawing.Point(174, 175);
             this.swtxtDesc.Name = "swtxtDesc";
             this.swtxtDesc.required = false;
             this.swtxtDesc.Size = new System.Drawing.Size(236, 29);
@@ -71,10 +73,12 @@ namespace UserCategories
             // 
             // swtxtCodePlan
             // 
+            this.swtxtCodePlan.codiSW = null;
             this.swtxtCodePlan.columnName = "CodeCategory";
             this.swtxtCodePlan.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtCodePlan.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodePlan.isForeignKey = false;
-            this.swtxtCodePlan.Location = new System.Drawing.Point(174, 142);
+            this.swtxtCodePlan.Location = new System.Drawing.Point(174, 121);
             this.swtxtCodePlan.Name = "swtxtCodePlan";
             this.swtxtCodePlan.required = false;
             this.swtxtCodePlan.Size = new System.Drawing.Size(125, 29);
@@ -92,10 +96,12 @@ namespace UserCategories
             // 
             // swTxtAccessLevel
             // 
+            this.swTxtAccessLevel.codiSW = null;
             this.swTxtAccessLevel.columnName = "Access Level";
             this.swTxtAccessLevel.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swTxtAccessLevel.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtAccessLevel.isForeignKey = false;
-            this.swTxtAccessLevel.Location = new System.Drawing.Point(174, 230);
+            this.swTxtAccessLevel.Location = new System.Drawing.Point(174, 229);
             this.swTxtAccessLevel.Name = "swTxtAccessLevel";
             this.swTxtAccessLevel.required = false;
             this.swTxtAccessLevel.Size = new System.Drawing.Size(236, 29);

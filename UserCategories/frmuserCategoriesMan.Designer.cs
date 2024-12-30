@@ -60,8 +60,10 @@ namespace UserCategories
             // 
             // swDescCategory
             // 
+            this.swDescCategory.codiSW = null;
             this.swDescCategory.columnName = "DescCategory";
             this.swDescCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swDescCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescCategory.isForeignKey = false;
             this.swDescCategory.Location = new System.Drawing.Point(172, 216);
             this.swDescCategory.Name = "swDescCategory";
@@ -72,8 +74,10 @@ namespace UserCategories
             // 
             // swCodeCategory
             // 
+            this.swCodeCategory.codiSW = null;
             this.swCodeCategory.columnName = "CodeCategory";
             this.swCodeCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swCodeCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeCategory.isForeignKey = false;
             this.swCodeCategory.Location = new System.Drawing.Point(172, 157);
             this.swCodeCategory.Name = "swCodeCategory";
@@ -94,8 +98,10 @@ namespace UserCategories
             // 
             // swAccessLevel
             // 
+            this.swAccessLevel.codiSW = null;
             this.swAccessLevel.columnName = "AccessLevel";
             this.swAccessLevel.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swAccessLevel.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swAccessLevel.isForeignKey = false;
             this.swAccessLevel.Location = new System.Drawing.Point(172, 274);
             this.swAccessLevel.Name = "swAccessLevel";

@@ -38,8 +38,10 @@ namespace SpaceShipCategories
             // 
             // swCodeShip
             // 
+            this.swCodeShip.codiSW = null;
             this.swCodeShip.columnName = "CodeSpaceShipCategory";
             this.swCodeShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swCodeShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeShip.isForeignKey = false;
             this.swCodeShip.Location = new System.Drawing.Point(125, 113);
             this.swCodeShip.Name = "swCodeShip";
@@ -50,8 +52,10 @@ namespace SpaceShipCategories
             // 
             // swDescShip
             // 
+            this.swDescShip.codiSW = null;
             this.swDescShip.columnName = "DescSpaceShipCategory";
             this.swDescShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swDescShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescShip.isForeignKey = false;
             this.swDescShip.Location = new System.Drawing.Point(177, 160);
             this.swDescShip.Name = "swDescShip";

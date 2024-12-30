@@ -60,8 +60,10 @@ namespace Sectors
             // 
             // swtxtDesc
             // 
+            this.swtxtDesc.codiSW = null;
             this.swtxtDesc.columnName = "DescSector";
             this.swtxtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDesc.isForeignKey = false;
             this.swtxtDesc.Location = new System.Drawing.Point(157, 174);
             this.swtxtDesc.Name = "swtxtDesc";
@@ -71,8 +73,10 @@ namespace Sectors
             // 
             // swtxtCode
             // 
+            this.swtxtCode.codiSW = null;
             this.swtxtCode.columnName = "CodeSector";
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
             this.swtxtCode.Location = new System.Drawing.Point(157, 124);
             this.swtxtCode.Name = "swtxtCode";
@@ -92,8 +96,10 @@ namespace Sectors
             // 
             // swtxtRemarks
             // 
+            this.swtxtRemarks.codiSW = null;
             this.swtxtRemarks.columnName = "Remarks";
             this.swtxtRemarks.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtRemarks.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtRemarks.isForeignKey = false;
             this.swtxtRemarks.Location = new System.Drawing.Point(157, 224);
             this.swtxtRemarks.Name = "swtxtRemarks";

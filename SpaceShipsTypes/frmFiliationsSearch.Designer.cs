@@ -58,8 +58,10 @@ namespace SpaceShipsTypes
             // 
             // swtxtDescFiliation
             // 
+            this.swtxtDescFiliation.codiSW = null;
             this.swtxtDescFiliation.columnName = "DescFiliation";
             this.swtxtDescFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtDescFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescFiliation.isForeignKey = false;
             this.swtxtDescFiliation.Location = new System.Drawing.Point(162, 180);
             this.swtxtDescFiliation.Name = "swtxtDescFiliation";
@@ -69,8 +71,10 @@ namespace SpaceShipsTypes
             // 
             // swtxtCodeFiliation
             // 
+            this.swtxtCodeFiliation.codiSW = null;
             this.swtxtCodeFiliation.columnName = "CodeFiliation";
             this.swtxtCodeFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtCodeFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeFiliation.isForeignKey = false;
             this.swtxtCodeFiliation.Location = new System.Drawing.Point(162, 129);
             this.swtxtCodeFiliation.Name = "swtxtCodeFiliation";
