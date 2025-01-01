@@ -36,18 +36,13 @@ namespace SpaceShipsTypes
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbClose
-            // 
-            this.pbClose.Location = new System.Drawing.Point(1045, 0);
-            // 
             // lblCodeSpec
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(219, 212);
-            this.lblCodeSpec.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 137);
             this.lblCodeSpec.Name = "lblCodeSpec";
-            this.lblCodeSpec.Size = new System.Drawing.Size(79, 33);
+            this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
             this.lblCodeSpec.Text = "Code";
             // 
@@ -55,10 +50,9 @@ namespace SpaceShipsTypes
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(140, 283);
-            this.lblDescSpecie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 203);
             this.lblDescSpecie.Name = "lblDescSpecie";
-            this.lblDescSpecie.Size = new System.Drawing.Size(167, 33);
+            this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
             this.lblDescSpecie.Text = "Description";
             // 
@@ -69,11 +63,10 @@ namespace SpaceShipsTypes
             this.swtxtDescSpaceShipType.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescSpaceShipType.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescSpaceShipType.isForeignKey = false;
-            this.swtxtDescSpaceShipType.Location = new System.Drawing.Point(315, 278);
-            this.swtxtDescSpaceShipType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swtxtDescSpaceShipType.Location = new System.Drawing.Point(156, 199);
             this.swtxtDescSpaceShipType.Name = "swtxtDescSpaceShipType";
             this.swtxtDescSpaceShipType.required = false;
-            this.swtxtDescSpaceShipType.Size = new System.Drawing.Size(181, 41);
+            this.swtxtDescSpaceShipType.Size = new System.Drawing.Size(244, 29);
             this.swtxtDescSpaceShipType.TabIndex = 24;
             // 
             // swtxtCodeSpaceShipType
@@ -83,18 +76,17 @@ namespace SpaceShipsTypes
             this.swtxtCodeSpaceShipType.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeSpaceShipType.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeSpaceShipType.isForeignKey = false;
-            this.swtxtCodeSpaceShipType.Location = new System.Drawing.Point(304, 203);
-            this.swtxtCodeSpaceShipType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swtxtCodeSpaceShipType.Location = new System.Drawing.Point(156, 133);
             this.swtxtCodeSpaceShipType.Name = "swtxtCodeSpaceShipType";
             this.swtxtCodeSpaceShipType.required = false;
-            this.swtxtCodeSpaceShipType.Size = new System.Drawing.Size(185, 41);
+            this.swtxtCodeSpaceShipType.Size = new System.Drawing.Size(158, 29);
             this.swtxtCodeSpaceShipType.TabIndex = 23;
             // 
             // frmSpaceShipTypesSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 883);
+            this.ClientSize = new System.Drawing.Size(677, 633);
             this.Controls.Add(this.lblCodeSpec);
             this.Controls.Add(this.lblDescSpecie);
             this.Controls.Add(this.swtxtDescSpaceShipType);

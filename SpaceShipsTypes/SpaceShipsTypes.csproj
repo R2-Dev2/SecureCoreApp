@@ -43,12 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmSpaceShipCategoriesSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSpaceShipCategoriesSearch.Designer.cs">
-      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmFiliationsSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +78,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmSpaceShipCategoriesSearch.resx">
-      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmFiliationsSearch.resx">
       <DependentUpon>frmFiliationsSearch.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,22 +39,20 @@ namespace UserRanks
             // lblCodeUserRank
             // 
             this.lblCodeUserRank.AutoSize = true;
-            this.lblCodeUserRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeUserRank.Location = new System.Drawing.Point(104, 211);
-            this.lblCodeUserRank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeUserRank.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeUserRank.Location = new System.Drawing.Point(103, 212);
             this.lblCodeUserRank.Name = "lblCodeUserRank";
-            this.lblCodeUserRank.Size = new System.Drawing.Size(67, 25);
+            this.lblCodeUserRank.Size = new System.Drawing.Size(48, 20);
             this.lblCodeUserRank.TabIndex = 32;
             this.lblCodeUserRank.Text = "Code";
             // 
             // lblDescUserRank
             // 
             this.lblDescUserRank.AutoSize = true;
-            this.lblDescUserRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescUserRank.Location = new System.Drawing.Point(104, 284);
-            this.lblDescUserRank.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescUserRank.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescUserRank.Location = new System.Drawing.Point(51, 267);
             this.lblDescUserRank.Name = "lblDescUserRank";
-            this.lblDescUserRank.Size = new System.Drawing.Size(131, 25);
+            this.lblDescUserRank.Size = new System.Drawing.Size(100, 20);
             this.lblDescUserRank.TabIndex = 31;
             this.lblDescUserRank.Text = "Description";
             // 
@@ -65,10 +63,10 @@ namespace UserRanks
             this.swDescUserRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swDescUserRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescUserRank.isForeignKey = false;
-            this.swDescUserRank.Location = new System.Drawing.Point(251, 273);
+            this.swDescUserRank.Location = new System.Drawing.Point(166, 258);
             this.swDescUserRank.Name = "swDescUserRank";
             this.swDescUserRank.required = false;
-            this.swDescUserRank.Size = new System.Drawing.Size(278, 41);
+            this.swDescUserRank.Size = new System.Drawing.Size(272, 29);
             this.swDescUserRank.TabIndex = 30;
             this.swDescUserRank.Tag = "DescRank";
             // 
@@ -79,18 +77,18 @@ namespace UserRanks
             this.swCodeUserRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodeUserRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeUserRank.isForeignKey = false;
-            this.swCodeUserRank.Location = new System.Drawing.Point(178, 200);
+            this.swCodeUserRank.Location = new System.Drawing.Point(166, 203);
             this.swCodeUserRank.Name = "swCodeUserRank";
-            this.swCodeUserRank.required = false;
-            this.swCodeUserRank.Size = new System.Drawing.Size(278, 41);
+            this.swCodeUserRank.required = true;
+            this.swCodeUserRank.Size = new System.Drawing.Size(187, 29);
             this.swCodeUserRank.TabIndex = 29;
             this.swCodeUserRank.Tag = "CodeRank";
             // 
             // frmManUserRanks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 954);
+            this.ClientSize = new System.Drawing.Size(786, 706);
             this.Controls.Add(this.lblCodeUserRank);
             this.Controls.Add(this.lblDescUserRank);
             this.Controls.Add(this.swDescUserRank);

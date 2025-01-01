@@ -28,7 +28,6 @@ namespace Sectors
             dtgDades.Columns["idRegion"].Visible = false;
             dtgDades.Columns["CodeSector"].HeaderText = "Code";
             dtgDades.Columns["DescSector"].HeaderText = "Description";
-            dtgDades.Columns["Remarks"].HeaderText = "Remarks";
         }
     }
 }

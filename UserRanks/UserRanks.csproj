@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -49,6 +50,12 @@
     <Compile Include="frmManUserRanks.Designer.cs">
       <DependentUpon>frmManUserRanks.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUserRankSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRankSearch.designer.cs">
+      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +71,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmManUserRanks.resx">
       <DependentUpon>frmManUserRanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRankSearch.resx">
+      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -30,6 +30,7 @@ namespace MainForms
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
             this.dtgDades = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -44,23 +45,32 @@ namespace MainForms
             // dtgDades
             // 
             this.dtgDades.AllowUserToAddRows = false;
+            this.dtgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDades.Location = new System.Drawing.Point(73, 262);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDades.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgDades.Location = new System.Drawing.Point(54, 359);
             this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
             this.dtgDades.ReadOnly = true;
             this.dtgDades.RowHeadersVisible = false;
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
-            this.dtgDades.Size = new System.Drawing.Size(611, 269);
+            this.dtgDades.Size = new System.Drawing.Size(676, 269);
             this.dtgDades.TabIndex = 1;
             this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgSpecies_SelectionChanged);
             // 
@@ -68,7 +78,7 @@ namespace MainForms
             // 
             this.btnUpdate.CausesValidation = false;
             this.btnUpdate.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(587, 547);
+            this.btnUpdate.Location = new System.Drawing.Point(635, 644);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 39);
             this.btnUpdate.TabIndex = 2;
@@ -79,7 +89,7 @@ namespace MainForms
             // btnNew
             // 
             this.btnNew.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(484, 547);
+            this.btnNew.Location = new System.Drawing.Point(532, 644);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(97, 39);
             this.btnNew.TabIndex = 3;
@@ -98,9 +108,10 @@ namespace MainForms
             // 
             // pbClose
             // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(731, 0);
+            this.pbClose.Location = new System.Drawing.Point(761, 0);
             this.pbClose.Margin = new System.Windows.Forms.Padding(0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(25, 23);
@@ -114,7 +125,7 @@ namespace MainForms
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(70, 234);
+            this.lblError.Location = new System.Drawing.Point(51, 331);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(387, 20);
             this.lblError.TabIndex = 22;
@@ -127,7 +138,7 @@ namespace MainForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(755, 606);
+            this.ClientSize = new System.Drawing.Size(786, 706);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lblTitle);
