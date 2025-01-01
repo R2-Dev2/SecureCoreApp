@@ -62,7 +62,6 @@ namespace CustomControls
             }
         }
 
-        // TODO Fix one click error
         private void SWLaunchForm_Click(object sender, EventArgs e)
         {
             Assembly ensamblat = Assembly.LoadFrom($@"{this.Library}.dll");
@@ -70,9 +69,8 @@ namespace CustomControls
             Type tipus;
 
             tipus = ensamblat.GetType($"{this.Library}.{this.Form}");
-            dllBD = Activator.CreateInstance(tipus);
-
-            Form form = activeForm(panel, tipus);
+            
+            Form form = ActiveForm(panel, tipus);
 
             if (form == null)
             {
@@ -83,13 +81,11 @@ namespace CustomControls
                 panel.Controls.Add(form);
                 form.Show();
             }
-            else
-            {
-                form.BringToFront();
-            }
+            form.BringToFront();
+            SetActiveColor();
         }
 
-        private Form activeForm(Control father, Type tipus)
+        private Form ActiveForm(Control father, Type tipus)
         {
             foreach (Form control in father.Controls)
             {
@@ -99,6 +95,25 @@ namespace CustomControls
                 }
             }
             return null;
+        }
+
+        private void SetActiveColor() 
+        {
+            Form frm = this.FindForm();
+            foreach (Control ctrl in frm.Controls)
+            {
+                if(ctrl is FlowLayoutPanel flowLayoutPanel)
+                {
+                    foreach (Control ctrlPanel in flowLayoutPanel.Controls)
+                    {
+                        if (ctrlPanel is SWLaunchForm swLauncher)
+                        {
+                            swLauncher.BackColor = Color.PowderBlue;
+                        }
+                    }
+                }
+            }
+            this.BackColor = Color.CadetBlue;
         }
 
         private void pbImage_Click(object sender, EventArgs e)
