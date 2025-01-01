@@ -19,6 +19,7 @@ namespace LoginForms
         private readonly string DEFAULT_PWD = "12345aA";
         private readonly int MAX_TRIES = 3;
         private string accessLevel;
+        private string imageUrl;
         private AccesADades accesADades;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         bool knownUser = false;
@@ -45,7 +46,7 @@ namespace LoginForms
             dict.Add("Login", txtUser.Text);
             
             string userPassword = txtPwd.Text;
-            string query = $"SELECT idUser, Password, Salt, AccessLevel FROM {this.tableName} as u, UserCategories as uc WHERE u.idUserCategory = uc.idUserCategory";
+            string query = $"SELECT idUser, Password, Salt, AccessLevel, Photo FROM {this.tableName} as u, UserCategories as uc WHERE u.idUserCategory = uc.idUserCategory";
             DataSet dts = accesADades.ExecutaCercaQuery(query, dict);
 
             if (dts.Tables[0].Rows.Count == 1)
@@ -79,6 +80,7 @@ namespace LoginForms
                         lblVerificantNivell.Text = "Verifying user access.";
                         lblBenvinguda.Text = $"Welcome, {txtUser.Text}!";
                         this.accessLevel = dts.Tables[0].Rows[0]["AccessLevel"].ToString();
+                        this.imageUrl = dts.Tables[0].Rows[0]["Photo"].ToString();
                     }
                 }
             }
@@ -152,6 +154,7 @@ namespace LoginForms
                 frmMain frmMain = new frmMain();
                 frmMain.LoggedUser = txtUser.Text;
                 frmMain.RangeOption = accessLevel;
+                frmMain.PhotoUrl = imageUrl;
                 frmMain.Show();
 
                 this.Close();
