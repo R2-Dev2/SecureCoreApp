@@ -103,6 +103,7 @@ namespace MainForms
             this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbUsari.BackColor = System.Drawing.Color.DarkCyan;
             this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbUsari.Image = global::MainForms.Properties.Resources.userImg;
             this.pbUsari.Location = new System.Drawing.Point(648, 0);
             this.pbUsari.Name = "pbUsari";
             this.pbUsari.Size = new System.Drawing.Size(38, 38);
@@ -114,6 +115,7 @@ namespace MainForms
             // 
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbClose.Image = global::MainForms.Properties.Resources.icon_cerrar_ventana;
             this.pbClose.Location = new System.Drawing.Point(832, 0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(48, 38);
