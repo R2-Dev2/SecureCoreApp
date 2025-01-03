@@ -76,6 +76,14 @@
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserCategories\UserCategories.csproj">
+      <Project>{0b763992-2963-446e-9f60-d504bd6648a4}</Project>
+      <Name>UserCategories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserRanks\UserRanks.csproj">
+      <Project>{7bb05c3d-8634-411d-8d1b-34f992d47de4}</Project>
+      <Name>UserRanks</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmUserCategoriesSearch.resx">
