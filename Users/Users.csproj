@@ -43,12 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmUserCategoriesSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUserCategoriesSearch.Designer.cs">
-      <DependentUpon>frmUserCategoriesSearch.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmUserMan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +70,12 @@
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserCategories\UserCategories.csproj">
+      <Project>{0b763992-2963-446e-9f60-d504bd6648a4}</Project>
+      <Name>UserCategories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmUserCategoriesSearch.resx">
-      <DependentUpon>frmUserCategoriesSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmUserMan.resx">
       <DependentUpon>frmUserMan.cs</DependentUpon>
     </EmbeddedResource>
