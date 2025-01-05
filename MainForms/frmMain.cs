@@ -62,12 +62,12 @@ namespace MainForms
                     swLaunchForm.Library = row["namespace"].ToString();
                     swLaunchForm.Form = row["formName"].ToString();
                     swLaunchForm.Description = row["description"].ToString();
-                    swLaunchForm.ImageBtn = ImageUtils.GetImageFromUrl(row["image"].ToString());
+                    swLaunchForm.ImageBtn = ImageUtils.GetImageFromRelativePath(System.IO.Path.Combine(Environment.CurrentDirectory, @row["image"].ToString()));
+                    System.IO.Path.Combine(Environment.CurrentDirectory,@row["image"].ToString());
 
                     pnlMenu.Controls.Add(swLaunchForm);
                 }
                 catch (Exception) { }
-
             };
         }
 
