@@ -49,6 +49,12 @@
     <Compile Include="frmManSpaceShipCategories.Designer.cs">
       <DependentUpon>frmManSpaceShipCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpaceShipCategoriesSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpaceShipCategoriesSearch.Designer.cs">
+      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +70,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmManSpaceShipCategories.resx">
       <DependentUpon>frmManSpaceShipCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpaceShipCategoriesSearch.resx">
+      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

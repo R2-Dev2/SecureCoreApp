@@ -43,10 +43,10 @@ namespace SpaceShipCategories
             this.swCodeShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodeShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeShip.isForeignKey = false;
-            this.swCodeShip.Location = new System.Drawing.Point(180, 177);
+            this.swCodeShip.Location = new System.Drawing.Point(125, 113);
             this.swCodeShip.Name = "swCodeShip";
-            this.swCodeShip.required = false;
-            this.swCodeShip.Size = new System.Drawing.Size(278, 41);
+            this.swCodeShip.required = true;
+            this.swCodeShip.Size = new System.Drawing.Size(187, 29);
             this.swCodeShip.TabIndex = 22;
             this.swCodeShip.Tag = "CodeSpaceShipCategory";
             // 
@@ -57,40 +57,38 @@ namespace SpaceShipCategories
             this.swDescShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swDescShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescShip.isForeignKey = false;
-            this.swDescShip.Location = new System.Drawing.Point(253, 250);
+            this.swDescShip.Location = new System.Drawing.Point(177, 160);
             this.swDescShip.Name = "swDescShip";
             this.swDescShip.required = false;
-            this.swDescShip.Size = new System.Drawing.Size(278, 41);
+            this.swDescShip.Size = new System.Drawing.Size(187, 29);
             this.swDescShip.TabIndex = 23;
             this.swDescShip.Tag = "DescSpaceShipCategory";
             // 
             // lblDescShip
             // 
             this.lblDescShip.AutoSize = true;
-            this.lblDescShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescShip.Location = new System.Drawing.Point(106, 261);
-            this.lblDescShip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescShip.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescShip.Location = new System.Drawing.Point(71, 167);
             this.lblDescShip.Name = "lblDescShip";
-            this.lblDescShip.Size = new System.Drawing.Size(131, 25);
+            this.lblDescShip.Size = new System.Drawing.Size(100, 20);
             this.lblDescShip.TabIndex = 27;
             this.lblDescShip.Text = "Description";
             // 
             // lblCodeShip
             // 
             this.lblCodeShip.AutoSize = true;
-            this.lblCodeShip.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeShip.Location = new System.Drawing.Point(106, 188);
-            this.lblCodeShip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodeShip.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodeShip.Location = new System.Drawing.Point(71, 120);
             this.lblCodeShip.Name = "lblCodeShip";
-            this.lblCodeShip.Size = new System.Drawing.Size(67, 25);
+            this.lblCodeShip.Size = new System.Drawing.Size(48, 20);
             this.lblCodeShip.TabIndex = 28;
             this.lblCodeShip.Text = "Code";
             // 
             // frmManSpaceShipCategories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 958);
+            this.ClientSize = new System.Drawing.Size(786, 706);
             this.Controls.Add(this.lblCodeShip);
             this.Controls.Add(this.lblDescShip);
             this.Controls.Add(this.swDescShip);

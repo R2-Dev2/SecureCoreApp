@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
 
-namespace SpaceShipsTypes
+namespace SpaceShipCategories
 {
     public partial class frmSpaceShipCategoriesSearch : frmSearch
     {

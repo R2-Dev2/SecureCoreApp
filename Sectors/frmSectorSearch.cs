@@ -9,24 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
 
-namespace Planets
+namespace Sectors
 {
-    public partial class frmSpeciesSearch : frmSearch
+    public partial class frmSectorSearch : frmSearch
     {
-        public frmSpeciesSearch(string controlId, Form originalForm)
+        public frmSectorSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.tableName = "Species";
-            this.title = "Search Species";
+            this.title = "Sectors Planets Search";
+            this.tableName = "Sectors";
             this.controlId = controlId;
             this.originalForm = originalForm;
         }
         protected override void ConfigurarDataGrid()
         {
             base.ConfigurarDataGrid();
-            dtgDades.Columns["idSpecie"].Visible = false;
-            dtgDades.Columns["CodeSpecie"].HeaderText = "Code";
-            dtgDades.Columns["DescSpecie"].HeaderText = "Description";
+            dtgDades.Columns["idSector"].Visible = false;
+            dtgDades.Columns["idRegion"].Visible = false;
+            dtgDades.Columns["CodeSector"].HeaderText = "Code";
+            dtgDades.Columns["DescSector"].HeaderText = "Description";
         }
     }
 }

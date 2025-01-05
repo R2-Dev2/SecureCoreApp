@@ -31,15 +31,16 @@ namespace Planets
         {
             this.lblDescSpecie = new System.Windows.Forms.Label();
             this.lblCodeSpec = new System.Windows.Forms.Label();
-            this.swtxtDescSpec = new CustomControls.SWTextBox();
-            this.swtxtCodeSpec = new CustomControls.SWTextBox();
+            this.swtxtDesc = new CustomControls.SWTextBox();
+            this.swtxtCode = new CustomControls.SWTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDescSpecie
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(94, 187);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 220);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 20;
@@ -49,51 +50,51 @@ namespace Planets
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(146, 136);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 167);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 19;
             this.lblCodeSpec.Text = "Code";
             // 
-            // swtxtDescSpec
+            // swtxtDesc
             // 
-            this.swtxtDescSpec.columnName = "DescSpecie";
-            this.swtxtDescSpec.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swtxtDescSpec.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtxtDescSpec.isForeignKey = false;
-            this.swtxtDescSpec.Location = new System.Drawing.Point(203, 178);
-            this.swtxtDescSpec.Name = "swtxtDescSpec";
-            this.swtxtDescSpec.required = false;
-            this.swtxtDescSpec.Size = new System.Drawing.Size(100, 29);
-            this.swtxtDescSpec.TabIndex = 6;
+            this.swtxtDesc.columnName = "DescSpecie";
+            this.swtxtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtDesc.isForeignKey = false;
+            this.swtxtDesc.Location = new System.Drawing.Point(154, 216);
+            this.swtxtDesc.Name = "swtxtDesc";
+            this.swtxtDesc.required = false;
+            this.swtxtDesc.Size = new System.Drawing.Size(148, 29);
+            this.swtxtDesc.TabIndex = 6;
             // 
-            // swtxtCodeSpec
+            // swtxtCode
             // 
-            this.swtxtCodeSpec.columnName = "CodeSpecie";
-            this.swtxtCodeSpec.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swtxtCodeSpec.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtxtCodeSpec.isForeignKey = false;
-            this.swtxtCodeSpec.Location = new System.Drawing.Point(203, 130);
-            this.swtxtCodeSpec.Name = "swtxtCodeSpec";
-            this.swtxtCodeSpec.required = false;
-            this.swtxtCodeSpec.Size = new System.Drawing.Size(100, 29);
-            this.swtxtCodeSpec.TabIndex = 5;
+            this.swtxtCode.columnName = "CodeSpecie";
+            this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtCode.isForeignKey = false;
+            this.swtxtCode.Location = new System.Drawing.Point(154, 163);
+            this.swtxtCode.Name = "swtxtCode";
+            this.swtxtCode.required = false;
+            this.swtxtCode.Size = new System.Drawing.Size(148, 29);
+            this.swtxtCode.TabIndex = 5;
             // 
             // frmSpeciesSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 573);
+            this.ClientSize = new System.Drawing.Size(677, 633);
             this.Controls.Add(this.lblCodeSpec);
             this.Controls.Add(this.lblDescSpecie);
-            this.Controls.Add(this.swtxtDescSpec);
-            this.Controls.Add(this.swtxtCodeSpec);
+            this.Controls.Add(this.swtxtDesc);
+            this.Controls.Add(this.swtxtCode);
             this.Name = "frmSpeciesSearch";
             this.Text = "frmSpeciesSearch";
-            this.Controls.SetChildIndex(this.swtxtCodeSpec, 0);
-            this.Controls.SetChildIndex(this.swtxtDescSpec, 0);
+            this.Controls.SetChildIndex(this.pbClose, 0);
+            this.Controls.SetChildIndex(this.swtxtCode, 0);
+            this.Controls.SetChildIndex(this.swtxtDesc, 0);
             this.Controls.SetChildIndex(this.lblDescSpecie, 0);
             this.Controls.SetChildIndex(this.lblCodeSpec, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,7 +103,7 @@ namespace Planets
         #endregion
         private System.Windows.Forms.Label lblDescSpecie;
         private System.Windows.Forms.Label lblCodeSpec;
-        private CustomControls.SWTextBox swtxtDescSpec;
-        public CustomControls.SWTextBox swtxtCodeSpec;
+        private CustomControls.SWTextBox swtxtDesc;
+        private CustomControls.SWTextBox swtxtCode;
     }
 }

@@ -36,7 +36,7 @@ namespace DataAccess
             conn = new SqlConnection(connectionString);
         }
         /// <summary>
-        /// This function returns all information contained in the selected table
+        /// This function returns all data contained in a table
         /// </summary>
         /// <param name="nomTaula">Name of the table to be consulted</param>
         /// <returns>DataSet with table contents</returns>
@@ -57,9 +57,9 @@ namespace DataAccess
             return dts;
         }
         /// <summary>
-        /// This function will return the information resulting from the query that we pass to it
+        /// This function will return the information resulting from executing the given query
         /// </summary>
-        /// <param name="query">SQL Query</param>
+        /// <param name="query">SQL Query in plain text</param>
         /// <returns>DataSet with the resulting data</returns>
         public DataSet PortarPerConsulta(string query)
         {
@@ -77,11 +77,11 @@ namespace DataAccess
             return dts;
         }
         /// <summary>
-        /// This function overloads the previous one in order to add as parameter the table name
+        /// This function overloads PortarPerConsulta(string query) in order to add the name that the returned DataTable will have
         /// </summary>
-        /// <param name="query">SQL Query</param>
-        /// <param name="nomTaula">Name of the table to be consultede</param>
-        /// <returns>DataSet with the resulting data</returns>
+        /// <param name="query">SQL Query in plain text</param>
+        /// <param name="nomTaula">Name that the returned table will have</param>
+        /// <returns>DataSet with the DataTable</returns>
         public DataSet PortarPerConsulta(string query, string nomTaula)
         {
             SqlDataAdapter adapter;
@@ -98,10 +98,10 @@ namespace DataAccess
             return dts;
         }
         /// <summary>
-        /// This function updates the modified data in the database. 
+        /// This function updates the database with the modified DataSet. 
         /// </summary>
-        /// <param name="query">Original SQL query</param>
-        /// <param name="dts">Data</param>
+        /// <param name="query">Original DataSet SQL query in plain Text</param>
+        /// <param name="dts">DataSet with changes</param>
         /// <returns>Number of rows affected</returns>
         public int Actualitzar(string query, DataSet dts)
         {
@@ -123,7 +123,7 @@ namespace DataAccess
         /// <summary>
         /// This function executes the query received as parameter
         /// </summary>
-        /// <param name="query">SQL Query</param>
+        /// <param name="query">SQL Query in plain text</param>
         public void Executa(string query)
         {
             conn.Open();
@@ -134,15 +134,36 @@ namespace DataAccess
             conn.Close();
         }
         /// <summary>
-        /// This function generates a query that has as a condition that contains the provided values
+        /// This function generates a SqlCommand query that returns all values from the table matching the parameters
         /// </summary>
-        /// <param name="tableName">Name of the table to be consulted</param>
-        /// <param name="values">Values to be contained in the query</param>
+        /// <param name="tableName">Name of the table to be queried</param>
+        /// <param name="values">Parameters to be checked in the query</param>
         /// <returns>Structured SQL query</returns>
         private SqlCommand GeneraConsultaCerca(string tableName, Dictionary<string, string> values)
         {
             SqlCommand command = conn.CreateCommand();
             string query = $"SELECT * FROM {tableName} WHERE 1 = 1";
+            command.CommandType = CommandType.Text;
+
+            foreach (var entry in values)
+            {
+                query += $" AND {entry.Key} = '{entry.Value}'";
+                command.Parameters.Add(new SqlParameter(entry.Key, entry.Value));
+            }
+            query += ";";
+            command.CommandText = query;
+
+            return command;
+        }
+        /// <summary>
+        /// This function generates a SqlCommand adding parameters to a given query in plain text
+        /// </summary>
+        /// <param name="query">Main query in plain text. Must contain at least one condition (i.e. WHERE 1 = 1)</param>
+        /// <param name="values">Parameters to be checked in the query</param>
+        /// <returns>Structured SQL query</returns>
+        private SqlCommand GeneraConsultaCercaQuery(string query, Dictionary<string, string> values)
+        {
+            SqlCommand command = conn.CreateCommand();
             command.CommandType = CommandType.Text;
 
             foreach (var entry in values)
@@ -168,7 +189,7 @@ namespace DataAccess
             return command;
         }
         /// <summary>
-        /// This function uses the function of GeneraConsultaConsultaCerca() to perform a query that has as a condition and contains the provided values
+        /// This function uses the function of GeneraConsultaConsultaCerca() to perform a query with the given parameters
         /// </summary>
         /// <param name="tableName">Name of the table to be consulted</param>
         /// <param name="values">Values to be contained in the query</param>
@@ -179,6 +200,26 @@ namespace DataAccess
             SqlDataAdapter adapter = new SqlDataAdapter();
 
             SqlCommand command = GeneraConsultaCerca(tableName, values);
+            adapter.SelectCommand = command;
+
+            conn.Open();
+            adapter.Fill(dts);
+            conn.Close();
+
+            return dts;
+        }
+        /// <summary>
+        /// This function uses the function of GeneraConsultaConsultaCercaQuery() to perform a query with the given parameters
+        /// </summary>
+        /// <param name="query">Main query in plain Text</param>
+        /// <param name="values">Values to be contained in the query</param>
+        /// <returns>DataSet with the resulting data</returns>
+        public DataSet ExecutaCercaQuery(string query, Dictionary<string, string> values)
+        {
+            DataSet dts = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            SqlCommand command = GeneraConsultaCercaQuery(query, values);
             adapter.SelectCommand = command;
 
             conn.Open();

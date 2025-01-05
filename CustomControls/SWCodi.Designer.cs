@@ -37,22 +37,23 @@ namespace CustomControls
             // 
             this.txtCodi.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodi.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtCodi.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodi.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodi.Location = new System.Drawing.Point(0, 0);
             this.txtCodi.MaxLength = 4;
             this.txtCodi.Name = "txtCodi";
-            this.txtCodi.Size = new System.Drawing.Size(50, 23);
+            this.txtCodi.Size = new System.Drawing.Size(66, 29);
             this.txtCodi.TabIndex = 0;
             this.txtCodi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodi_KeyDown);
             this.txtCodi.Leave += new System.EventHandler(this.txtCodi_Leave);
             // 
             // txtDesc
             // 
+            this.txtDesc.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtDesc.Enabled = false;
-            this.txtDesc.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(70, 0);
+            this.txtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.Location = new System.Drawing.Point(85, 0);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(317, 23);
+            this.txtDesc.Size = new System.Drawing.Size(317, 29);
             this.txtDesc.TabIndex = 1;
             // 
             // SWCodi
@@ -62,7 +63,7 @@ namespace CustomControls
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCodi);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(394, 27);
+            this.Size = new System.Drawing.Size(402, 29);
             this.Load += new System.EventHandler(this.SWCodi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

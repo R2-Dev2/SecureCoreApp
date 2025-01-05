@@ -36,15 +36,11 @@ namespace SpaceShipsTypes
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbClose
-            // 
-            this.pbClose.Location = new System.Drawing.Point(678, 0);
-            // 
             // lblCode
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(148, 133);
+            this.lblCode.Location = new System.Drawing.Point(91, 133);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(48, 20);
             this.lblCode.TabIndex = 25;
@@ -54,7 +50,7 @@ namespace SpaceShipsTypes
             // 
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(96, 184);
+            this.lblDesc.Location = new System.Drawing.Point(39, 184);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(100, 20);
             this.lblDesc.TabIndex = 26;
@@ -62,23 +58,25 @@ namespace SpaceShipsTypes
             // 
             // swtxtDescFiliation
             // 
+            this.swtxtDescFiliation.codiSW = null;
             this.swtxtDescFiliation.columnName = "DescFiliation";
             this.swtxtDescFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescFiliation.isForeignKey = false;
-            this.swtxtDescFiliation.Location = new System.Drawing.Point(205, 175);
+            this.swtxtDescFiliation.Location = new System.Drawing.Point(162, 180);
             this.swtxtDescFiliation.Name = "swtxtDescFiliation";
             this.swtxtDescFiliation.required = false;
-            this.swtxtDescFiliation.Size = new System.Drawing.Size(100, 29);
+            this.swtxtDescFiliation.Size = new System.Drawing.Size(263, 29);
             this.swtxtDescFiliation.TabIndex = 24;
             // 
             // swtxtCodeFiliation
             // 
+            this.swtxtCodeFiliation.codiSW = null;
             this.swtxtCodeFiliation.columnName = "CodeFiliation";
             this.swtxtCodeFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeFiliation.isForeignKey = false;
-            this.swtxtCodeFiliation.Location = new System.Drawing.Point(205, 127);
+            this.swtxtCodeFiliation.Location = new System.Drawing.Point(162, 129);
             this.swtxtCodeFiliation.Name = "swtxtCodeFiliation";
             this.swtxtCodeFiliation.required = false;
             this.swtxtCodeFiliation.Size = new System.Drawing.Size(100, 29);
@@ -88,13 +86,14 @@ namespace SpaceShipsTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 589);
+            this.ClientSize = new System.Drawing.Size(677, 633);
             this.Controls.Add(this.lblCode);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.swtxtDescFiliation);
             this.Controls.Add(this.swtxtCodeFiliation);
             this.Name = "frmFiliationsSearch";
             this.Text = "frmFiliationsSearch";
+            this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCodeFiliation, 0);
             this.Controls.SetChildIndex(this.swtxtDescFiliation, 0);
             this.Controls.SetChildIndex(this.lblDesc, 0);
@@ -110,6 +109,6 @@ namespace SpaceShipsTypes
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label lblDesc;
         private CustomControls.SWTextBox swtxtDescFiliation;
-        public CustomControls.SWTextBox swtxtCodeFiliation;
+        private CustomControls.SWTextBox swtxtCodeFiliation;
     }
 }

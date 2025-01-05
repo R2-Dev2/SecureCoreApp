@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BB05C3D-8634-411D-8D1B-34F992D47DE4}</ProjectGuid>
+    <ProjectGuid>{3115C9FF-A5F5-4DC8-9ACC-84B4031C2DEC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UserRanks</RootNamespace>
-    <AssemblyName>UserRanks</AssemblyName>
+    <RootNamespace>Users</RootNamespace>
+    <AssemblyName>Users</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,17 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManUserRanks.cs">
+    <Compile Include="frmUserCategoriesSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManUserRanks.Designer.cs">
-      <DependentUpon>frmManUserRanks.cs</DependentUpon>
+    <Compile Include="frmUserCategoriesSearch.Designer.cs">
+      <DependentUpon>frmUserCategoriesSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserRankSearch.cs">
+    <Compile Include="frmUserMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserRankSearch.designer.cs">
-      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    <Compile Include="frmUserMan.Designer.cs">
+      <DependentUpon>frmUserMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserSearch.Designer.cs">
+      <DependentUpon>frmUserSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,17 +68,24 @@
       <Project>{bd887f3c-b07f-45f9-a60c-46a0c4003966}</Project>
       <Name>CustomControls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{32f0f4dd-8ad5-4f3c-b52f-0ea6fe1c0fa2}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MainForms\MainForms.csproj">
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManUserRanks.resx">
-      <DependentUpon>frmManUserRanks.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserCategoriesSearch.resx">
+      <DependentUpon>frmUserCategoriesSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUserRankSearch.resx">
-      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserMan.resx">
+      <DependentUpon>frmUserMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserSearch.resx">
+      <DependentUpon>frmUserSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
