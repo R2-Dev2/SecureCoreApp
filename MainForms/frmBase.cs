@@ -172,7 +172,7 @@ namespace MainForms
             this.accesADades = new AccesADades(this.connectionString);
             this.query = $"SELECT * FROM {this.tableName}";
 
-            dtgDades.SelectionChanged -= this.dtgSpecies_SelectionChanged;
+            dtgDades.SelectionChanged -= this.dtgDades_SelectionChanged;
             PortarDades();
             ConfigurarDataGrid();
         }
@@ -219,7 +219,7 @@ namespace MainForms
             FocusOnCodeTable();
         }
 
-        private void dtgSpecies_SelectionChanged(object sender, EventArgs e)
+        protected virtual void dtgDades_SelectionChanged(object sender, EventArgs e)
         {
             if(incorrectRowIndex != -1)
             {
@@ -259,6 +259,11 @@ namespace MainForms
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtgDades_CurrentCellChanged(object sender, EventArgs e)
+        {
+            dtgDades_SelectionChanged(sender, e);
         }
     }
 }
