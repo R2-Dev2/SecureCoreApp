@@ -62,7 +62,7 @@ namespace MainForms
                     swLaunchForm.Library = row["namespace"].ToString();
                     swLaunchForm.Form = row["formName"].ToString();
                     swLaunchForm.Description = row["description"].ToString();
-                    swLaunchForm.ImageBtn = ImageUtils.GetImageFromUrl(row["image"].ToString());
+                    swLaunchForm.ImageBtn = ImageUtils.GetImageFromRelativePath(row["image"].ToString());
 
                     pnlMenu.Controls.Add(swLaunchForm);
                 }

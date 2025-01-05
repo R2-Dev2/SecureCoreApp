@@ -31,5 +31,17 @@ namespace Utils
 
             return img;
         }
+
+        public static Image GetImageFromRelativePath(string path)
+        {            
+            try
+            {
+                return Image.FromFile(System.IO.Path.Combine(Environment.CurrentDirectory, @path));
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }
