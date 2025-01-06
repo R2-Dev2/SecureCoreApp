@@ -18,14 +18,14 @@ namespace MainForms
     {
         private AccesADades accesADades;
         string rangeOption;
-        string idUser;
-        bool isLogout = false;
         private DataSet dtsOptions;
         private DataSet dtsUser;
 
-        public string RangeOption { get => rangeOption; set => rangeOption = value; }
-        public string IdUser { get => idUser; set => idUser = value; }
-        public bool IsLogout { get => isLogout; set => isLogout = value; }
+        private string _idUser;
+        private bool _isLogout = false;
+
+        public string idUser { get => _idUser; set => _idUser = value; }
+        public bool isLogout { get => _isLogout; set => _isLogout = value; }
 
         public frmMain()
         {

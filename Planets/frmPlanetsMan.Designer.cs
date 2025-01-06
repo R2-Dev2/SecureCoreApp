@@ -127,7 +127,7 @@ namespace Planets
             this.swcodSector.Name = "swcodSector";
             this.swcodSector.nameId = "idSector";
             this.swcodSector.Size = new System.Drawing.Size(402, 29);
-            this.swcodSector.TabIndex = 35;
+            this.swcodSector.TabIndex = 4;
             this.swcodSector.tableName = "Sectors";
             // 
             // swcodFiliation
@@ -141,7 +141,7 @@ namespace Planets
             this.swcodFiliation.Name = "swcodFiliation";
             this.swcodFiliation.nameId = "idFiliation";
             this.swcodFiliation.Size = new System.Drawing.Size(402, 29);
-            this.swcodFiliation.TabIndex = 34;
+            this.swcodFiliation.TabIndex = 3;
             this.swcodFiliation.tableName = "Filiations";
             // 
             // swImagePlan
@@ -155,7 +155,7 @@ namespace Planets
             this.swImagePlan.Name = "swImagePlan";
             this.swImagePlan.required = false;
             this.swImagePlan.Size = new System.Drawing.Size(175, 29);
-            this.swImagePlan.TabIndex = 33;
+            this.swImagePlan.TabIndex = 9;
             // 
             // swtxtCode
             // 
@@ -168,7 +168,7 @@ namespace Planets
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = true;
             this.swtxtCode.Size = new System.Drawing.Size(150, 29);
-            this.swtxtCode.TabIndex = 32;
+            this.swtxtCode.TabIndex = 0;
             this.swtxtCode.Tag = "CodePlanet";
             // 
             // swtxtCodiNative
@@ -205,7 +205,7 @@ namespace Planets
             this.swcodNative.Name = "swcodNative";
             this.swcodNative.nameId = "idSpecie";
             this.swcodNative.Size = new System.Drawing.Size(402, 29);
-            this.swcodNative.TabIndex = 42;
+            this.swcodNative.TabIndex = 5;
             this.swcodNative.tableName = "Species";
             // 
             // lblIPPlanet
@@ -239,7 +239,7 @@ namespace Planets
             this.swIPPlanet.Name = "swIPPlanet";
             this.swIPPlanet.required = false;
             this.swIPPlanet.Size = new System.Drawing.Size(150, 29);
-            this.swIPPlanet.TabIndex = 46;
+            this.swIPPlanet.TabIndex = 2;
             // 
             // swDescPlan
             // 
@@ -252,7 +252,7 @@ namespace Planets
             this.swDescPlan.Name = "swDescPlan";
             this.swDescPlan.required = true;
             this.swDescPlan.Size = new System.Drawing.Size(132, 29);
-            this.swDescPlan.TabIndex = 45;
+            this.swDescPlan.TabIndex = 6;
             // 
             // lblPortPlanet
             // 
@@ -285,7 +285,7 @@ namespace Planets
             this.swPortPlanet.Name = "swPortPlanet";
             this.swPortPlanet.required = false;
             this.swPortPlanet.Size = new System.Drawing.Size(112, 29);
-            this.swPortPlanet.TabIndex = 50;
+            this.swPortPlanet.TabIndex = 10;
             // 
             // swtxtLong
             // 
@@ -298,7 +298,7 @@ namespace Planets
             this.swtxtLong.Name = "swtxtLong";
             this.swtxtLong.required = true;
             this.swtxtLong.Size = new System.Drawing.Size(132, 29);
-            this.swtxtLong.TabIndex = 49;
+            this.swtxtLong.TabIndex = 7;
             // 
             // lblPortPlanet1
             // 
@@ -331,7 +331,7 @@ namespace Planets
             this.swPortPlanet1.Name = "swPortPlanet1";
             this.swPortPlanet1.required = false;
             this.swPortPlanet1.Size = new System.Drawing.Size(112, 29);
-            this.swPortPlanet1.TabIndex = 54;
+            this.swPortPlanet1.TabIndex = 11;
             // 
             // swlat
             // 
@@ -344,7 +344,7 @@ namespace Planets
             this.swlat.Name = "swlat";
             this.swlat.required = true;
             this.swlat.Size = new System.Drawing.Size(150, 29);
-            this.swlat.TabIndex = 53;
+            this.swlat.TabIndex = 1;
             // 
             // lblParsecs
             // 
@@ -367,7 +367,7 @@ namespace Planets
             this.swParsecs.Name = "swParsecs";
             this.swParsecs.required = true;
             this.swParsecs.Size = new System.Drawing.Size(132, 29);
-            this.swParsecs.TabIndex = 57;
+            this.swParsecs.TabIndex = 8;
             // 
             // pbPlanet
             // 
