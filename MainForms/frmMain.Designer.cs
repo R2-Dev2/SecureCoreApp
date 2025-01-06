@@ -33,11 +33,11 @@ namespace MainForms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.imlButtons = new System.Windows.Forms.ImageList(this.components);
             this.pnlStatus = new System.Windows.Forms.Panel();
+            this.pbUsari = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblUsuari = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPpal = new System.Windows.Forms.Panel();
-            this.pbUsari = new System.Windows.Forms.PictureBox();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             this.pnlStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsari)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -67,6 +67,33 @@ namespace MainForms
             this.pnlStatus.Size = new System.Drawing.Size(880, 38);
             this.pnlStatus.TabIndex = 2;
             // 
+            // pbUsari
+            // 
+            this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbUsari.BackColor = System.Drawing.Color.DarkCyan;
+            this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbUsari.Image = global::MainForms.Properties.Resources.userImg;
+            this.pbUsari.Location = new System.Drawing.Point(648, 0);
+            this.pbUsari.Name = "pbUsari";
+            this.pbUsari.Size = new System.Drawing.Size(38, 38);
+            this.pbUsari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsari.TabIndex = 3;
+            this.pbUsari.TabStop = false;
+            this.pbUsari.Click += new System.EventHandler(this.pbUsari_Click);
+            // 
+            // pbClose
+            // 
+            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbClose.Image = global::MainForms.Properties.Resources.icon_cerrar_ventana;
+            this.pbClose.Location = new System.Drawing.Point(832, 0);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(48, 38);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClose.TabIndex = 1;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            // 
             // lblUsuari
             // 
             this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -77,6 +104,7 @@ namespace MainForms
             this.lblUsuari.Size = new System.Drawing.Size(132, 38);
             this.lblUsuari.TabIndex = 0;
             this.lblUsuari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblUsuari.Click += new System.EventHandler(this.lblUsuari_Click);
             // 
             // pnlMenu
             // 
@@ -97,32 +125,6 @@ namespace MainForms
             this.pnlPpal.Name = "pnlPpal";
             this.pnlPpal.Size = new System.Drawing.Size(647, 469);
             this.pnlPpal.TabIndex = 1;
-            // 
-            // pbUsari
-            // 
-            this.pbUsari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbUsari.BackColor = System.Drawing.Color.DarkCyan;
-            this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbUsari.Image = global::MainForms.Properties.Resources.userImg;
-            this.pbUsari.Location = new System.Drawing.Point(648, 0);
-            this.pbUsari.Name = "pbUsari";
-            this.pbUsari.Size = new System.Drawing.Size(38, 38);
-            this.pbUsari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsari.TabIndex = 3;
-            this.pbUsari.TabStop = false;
-            // 
-            // pbClose
-            // 
-            this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pbClose.Image = global::MainForms.Properties.Resources.icon_cerrar_ventana;
-            this.pbClose.Location = new System.Drawing.Point(832, 0);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(48, 38);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbClose.TabIndex = 1;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // frmMain
             // 
