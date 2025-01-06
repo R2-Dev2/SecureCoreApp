@@ -50,7 +50,7 @@ namespace UserOptions
             // 
             this.swtxtDescription.codiSW = null;
             this.swtxtDescription.columnName = null;
-            this.swtxtDescription.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtDescription.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescription.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescription.isForeignKey = false;
             this.swtxtDescription.Location = new System.Drawing.Point(178, 97);
@@ -74,7 +74,7 @@ namespace UserOptions
             // 
             this.swtxtFormName.codiSW = null;
             this.swtxtFormName.columnName = null;
-            this.swtxtFormName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtFormName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtFormName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtFormName.isForeignKey = false;
             this.swtxtFormName.Location = new System.Drawing.Point(178, 142);
@@ -98,7 +98,7 @@ namespace UserOptions
             // 
             this.swtxtTableName.codiSW = null;
             this.swtxtTableName.columnName = null;
-            this.swtxtTableName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtTableName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtTableName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtTableName.isForeignKey = false;
             this.swtxtTableName.Location = new System.Drawing.Point(178, 188);
@@ -154,7 +154,7 @@ namespace UserOptions
             // 
             this.swtxtNamespace.codiSW = null;
             this.swtxtNamespace.columnName = null;
-            this.swtxtNamespace.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtNamespace.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtNamespace.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtNamespace.isForeignKey = false;
             this.swtxtNamespace.Location = new System.Drawing.Point(178, 281);
