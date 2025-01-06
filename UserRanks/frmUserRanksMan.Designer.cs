@@ -1,7 +1,7 @@
 ﻿
 namespace UserRanks
 {
-    partial class frmManUserRanks
+    partial class frmUserRanksMan
     {
         /// <summary>
         /// Required designer variable.

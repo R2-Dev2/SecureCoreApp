@@ -44,17 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManUserRanks.cs">
+    <Compile Include="frmUserRanksMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManUserRanks.Designer.cs">
-      <DependentUpon>frmManUserRanks.cs</DependentUpon>
+    <Compile Include="frmUserRanksMan.Designer.cs">
+      <DependentUpon>frmUserRanksMan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUserRankSearch.cs">
+    <Compile Include="frmUserRanksSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUserRankSearch.designer.cs">
-      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    <Compile Include="frmUserRanksSearch.designer.cs">
+      <DependentUpon>frmUserRanksSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,11 +69,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManUserRanks.resx">
-      <DependentUpon>frmManUserRanks.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserRanksMan.resx">
+      <DependentUpon>frmUserRanksMan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUserRankSearch.resx">
-      <DependentUpon>frmUserRankSearch.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserRanksSearch.resx">
+      <DependentUpon>frmUserRanksSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

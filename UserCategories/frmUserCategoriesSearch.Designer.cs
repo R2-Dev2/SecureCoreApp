@@ -97,7 +97,7 @@ namespace UserCategories
             // swTxtAccessLevel
             // 
             this.swTxtAccessLevel.codiSW = null;
-            this.swTxtAccessLevel.columnName = "Access Level";
+            this.swTxtAccessLevel.columnName = "AccessLevel";
             this.swTxtAccessLevel.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtAccessLevel.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtAccessLevel.isForeignKey = false;

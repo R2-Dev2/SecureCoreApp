@@ -11,9 +11,9 @@ using MainForms;
 
 namespace Sectors
 {
-    public partial class frmSectorSearch : frmSearch
+    public partial class frmSectorsSearch : frmSearch
     {
-        public frmSectorSearch(string controlId, Form originalForm)
+        public frmSectorsSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
             this.title = "Sectors Planets Search";

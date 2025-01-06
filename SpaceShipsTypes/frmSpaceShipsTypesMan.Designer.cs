@@ -1,7 +1,7 @@
 ﻿
 namespace SpaceShipsTypes
 {
-    partial class frmSpaceShipsTypesMant
+    partial class frmSpaceShipsTypesMan
     {
         /// <summary>
         /// Required designer variable.
@@ -112,11 +112,11 @@ namespace SpaceShipsTypes
             // 
             // swcodCategory
             // 
-            this.swcodCategory.classeCS = "SpaceShipsTypes";
+            this.swcodCategory.classeCS = "SpaceShipCategories";
             this.swcodCategory.codeName = "CodeSpaceShipCategory";
             this.swcodCategory.controlId = "swtxtCategory";
             this.swcodCategory.descName = "DescSpaceShipCategory";
-            this.swcodCategory.formCS = "frmSpaceShipCategoriesSearch";
+            this.swcodCategory.formCS = "frmSpaceShipsCategoriesSearch";
             this.swcodCategory.Location = new System.Drawing.Point(167, 287);
             this.swcodCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swcodCategory.Name = "swcodCategory";
@@ -166,7 +166,7 @@ namespace SpaceShipsTypes
             this.swtxtCode.Size = new System.Drawing.Size(100, 29);
             this.swtxtCode.TabIndex = 22;
             // 
-            // frmSpaceShipsTypesMant
+            // frmSpaceShipsTypesMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +182,7 @@ namespace SpaceShipsTypes
             this.Controls.Add(this.swtxtDesc);
             this.Controls.Add(this.swtxtCode);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmSpaceShipsTypesMant";
+            this.Name = "frmSpaceShipsTypesMan";
             this.Text = "frmSpaceShipsTypesMant";
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCode, 0);

@@ -1,7 +1,7 @@
 ﻿
 namespace SpaceShipCategories
 {
-    partial class frmSpaceShipCategoriesSearch
+    partial class frmSpaceShipsCategoriesSearch
     {
         /// <summary>
         /// Required designer variable.

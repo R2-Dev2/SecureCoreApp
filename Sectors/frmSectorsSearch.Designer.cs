@@ -1,7 +1,7 @@
 ﻿
 namespace Sectors
 {
-    partial class frmSectorSearch
+    partial class frmSectorsSearch
     {
         /// <summary>
         /// Required designer variable.

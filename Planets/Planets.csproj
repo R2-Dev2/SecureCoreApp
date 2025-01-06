@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPlanetsMant.cs">
+    <Compile Include="frmPlanetsMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPlanetsMant.Designer.cs">
-      <DependentUpon>frmPlanetsMant.cs</DependentUpon>
+    <Compile Include="frmPlanetsMan.Designer.cs">
+      <DependentUpon>frmPlanetsMan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPlanetsSearch.cs">
       <SubType>Form</SubType>
@@ -82,8 +82,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmPlanetsMant.resx">
-      <DependentUpon>frmPlanetsMant.cs</DependentUpon>
+    <EmbeddedResource Include="frmPlanetsMan.resx">
+      <DependentUpon>frmPlanetsMan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPlanetsSearch.resx">
       <DependentUpon>frmPlanetsSearch.cs</DependentUpon>

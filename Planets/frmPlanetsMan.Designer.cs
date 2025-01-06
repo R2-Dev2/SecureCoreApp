@@ -1,7 +1,7 @@
 ﻿
 namespace Planets
 {
-    partial class frmPlanetsMant
+    partial class frmPlanetsMan
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@ namespace Planets
             this.swcodSector.codeName = "CodeSector";
             this.swcodSector.controlId = "swtxtSector";
             this.swcodSector.descName = "DescSector";
-            this.swcodSector.formCS = "frmSectorSearch";
+            this.swcodSector.formCS = "frmSectorsSearch";
             this.swcodSector.Location = new System.Drawing.Point(140, 256);
             this.swcodSector.Name = "swcodSector";
             this.swcodSector.nameId = "idSector";
@@ -378,7 +378,7 @@ namespace Planets
             this.pbPlanet.TabIndex = 60;
             this.pbPlanet.TabStop = false;
             // 
-            // frmPlanetsMant
+            // frmPlanetsMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -410,7 +410,7 @@ namespace Planets
             this.Controls.Add(this.swtxtCodiNative);
             this.Controls.Add(this.swtxtSector);
             this.Controls.Add(this.swtxtFiliation);
-            this.Name = "frmPlanetsMant";
+            this.Name = "frmPlanetsMan";
             this.Text = "frmPlanetsMant";
             this.Controls.SetChildIndex(this.swtxtFiliation, 0);
             this.Controls.SetChildIndex(this.swtxtSector, 0);

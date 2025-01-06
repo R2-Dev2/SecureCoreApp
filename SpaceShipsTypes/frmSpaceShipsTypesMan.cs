@@ -11,20 +11,19 @@ using MainForms;
 
 namespace SpaceShipsTypes
 {
-    public partial class frmSpaceShipTypesSearch : frmSearch
+    public partial class frmSpaceShipsTypesMan : frmBase
     {
-        public frmSpaceShipTypesSearch(string controlId, Form originalForm)
+        public frmSpaceShipsTypesMan()
         {
             InitializeComponent();
-            this.tableName = "Species";
-            this.title = "Search Species";
-            this.controlId = controlId;
-            this.originalForm = originalForm;
+            this.title = "SpaceShip Types Management";
+            this.tableName = "SpaceShipTypes";
+            this.codeTable = "CodeSpaceShipType";
         }
         protected override void ConfigurarDataGrid()
         {
             base.ConfigurarDataGrid();
-            dtgDades.Columns["idSpaceShipType"].Visible = false;    
+            dtgDades.Columns["idSpaceShipType"].Visible = false;
             dtgDades.Columns["idFiliation"].Visible = false;
             dtgDades.Columns["idSpaceShipCategory"].Visible = false;
             dtgDades.Columns["CodeSpaceShipType"].HeaderText = "Code";

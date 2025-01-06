@@ -1,7 +1,7 @@
 ﻿
 namespace SpaceShipCategories
 {
-    partial class frmManSpaceShipCategories
+    partial class frmSpaceShipsCategoriesMan
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@ namespace SpaceShipCategories
             this.lblCodeShip.TabIndex = 28;
             this.lblCodeShip.Text = "Code";
             // 
-            // frmManSpaceShipCategories
+            // frmSpaceShipsCategoriesMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +93,7 @@ namespace SpaceShipCategories
             this.Controls.Add(this.lblDescShip);
             this.Controls.Add(this.swDescShip);
             this.Controls.Add(this.swCodeShip);
-            this.Name = "frmManSpaceShipCategories";
+            this.Name = "frmSpaceShipsCategoriesMan";
             this.Text = "frmManSpaceShipCategories";
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swCodeShip, 0);
