@@ -76,6 +76,10 @@
       <Project>{b8ab7c7f-713b-43aa-a3ec-0589d8ede40c}</Project>
       <Name>MainForms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Utils.csproj">
+      <Project>{6d724ee2-bb06-45ec-af04-0c871ef5d035}</Project>
+      <Name>Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmPlanetsMant.resx">
