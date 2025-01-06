@@ -72,7 +72,8 @@ namespace MainForms
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(676, 269);
             this.dtgDades.TabIndex = 1;
-            this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgSpecies_SelectionChanged);
+            this.dtgDades.CurrentCellChanged += new System.EventHandler(this.dtgDades_CurrentCellChanged);
+            this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgDades_SelectionChanged);
             // 
             // btnUpdate
             // 
@@ -161,7 +162,7 @@ namespace MainForms
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label lblTitle;
-        protected System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label lblError;
+        protected System.Windows.Forms.PictureBox pbClose;
     }
 }

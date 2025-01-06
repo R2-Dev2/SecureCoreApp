@@ -31,5 +31,39 @@ namespace Utils
 
             return img;
         }
+
+        public static Image GetImageFromDataBase(object image)
+        {
+            ImageConverter imageConverter = new ImageConverter();
+            Image img;
+            try
+            {
+                if (image == null)
+                {
+                    img = GetImageFromRelativePath("./login.png");
+                }
+                else
+                {
+                    img = (Image)imageConverter.ConvertFrom(image);
+                }
+                return img;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static Image GetImageFromRelativePath(string path)
+        {            
+            try
+            {
+                return Image.FromFile(System.IO.Path.Combine(Environment.CurrentDirectory, @path));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

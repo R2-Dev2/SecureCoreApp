@@ -26,7 +26,7 @@ namespace LoginForms
             {
                 timer.Stop();
 
-                 frmLogin frm = new frmLogin();
+                 frmLogin frm = new frmLogin(true);
                  frm.Show();
 
                 this.Hide();

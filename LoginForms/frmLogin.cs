@@ -18,21 +18,22 @@ namespace LoginForms
         private readonly string tableName = "Users";
         private readonly string DEFAULT_PWD = "12345aA";
         private readonly int MAX_TRIES = 3;
-        private string accessLevel;
-        private string imageUrl;
+        private bool isFirstLogin;
+        private string idUser;
         private AccesADades accesADades;
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         bool knownUser = false;
         int tries = 0;
         int counter = 0;
-        public frmLogin()
+        public frmLogin(bool isFirstLogin)
         {
+            this.isFirstLogin = isFirstLogin;
             InitializeComponent();
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!knownUser)
+            if (!knownUser && isFirstLogin)
             {
                 Application.Exit();
             }
@@ -46,7 +47,7 @@ namespace LoginForms
             dict.Add("Login", txtUser.Text);
             
             string userPassword = txtPwd.Text;
-            string query = $"SELECT idUser, Password, Salt, AccessLevel, Photo FROM {this.tableName} as u, UserCategories as uc WHERE u.idUserCategory = uc.idUserCategory";
+            string query = $"SELECT idUser, Password, Salt FROM {this.tableName} WHERE 1 = 1";
             DataSet dts = accesADades.ExecutaCercaQuery(query, dict);
 
             if (dts.Tables[0].Rows.Count == 1)
@@ -60,8 +61,8 @@ namespace LoginForms
                     frm.idUser = idUser;
                     txtPwd.Clear();
                     tries = 0;
-                    lblIncorrect.Hide();
-                    lblTriesLeft.Hide();
+                    lblIncorrect.Visible = false;
+                    lblTriesLeft.Visible = false;
                     frm.ShowDialog();
                 }
                 else
@@ -70,7 +71,6 @@ namespace LoginForms
                     if (HashingUtils.VerifyPassword(userPassword, salt, savedPassword))
                     {
                         isValid = true;
-                        closeOpenedMain();
                         knownUser = true;
                         timerValidating.Start();
 
@@ -79,8 +79,7 @@ namespace LoginForms
                         pbvalidacio.Image = LoginForms.Properties.Resources.validacioCorrecta;
                         lblVerificantNivell.Text = "Verifying user access.";
                         lblBenvinguda.Text = $"Welcome, {txtUser.Text}!";
-                        this.accessLevel = dts.Tables[0].Rows[0]["AccessLevel"].ToString();
-                        this.imageUrl = dts.Tables[0].Rows[0]["Photo"].ToString();
+                        this.idUser = dts.Tables[0].Rows[0]["idUser"].ToString();
                     }
                 }
             }
@@ -129,6 +128,10 @@ namespace LoginForms
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            if (!isFirstLogin)
+            {
+                closeOpenedMain();
+            }
             this.accesADades = new AccesADades("SecureCore");
         }
 
@@ -152,9 +155,7 @@ namespace LoginForms
                 timerValidating.Stop();
 
                 frmMain frmMain = new frmMain();
-                frmMain.LoggedUser = txtUser.Text;
-                frmMain.RangeOption = accessLevel;
-                frmMain.PhotoUrl = imageUrl;
+                frmMain.IdUser = idUser;
                 frmMain.Show();
 
                 this.Close();

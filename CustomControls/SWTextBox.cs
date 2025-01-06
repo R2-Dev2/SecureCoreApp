@@ -76,7 +76,7 @@ namespace CustomControls
         }
 
 
-        private void SWTextbox_Leave(object sender, EventArgs e)
+        public void SWTextbox_Leave(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
         }
