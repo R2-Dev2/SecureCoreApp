@@ -122,7 +122,7 @@ namespace Users
             // 
             this.lblRank.AutoSize = true;
             this.lblRank.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRank.Location = new System.Drawing.Point(80, 227);
+            this.lblRank.Location = new System.Drawing.Point(80, 223);
             this.lblRank.Name = "lblRank";
             this.lblRank.Size = new System.Drawing.Size(49, 20);
             this.lblRank.TabIndex = 39;
@@ -161,7 +161,7 @@ namespace Users
             // 
             this.lblUserCategory.AutoSize = true;
             this.lblUserCategory.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserCategory.Location = new System.Drawing.Point(50, 275);
+            this.lblUserCategory.Location = new System.Drawing.Point(50, 271);
             this.lblUserCategory.Name = "lblUserCategory";
             this.lblUserCategory.Size = new System.Drawing.Size(79, 20);
             this.lblUserCategory.TabIndex = 42;

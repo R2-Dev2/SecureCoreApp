@@ -42,7 +42,7 @@ namespace Sectors
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(91, 128);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 131);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
@@ -52,7 +52,7 @@ namespace Sectors
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(39, 178);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 181);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
@@ -65,10 +65,10 @@ namespace Sectors
             this.swtxtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDesc.isForeignKey = false;
-            this.swtxtDesc.Location = new System.Drawing.Point(157, 174);
+            this.swtxtDesc.Location = new System.Drawing.Point(157, 177);
             this.swtxtDesc.Name = "swtxtDesc";
             this.swtxtDesc.required = false;
-            this.swtxtDesc.Size = new System.Drawing.Size(148, 29);
+            this.swtxtDesc.Size = new System.Drawing.Size(245, 29);
             this.swtxtDesc.TabIndex = 24;
             // 
             // swtxtCode
@@ -78,17 +78,17 @@ namespace Sectors
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
-            this.swtxtCode.Location = new System.Drawing.Point(157, 124);
+            this.swtxtCode.Location = new System.Drawing.Point(157, 127);
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = false;
-            this.swtxtCode.Size = new System.Drawing.Size(148, 29);
+            this.swtxtCode.Size = new System.Drawing.Size(101, 29);
             this.swtxtCode.TabIndex = 23;
             // 
             // lblRemarks
             // 
             this.lblRemarks.AutoSize = true;
             this.lblRemarks.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRemarks.Location = new System.Drawing.Point(60, 229);
+            this.lblRemarks.Location = new System.Drawing.Point(60, 232);
             this.lblRemarks.Name = "lblRemarks";
             this.lblRemarks.Size = new System.Drawing.Size(79, 20);
             this.lblRemarks.TabIndex = 28;
@@ -101,7 +101,7 @@ namespace Sectors
             this.swtxtRemarks.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtRemarks.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtRemarks.isForeignKey = false;
-            this.swtxtRemarks.Location = new System.Drawing.Point(157, 224);
+            this.swtxtRemarks.Location = new System.Drawing.Point(157, 227);
             this.swtxtRemarks.Name = "swtxtRemarks";
             this.swtxtRemarks.required = false;
             this.swtxtRemarks.Size = new System.Drawing.Size(314, 29);

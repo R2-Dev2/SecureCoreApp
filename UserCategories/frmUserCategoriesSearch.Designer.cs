@@ -52,7 +52,7 @@ namespace UserCategories
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(45, 179);
+            this.lblDescSpecie.Location = new System.Drawing.Point(45, 178);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
@@ -65,10 +65,10 @@ namespace UserCategories
             this.swtxtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDesc.isForeignKey = false;
-            this.swtxtDesc.Location = new System.Drawing.Point(174, 175);
+            this.swtxtDesc.Location = new System.Drawing.Point(169, 174);
             this.swtxtDesc.Name = "swtxtDesc";
             this.swtxtDesc.required = false;
-            this.swtxtDesc.Size = new System.Drawing.Size(236, 29);
+            this.swtxtDesc.Size = new System.Drawing.Size(245, 29);
             this.swtxtDesc.TabIndex = 24;
             // 
             // swtxtCodePlan
@@ -78,17 +78,17 @@ namespace UserCategories
             this.swtxtCodePlan.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodePlan.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodePlan.isForeignKey = false;
-            this.swtxtCodePlan.Location = new System.Drawing.Point(174, 121);
+            this.swtxtCodePlan.Location = new System.Drawing.Point(169, 121);
             this.swtxtCodePlan.Name = "swtxtCodePlan";
             this.swtxtCodePlan.required = false;
-            this.swtxtCodePlan.Size = new System.Drawing.Size(125, 29);
+            this.swtxtCodePlan.Size = new System.Drawing.Size(101, 29);
             this.swtxtCodePlan.TabIndex = 23;
             // 
             // lblAccessLevel
             // 
             this.lblAccessLevel.AutoSize = true;
             this.lblAccessLevel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccessLevel.Location = new System.Drawing.Point(39, 234);
+            this.lblAccessLevel.Location = new System.Drawing.Point(39, 230);
             this.lblAccessLevel.Name = "lblAccessLevel";
             this.lblAccessLevel.Size = new System.Drawing.Size(106, 20);
             this.lblAccessLevel.TabIndex = 28;
@@ -101,10 +101,10 @@ namespace UserCategories
             this.swTxtAccessLevel.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtAccessLevel.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtAccessLevel.isForeignKey = false;
-            this.swTxtAccessLevel.Location = new System.Drawing.Point(174, 229);
+            this.swTxtAccessLevel.Location = new System.Drawing.Point(169, 225);
             this.swTxtAccessLevel.Name = "swTxtAccessLevel";
             this.swTxtAccessLevel.required = false;
-            this.swTxtAccessLevel.Size = new System.Drawing.Size(236, 29);
+            this.swTxtAccessLevel.Size = new System.Drawing.Size(245, 29);
             this.swTxtAccessLevel.TabIndex = 27;
             // 
             // frmUserCategoriesSearch

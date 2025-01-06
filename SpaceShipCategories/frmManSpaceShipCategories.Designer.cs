@@ -43,10 +43,10 @@ namespace SpaceShipCategories
             this.swCodeShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swCodeShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swCodeShip.isForeignKey = false;
-            this.swCodeShip.Location = new System.Drawing.Point(125, 113);
+            this.swCodeShip.Location = new System.Drawing.Point(171, 214);
             this.swCodeShip.Name = "swCodeShip";
             this.swCodeShip.required = true;
-            this.swCodeShip.Size = new System.Drawing.Size(187, 29);
+            this.swCodeShip.Size = new System.Drawing.Size(100, 29);
             this.swCodeShip.TabIndex = 22;
             this.swCodeShip.Tag = "CodeSpaceShipCategory";
             // 
@@ -57,10 +57,10 @@ namespace SpaceShipCategories
             this.swDescShip.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swDescShip.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swDescShip.isForeignKey = false;
-            this.swDescShip.Location = new System.Drawing.Point(177, 160);
+            this.swDescShip.Location = new System.Drawing.Point(171, 265);
             this.swDescShip.Name = "swDescShip";
             this.swDescShip.required = false;
-            this.swDescShip.Size = new System.Drawing.Size(187, 29);
+            this.swDescShip.Size = new System.Drawing.Size(245, 29);
             this.swDescShip.TabIndex = 23;
             this.swDescShip.Tag = "DescSpaceShipCategory";
             // 
@@ -68,7 +68,7 @@ namespace SpaceShipCategories
             // 
             this.lblDescShip.AutoSize = true;
             this.lblDescShip.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescShip.Location = new System.Drawing.Point(71, 167);
+            this.lblDescShip.Location = new System.Drawing.Point(51, 269);
             this.lblDescShip.Name = "lblDescShip";
             this.lblDescShip.Size = new System.Drawing.Size(100, 20);
             this.lblDescShip.TabIndex = 27;
@@ -78,7 +78,7 @@ namespace SpaceShipCategories
             // 
             this.lblCodeShip.AutoSize = true;
             this.lblCodeShip.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeShip.Location = new System.Drawing.Point(71, 120);
+            this.lblCodeShip.Location = new System.Drawing.Point(103, 218);
             this.lblCodeShip.Name = "lblCodeShip";
             this.lblCodeShip.Size = new System.Drawing.Size(48, 20);
             this.lblCodeShip.TabIndex = 28;

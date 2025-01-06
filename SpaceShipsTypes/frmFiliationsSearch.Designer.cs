@@ -40,7 +40,7 @@ namespace SpaceShipsTypes
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(91, 133);
+            this.lblCode.Location = new System.Drawing.Point(91, 178);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(48, 20);
             this.lblCode.TabIndex = 25;
@@ -50,7 +50,7 @@ namespace SpaceShipsTypes
             // 
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(39, 184);
+            this.lblDesc.Location = new System.Drawing.Point(39, 229);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(100, 20);
             this.lblDesc.TabIndex = 26;
@@ -63,10 +63,10 @@ namespace SpaceShipsTypes
             this.swtxtDescFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescFiliation.isForeignKey = false;
-            this.swtxtDescFiliation.Location = new System.Drawing.Point(162, 180);
+            this.swtxtDescFiliation.Location = new System.Drawing.Point(162, 225);
             this.swtxtDescFiliation.Name = "swtxtDescFiliation";
             this.swtxtDescFiliation.required = false;
-            this.swtxtDescFiliation.Size = new System.Drawing.Size(263, 29);
+            this.swtxtDescFiliation.Size = new System.Drawing.Size(245, 29);
             this.swtxtDescFiliation.TabIndex = 24;
             // 
             // swtxtCodeFiliation
@@ -76,7 +76,7 @@ namespace SpaceShipsTypes
             this.swtxtCodeFiliation.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeFiliation.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeFiliation.isForeignKey = false;
-            this.swtxtCodeFiliation.Location = new System.Drawing.Point(162, 129);
+            this.swtxtCodeFiliation.Location = new System.Drawing.Point(162, 174);
             this.swtxtCodeFiliation.Name = "swtxtCodeFiliation";
             this.swtxtCodeFiliation.required = false;
             this.swtxtCodeFiliation.Size = new System.Drawing.Size(100, 29);

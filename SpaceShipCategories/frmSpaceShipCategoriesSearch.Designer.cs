@@ -40,7 +40,7 @@ namespace SpaceShipCategories
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(91, 133);
+            this.lblCode.Location = new System.Drawing.Point(91, 179);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(48, 20);
             this.lblCode.TabIndex = 25;
@@ -50,7 +50,7 @@ namespace SpaceShipCategories
             // 
             this.lblDesc.AutoSize = true;
             this.lblDesc.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesc.Location = new System.Drawing.Point(39, 184);
+            this.lblDesc.Location = new System.Drawing.Point(39, 230);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(100, 20);
             this.lblDesc.TabIndex = 26;
@@ -63,7 +63,7 @@ namespace SpaceShipCategories
             this.swtxtDescSpaceShipCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescSpaceShipCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescSpaceShipCategory.isForeignKey = false;
-            this.swtxtDescSpaceShipCategory.Location = new System.Drawing.Point(162, 180);
+            this.swtxtDescSpaceShipCategory.Location = new System.Drawing.Point(156, 226);
             this.swtxtDescSpaceShipCategory.Name = "swtxtDescSpaceShipCategory";
             this.swtxtDescSpaceShipCategory.required = false;
             this.swtxtDescSpaceShipCategory.Size = new System.Drawing.Size(245, 29);
@@ -76,7 +76,7 @@ namespace SpaceShipCategories
             this.swtxtCodeSpaceShipCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeSpaceShipCategory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeSpaceShipCategory.isForeignKey = false;
-            this.swtxtCodeSpaceShipCategory.Location = new System.Drawing.Point(162, 129);
+            this.swtxtCodeSpaceShipCategory.Location = new System.Drawing.Point(156, 175);
             this.swtxtCodeSpaceShipCategory.Name = "swtxtCodeSpaceShipCategory";
             this.swtxtCodeSpaceShipCategory.required = false;
             this.swtxtCodeSpaceShipCategory.Size = new System.Drawing.Size(100, 29);

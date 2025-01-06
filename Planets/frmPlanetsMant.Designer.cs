@@ -90,7 +90,7 @@ namespace Planets
             // 
             this.lblSector.AutoSize = true;
             this.lblSector.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSector.Location = new System.Drawing.Point(73, 264);
+            this.lblSector.Location = new System.Drawing.Point(73, 260);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(59, 20);
             this.lblSector.TabIndex = 39;
@@ -100,7 +100,7 @@ namespace Planets
             // 
             this.lblFiliation.AutoSize = true;
             this.lblFiliation.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiliation.Location = new System.Drawing.Point(59, 223);
+            this.lblFiliation.Location = new System.Drawing.Point(59, 220);
             this.lblFiliation.Name = "lblFiliation";
             this.lblFiliation.Size = new System.Drawing.Size(73, 20);
             this.lblFiliation.TabIndex = 38;
@@ -188,7 +188,7 @@ namespace Planets
             // 
             this.lblNative.AutoSize = true;
             this.lblNative.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNative.Location = new System.Drawing.Point(73, 305);
+            this.lblNative.Location = new System.Drawing.Point(73, 300);
             this.lblNative.Name = "lblNative";
             this.lblNative.Size = new System.Drawing.Size(59, 20);
             this.lblNative.TabIndex = 43;
@@ -212,7 +212,7 @@ namespace Planets
             // 
             this.lblIPPlanet.AutoSize = true;
             this.lblIPPlanet.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIPPlanet.Location = new System.Drawing.Point(54, 182);
+            this.lblIPPlanet.Location = new System.Drawing.Point(54, 180);
             this.lblIPPlanet.Name = "lblIPPlanet";
             this.lblIPPlanet.Size = new System.Drawing.Size(78, 20);
             this.lblIPPlanet.TabIndex = 48;
@@ -268,7 +268,7 @@ namespace Planets
             // 
             this.lbllongPlan.AutoSize = true;
             this.lbllongPlan.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllongPlan.Location = new System.Drawing.Point(316, 141);
+            this.lbllongPlan.Location = new System.Drawing.Point(316, 140);
             this.lbllongPlan.Name = "lbllongPlan";
             this.lbllongPlan.Size = new System.Drawing.Size(87, 20);
             this.lbllongPlan.TabIndex = 51;
@@ -304,7 +304,7 @@ namespace Planets
             // 
             this.lblPortPlanet1.AutoSize = true;
             this.lblPortPlanet1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortPlanet1.Location = new System.Drawing.Point(555, 305);
+            this.lblPortPlanet1.Location = new System.Drawing.Point(555, 300);
             this.lblPortPlanet1.Name = "lblPortPlanet1";
             this.lblPortPlanet1.Size = new System.Drawing.Size(57, 20);
             this.lblPortPlanet1.TabIndex = 56;
@@ -314,7 +314,7 @@ namespace Planets
             // 
             this.lbllat.AutoSize = true;
             this.lbllat.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllat.Location = new System.Drawing.Point(59, 141);
+            this.lbllat.Location = new System.Drawing.Point(59, 140);
             this.lbllat.Name = "lbllat";
             this.lbllat.Size = new System.Drawing.Size(73, 20);
             this.lbllat.TabIndex = 55;
@@ -350,7 +350,7 @@ namespace Planets
             // 
             this.lblParsecs.AutoSize = true;
             this.lblParsecs.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParsecs.Location = new System.Drawing.Point(334, 182);
+            this.lblParsecs.Location = new System.Drawing.Point(334, 186);
             this.lblParsecs.Name = "lblParsecs";
             this.lblParsecs.Size = new System.Drawing.Size(69, 20);
             this.lblParsecs.TabIndex = 59;

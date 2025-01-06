@@ -40,7 +40,7 @@ namespace SpaceShipsTypes
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(91, 137);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 175);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
@@ -50,7 +50,7 @@ namespace SpaceShipsTypes
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(39, 203);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 228);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
@@ -63,7 +63,7 @@ namespace SpaceShipsTypes
             this.swtxtDescSpaceShipType.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescSpaceShipType.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescSpaceShipType.isForeignKey = false;
-            this.swtxtDescSpaceShipType.Location = new System.Drawing.Point(156, 199);
+            this.swtxtDescSpaceShipType.Location = new System.Drawing.Point(156, 224);
             this.swtxtDescSpaceShipType.Name = "swtxtDescSpaceShipType";
             this.swtxtDescSpaceShipType.required = false;
             this.swtxtDescSpaceShipType.Size = new System.Drawing.Size(244, 29);
@@ -76,10 +76,10 @@ namespace SpaceShipsTypes
             this.swtxtCodeSpaceShipType.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeSpaceShipType.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeSpaceShipType.isForeignKey = false;
-            this.swtxtCodeSpaceShipType.Location = new System.Drawing.Point(156, 133);
+            this.swtxtCodeSpaceShipType.Location = new System.Drawing.Point(156, 171);
             this.swtxtCodeSpaceShipType.Name = "swtxtCodeSpaceShipType";
             this.swtxtCodeSpaceShipType.required = false;
-            this.swtxtCodeSpaceShipType.Size = new System.Drawing.Size(158, 29);
+            this.swtxtCodeSpaceShipType.Size = new System.Drawing.Size(100, 29);
             this.swtxtCodeSpaceShipType.TabIndex = 23;
             // 
             // frmSpaceShipTypesSearch
