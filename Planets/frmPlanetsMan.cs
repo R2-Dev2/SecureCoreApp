@@ -12,9 +12,9 @@ using Utils;
 
 namespace Planets
 {
-    public partial class frmPlanetsMant : frmBase
+    public partial class frmPlanetsMan : frmBase
     {
-        public frmPlanetsMant()
+        public frmPlanetsMan()
         {
             InitializeComponent();
             this.title = "Planets Manteniment";

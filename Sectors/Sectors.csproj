@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmSectorSearch.cs">
+    <Compile Include="frmSectorsSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSectorSearch.Designer.cs">
-      <DependentUpon>frmSectorSearch.cs</DependentUpon>
+    <Compile Include="frmSectorsSearch.Designer.cs">
+      <DependentUpon>frmSectorsSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,8 +62,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmSectorSearch.resx">
-      <DependentUpon>frmSectorSearch.cs</DependentUpon>
+    <EmbeddedResource Include="frmSectorsSearch.resx">
+      <DependentUpon>frmSectorsSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

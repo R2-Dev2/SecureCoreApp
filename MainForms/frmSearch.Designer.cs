@@ -70,7 +70,7 @@ namespace MainForms
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(588, 270);
-            this.dtgDades.TabIndex = 0;
+            this.dtgDades.TabIndex = 1;
             this.dtgDades.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDades_CellContentDoubleClick);
             // 
             // lblTitle
@@ -88,7 +88,7 @@ namespace MainForms
             this.btnSearch.Location = new System.Drawing.Point(534, 220);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(97, 39);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 0;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -99,7 +99,7 @@ namespace MainForms
             this.btnSelect.Location = new System.Drawing.Point(534, 569);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(97, 39);
-            this.btnSelect.TabIndex = 4;
+            this.btnSelect.TabIndex = 2;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);

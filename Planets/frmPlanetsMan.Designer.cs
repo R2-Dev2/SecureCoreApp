@@ -1,7 +1,7 @@
 ﻿
 namespace Planets
 {
-    partial class frmPlanetsMant
+    partial class frmPlanetsMan
     {
         /// <summary>
         /// Required designer variable.
@@ -90,7 +90,7 @@ namespace Planets
             // 
             this.lblSector.AutoSize = true;
             this.lblSector.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSector.Location = new System.Drawing.Point(73, 264);
+            this.lblSector.Location = new System.Drawing.Point(73, 260);
             this.lblSector.Name = "lblSector";
             this.lblSector.Size = new System.Drawing.Size(59, 20);
             this.lblSector.TabIndex = 39;
@@ -100,7 +100,7 @@ namespace Planets
             // 
             this.lblFiliation.AutoSize = true;
             this.lblFiliation.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiliation.Location = new System.Drawing.Point(59, 223);
+            this.lblFiliation.Location = new System.Drawing.Point(59, 220);
             this.lblFiliation.Name = "lblFiliation";
             this.lblFiliation.Size = new System.Drawing.Size(73, 20);
             this.lblFiliation.TabIndex = 38;
@@ -122,12 +122,12 @@ namespace Planets
             this.swcodSector.codeName = "CodeSector";
             this.swcodSector.controlId = "swtxtSector";
             this.swcodSector.descName = "DescSector";
-            this.swcodSector.formCS = "frmSectorSearch";
+            this.swcodSector.formCS = "frmSectorsSearch";
             this.swcodSector.Location = new System.Drawing.Point(140, 256);
             this.swcodSector.Name = "swcodSector";
             this.swcodSector.nameId = "idSector";
             this.swcodSector.Size = new System.Drawing.Size(402, 29);
-            this.swcodSector.TabIndex = 35;
+            this.swcodSector.TabIndex = 4;
             this.swcodSector.tableName = "Sectors";
             // 
             // swcodFiliation
@@ -141,7 +141,7 @@ namespace Planets
             this.swcodFiliation.Name = "swcodFiliation";
             this.swcodFiliation.nameId = "idFiliation";
             this.swcodFiliation.Size = new System.Drawing.Size(402, 29);
-            this.swcodFiliation.TabIndex = 34;
+            this.swcodFiliation.TabIndex = 3;
             this.swcodFiliation.tableName = "Filiations";
             // 
             // swImagePlan
@@ -155,7 +155,7 @@ namespace Planets
             this.swImagePlan.Name = "swImagePlan";
             this.swImagePlan.required = false;
             this.swImagePlan.Size = new System.Drawing.Size(175, 29);
-            this.swImagePlan.TabIndex = 33;
+            this.swImagePlan.TabIndex = 9;
             // 
             // swtxtCode
             // 
@@ -168,7 +168,7 @@ namespace Planets
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = true;
             this.swtxtCode.Size = new System.Drawing.Size(150, 29);
-            this.swtxtCode.TabIndex = 32;
+            this.swtxtCode.TabIndex = 0;
             this.swtxtCode.Tag = "CodePlanet";
             // 
             // swtxtCodiNative
@@ -188,7 +188,7 @@ namespace Planets
             // 
             this.lblNative.AutoSize = true;
             this.lblNative.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNative.Location = new System.Drawing.Point(73, 305);
+            this.lblNative.Location = new System.Drawing.Point(73, 300);
             this.lblNative.Name = "lblNative";
             this.lblNative.Size = new System.Drawing.Size(59, 20);
             this.lblNative.TabIndex = 43;
@@ -205,14 +205,14 @@ namespace Planets
             this.swcodNative.Name = "swcodNative";
             this.swcodNative.nameId = "idSpecie";
             this.swcodNative.Size = new System.Drawing.Size(402, 29);
-            this.swcodNative.TabIndex = 42;
+            this.swcodNative.TabIndex = 5;
             this.swcodNative.tableName = "Species";
             // 
             // lblIPPlanet
             // 
             this.lblIPPlanet.AutoSize = true;
             this.lblIPPlanet.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIPPlanet.Location = new System.Drawing.Point(54, 182);
+            this.lblIPPlanet.Location = new System.Drawing.Point(54, 180);
             this.lblIPPlanet.Name = "lblIPPlanet";
             this.lblIPPlanet.Size = new System.Drawing.Size(78, 20);
             this.lblIPPlanet.TabIndex = 48;
@@ -239,7 +239,7 @@ namespace Planets
             this.swIPPlanet.Name = "swIPPlanet";
             this.swIPPlanet.required = false;
             this.swIPPlanet.Size = new System.Drawing.Size(150, 29);
-            this.swIPPlanet.TabIndex = 46;
+            this.swIPPlanet.TabIndex = 2;
             // 
             // swDescPlan
             // 
@@ -252,7 +252,7 @@ namespace Planets
             this.swDescPlan.Name = "swDescPlan";
             this.swDescPlan.required = true;
             this.swDescPlan.Size = new System.Drawing.Size(132, 29);
-            this.swDescPlan.TabIndex = 45;
+            this.swDescPlan.TabIndex = 6;
             // 
             // lblPortPlanet
             // 
@@ -268,7 +268,7 @@ namespace Planets
             // 
             this.lbllongPlan.AutoSize = true;
             this.lbllongPlan.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllongPlan.Location = new System.Drawing.Point(316, 141);
+            this.lbllongPlan.Location = new System.Drawing.Point(316, 140);
             this.lbllongPlan.Name = "lbllongPlan";
             this.lbllongPlan.Size = new System.Drawing.Size(87, 20);
             this.lbllongPlan.TabIndex = 51;
@@ -285,7 +285,7 @@ namespace Planets
             this.swPortPlanet.Name = "swPortPlanet";
             this.swPortPlanet.required = false;
             this.swPortPlanet.Size = new System.Drawing.Size(112, 29);
-            this.swPortPlanet.TabIndex = 50;
+            this.swPortPlanet.TabIndex = 10;
             // 
             // swtxtLong
             // 
@@ -298,13 +298,13 @@ namespace Planets
             this.swtxtLong.Name = "swtxtLong";
             this.swtxtLong.required = true;
             this.swtxtLong.Size = new System.Drawing.Size(132, 29);
-            this.swtxtLong.TabIndex = 49;
+            this.swtxtLong.TabIndex = 7;
             // 
             // lblPortPlanet1
             // 
             this.lblPortPlanet1.AutoSize = true;
             this.lblPortPlanet1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortPlanet1.Location = new System.Drawing.Point(555, 305);
+            this.lblPortPlanet1.Location = new System.Drawing.Point(555, 300);
             this.lblPortPlanet1.Name = "lblPortPlanet1";
             this.lblPortPlanet1.Size = new System.Drawing.Size(57, 20);
             this.lblPortPlanet1.TabIndex = 56;
@@ -314,7 +314,7 @@ namespace Planets
             // 
             this.lbllat.AutoSize = true;
             this.lbllat.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllat.Location = new System.Drawing.Point(59, 141);
+            this.lbllat.Location = new System.Drawing.Point(59, 140);
             this.lbllat.Name = "lbllat";
             this.lbllat.Size = new System.Drawing.Size(73, 20);
             this.lbllat.TabIndex = 55;
@@ -331,7 +331,7 @@ namespace Planets
             this.swPortPlanet1.Name = "swPortPlanet1";
             this.swPortPlanet1.required = false;
             this.swPortPlanet1.Size = new System.Drawing.Size(112, 29);
-            this.swPortPlanet1.TabIndex = 54;
+            this.swPortPlanet1.TabIndex = 11;
             // 
             // swlat
             // 
@@ -344,13 +344,13 @@ namespace Planets
             this.swlat.Name = "swlat";
             this.swlat.required = true;
             this.swlat.Size = new System.Drawing.Size(150, 29);
-            this.swlat.TabIndex = 53;
+            this.swlat.TabIndex = 1;
             // 
             // lblParsecs
             // 
             this.lblParsecs.AutoSize = true;
             this.lblParsecs.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParsecs.Location = new System.Drawing.Point(334, 182);
+            this.lblParsecs.Location = new System.Drawing.Point(334, 186);
             this.lblParsecs.Name = "lblParsecs";
             this.lblParsecs.Size = new System.Drawing.Size(69, 20);
             this.lblParsecs.TabIndex = 59;
@@ -367,7 +367,7 @@ namespace Planets
             this.swParsecs.Name = "swParsecs";
             this.swParsecs.required = true;
             this.swParsecs.Size = new System.Drawing.Size(132, 29);
-            this.swParsecs.TabIndex = 57;
+            this.swParsecs.TabIndex = 8;
             // 
             // pbPlanet
             // 
@@ -378,7 +378,7 @@ namespace Planets
             this.pbPlanet.TabIndex = 60;
             this.pbPlanet.TabStop = false;
             // 
-            // frmPlanetsMant
+            // frmPlanetsMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -410,7 +410,7 @@ namespace Planets
             this.Controls.Add(this.swtxtCodiNative);
             this.Controls.Add(this.swtxtSector);
             this.Controls.Add(this.swtxtFiliation);
-            this.Name = "frmPlanetsMant";
+            this.Name = "frmPlanetsMan";
             this.Text = "frmPlanetsMant";
             this.Controls.SetChildIndex(this.swtxtFiliation, 0);
             this.Controls.SetChildIndex(this.swtxtSector, 0);

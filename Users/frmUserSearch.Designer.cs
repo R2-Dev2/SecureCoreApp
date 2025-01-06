@@ -69,7 +69,7 @@ namespace UserCategories
             this.swTxtUserName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtUserName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtUserName.isForeignKey = false;
-            this.swTxtUserName.Location = new System.Drawing.Point(164, 173);
+            this.swTxtUserName.Location = new System.Drawing.Point(156, 173);
             this.swTxtUserName.Name = "swTxtUserName";
             this.swTxtUserName.required = false;
             this.swTxtUserName.Size = new System.Drawing.Size(148, 29);
@@ -82,7 +82,7 @@ namespace UserCategories
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
-            this.swtxtCode.Location = new System.Drawing.Point(164, 122);
+            this.swtxtCode.Location = new System.Drawing.Point(156, 122);
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = false;
             this.swtxtCode.Size = new System.Drawing.Size(148, 29);
@@ -105,7 +105,7 @@ namespace UserCategories
             this.swTxtLogin.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swTxtLogin.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtLogin.isForeignKey = false;
-            this.swTxtLogin.Location = new System.Drawing.Point(164, 225);
+            this.swTxtLogin.Location = new System.Drawing.Point(156, 225);
             this.swTxtLogin.Name = "swTxtLogin";
             this.swTxtLogin.required = false;
             this.swTxtLogin.Size = new System.Drawing.Size(148, 29);

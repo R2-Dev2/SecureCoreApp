@@ -43,17 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManSpaceShipCategories.cs">
+    <Compile Include="frmSpaceShipsCategoriesMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManSpaceShipCategories.Designer.cs">
-      <DependentUpon>frmManSpaceShipCategories.cs</DependentUpon>
+    <Compile Include="frmSpaceShipsCategoriesMan.Designer.cs">
+      <DependentUpon>frmSpaceShipsCategoriesMan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSpaceShipCategoriesSearch.cs">
+    <Compile Include="frmSpaceShipsCategoriesSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSpaceShipCategoriesSearch.Designer.cs">
-      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
+    <Compile Include="frmSpaceShipsCategoriesSearch.Designer.cs">
+      <DependentUpon>frmSpaceShipsCategoriesSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,11 +68,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManSpaceShipCategories.resx">
-      <DependentUpon>frmManSpaceShipCategories.cs</DependentUpon>
+    <EmbeddedResource Include="frmSpaceShipsCategoriesMan.resx">
+      <DependentUpon>frmSpaceShipsCategoriesMan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSpaceShipCategoriesSearch.resx">
-      <DependentUpon>frmSpaceShipCategoriesSearch.cs</DependentUpon>
+    <EmbeddedResource Include="frmSpaceShipsCategoriesSearch.resx">
+      <DependentUpon>frmSpaceShipsCategoriesSearch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

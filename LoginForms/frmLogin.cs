@@ -115,7 +115,7 @@ namespace LoginForms
             if (isMain)
             {
                 frmMain main = (frmMain)form;
-                main.IsLogout = true;
+                main.isLogout = true;
             }
             form.Close();
         }
@@ -155,7 +155,7 @@ namespace LoginForms
                 timerValidating.Stop();
 
                 frmMain frmMain = new frmMain();
-                frmMain.IdUser = idUser;
+                frmMain.idUser = idUser;
                 frmMain.Show();
 
                 this.Close();

@@ -1,7 +1,7 @@
 ﻿
 namespace UserRanks
 {
-    partial class frmUserRankSearch
+    partial class frmUserRanksSearch
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@ namespace UserRanks
             // 
             this.lblCodeSpec.AutoSize = true;
             this.lblCodeSpec.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodeSpec.Location = new System.Drawing.Point(91, 138);
+            this.lblCodeSpec.Location = new System.Drawing.Point(91, 175);
             this.lblCodeSpec.Name = "lblCodeSpec";
             this.lblCodeSpec.Size = new System.Drawing.Size(48, 20);
             this.lblCodeSpec.TabIndex = 25;
@@ -50,7 +50,7 @@ namespace UserRanks
             // 
             this.lblDescSpecie.AutoSize = true;
             this.lblDescSpecie.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSpecie.Location = new System.Drawing.Point(39, 195);
+            this.lblDescSpecie.Location = new System.Drawing.Point(39, 228);
             this.lblDescSpecie.Name = "lblDescSpecie";
             this.lblDescSpecie.Size = new System.Drawing.Size(100, 20);
             this.lblDescSpecie.TabIndex = 26;
@@ -63,10 +63,10 @@ namespace UserRanks
             this.swtxtDescRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescRank.isForeignKey = false;
-            this.swtxtDescRank.Location = new System.Drawing.Point(169, 191);
+            this.swtxtDescRank.Location = new System.Drawing.Point(163, 224);
             this.swtxtDescRank.Name = "swtxtDescRank";
             this.swtxtDescRank.required = false;
-            this.swtxtDescRank.Size = new System.Drawing.Size(251, 29);
+            this.swtxtDescRank.Size = new System.Drawing.Size(244, 29);
             this.swtxtDescRank.TabIndex = 24;
             // 
             // swtxtCodeUserRank
@@ -76,10 +76,10 @@ namespace UserRanks
             this.swtxtCodeUserRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCodeUserRank.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCodeUserRank.isForeignKey = false;
-            this.swtxtCodeUserRank.Location = new System.Drawing.Point(169, 134);
+            this.swtxtCodeUserRank.Location = new System.Drawing.Point(163, 171);
             this.swtxtCodeUserRank.Name = "swtxtCodeUserRank";
             this.swtxtCodeUserRank.required = false;
-            this.swtxtCodeUserRank.Size = new System.Drawing.Size(130, 29);
+            this.swtxtCodeUserRank.Size = new System.Drawing.Size(101, 29);
             this.swtxtCodeUserRank.TabIndex = 23;
             // 
             // frmUserRankSearch
@@ -93,11 +93,11 @@ namespace UserRanks
             this.Controls.Add(this.swtxtCodeUserRank);
             this.Name = "frmUserRankSearch";
             this.Text = "frmUserRankSearch";
-            this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCodeUserRank, 0);
             this.Controls.SetChildIndex(this.swtxtDescRank, 0);
             this.Controls.SetChildIndex(this.lblDescSpecie, 0);
             this.Controls.SetChildIndex(this.lblCodeSpec, 0);
+            this.Controls.SetChildIndex(this.pbClose, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

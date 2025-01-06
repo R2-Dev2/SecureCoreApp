@@ -11,9 +11,9 @@ using MainForms;
 
 namespace UserRanks
 {
-    public partial class frmManUserRanks : frmBase
+    public partial class frmUserRanksMan : frmBase
     {
-        public frmManUserRanks()
+        public frmUserRanksMan()
         {
             InitializeComponent();
             this.title = "User Ranks";

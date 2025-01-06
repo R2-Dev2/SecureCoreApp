@@ -11,9 +11,9 @@ using MainForms;
 
 namespace UserRanks
 {
-    public partial class frmUserRankSearch : frmSearch
+    public partial class frmUserRanksSearch : frmSearch
     {
-        public frmUserRankSearch(string controlId, Form originalForm)
+        public frmUserRanksSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
             this.tableName = "UserRanks";

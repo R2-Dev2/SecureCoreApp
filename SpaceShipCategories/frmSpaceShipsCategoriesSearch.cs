@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainForms;
-using CustomControls;
 
 namespace SpaceShipCategories
 {
-    public partial class frmManSpaceShipCategories : frmBase
+    public partial class frmSpaceShipsCategoriesSearch : frmSearch
     {
-        public frmManSpaceShipCategories()
+        public frmSpaceShipsCategoriesSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.title = "SpaceShip Categories";
+            this.title = "SpaceShips Categories Search";
             this.tableName = "SpaceShipCategories";
-            this.codeTable = "CodeSpaceShipCategory";
+            this.controlId = controlId;
+            this.originalForm = originalForm;
         }
         protected override void ConfigurarDataGrid()
         {
