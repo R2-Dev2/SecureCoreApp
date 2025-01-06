@@ -95,7 +95,7 @@ namespace Users
             this.swcodRank.codeName = "CodeRank";
             this.swcodRank.controlId = "swtxtRank";
             this.swcodRank.descName = "DescRank";
-            this.swcodRank.formCS = "frmUserRankSearch";
+            this.swcodRank.formCS = "frmUserRanksSearch";
             this.swcodRank.Location = new System.Drawing.Point(146, 218);
             this.swcodRank.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swcodRank.Name = "swcodRank";
