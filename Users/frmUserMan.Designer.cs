@@ -40,6 +40,8 @@ namespace Users
             this.swTxtUserCategory = new CustomControls.SWTextBox();
             this.lblUserCategory = new System.Windows.Forms.Label();
             this.btnViwerUser = new System.Windows.Forms.Button();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.UsersAccessCards1 = new Users.UsersAccessCards();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,11 +179,22 @@ namespace Users
             this.btnViwerUser.Text = "View";
             this.btnViwerUser.UseVisualStyleBackColor = true;
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(622, 289);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(150, 150);
+            this.crystalReportViewer1.TabIndex = 45;
+            // 
             // frmUserMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 706);
+            this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.btnViwerUser);
             this.Controls.Add(this.swUserCat);
             this.Controls.Add(this.swTxtUserCategory);
@@ -208,6 +221,7 @@ namespace Users
             this.Controls.SetChildIndex(this.swTxtUserCategory, 0);
             this.Controls.SetChildIndex(this.swUserCat, 0);
             this.Controls.SetChildIndex(this.btnViwerUser, 0);
+            this.Controls.SetChildIndex(this.crystalReportViewer1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,5 +240,7 @@ namespace Users
         private CustomControls.SWTextBox swTxtUserCategory;
         private System.Windows.Forms.Label lblUserCategory;
         private System.Windows.Forms.Button btnViwerUser;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private UsersAccessCards UsersAccessCards1;
     }
 }
