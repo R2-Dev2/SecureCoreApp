@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -40,6 +41,27 @@ namespace Users
             dtgDades.Columns["Salt"].Visible = false;
         }
 
+        private void SetCredentialsInfo()
+        {
+            SqlConnectionStringBuilder builder = accesADades.GetStringConnectionBuilder();
+
+            ConnectionInfo crConnectionInfo = new ConnectionInfo();
+            crConnectionInfo.ServerName = builder.DataSource;
+            crConnectionInfo.DatabaseName = builder.InitialCatalog;
+            crConnectionInfo.UserID = builder.UserID;
+            crConnectionInfo.Password = builder.Password;
+
+            TableLogOnInfo crtableLogoninfo = new TableLogOnInfo();
+            Tables CrTables = cryRpt.Database.Tables;
+
+            foreach (Table CrTable in CrTables)
+            {
+                crtableLogoninfo = CrTable.LogOnInfo;
+                crtableLogoninfo.ConnectionInfo = crConnectionInfo;
+                CrTable.ApplyLogOnInfo(crtableLogoninfo);
+            }
+        }
+
         private void btnViwerUser_Click(object sender, EventArgs e)
         {
             string printer = "Microsoft to PDF";
@@ -67,7 +89,8 @@ namespace Users
         private void frmUserMan_Load(object sender, EventArgs e)
         {
             cryRpt = new ReportDocument();
-            cryRpt.Load("AccessCardsUsers.rpt");
+            cryRpt.Load("AccessCardsReport.rpt");
+            SetCredentialsInfo();
             crvAccessCards.ReportSource = cryRpt;
             crvAccessCards.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None; 
             crvAccessCards.Refresh();
