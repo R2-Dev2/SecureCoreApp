@@ -185,7 +185,7 @@ namespace Users
             // 
             // crvAccessCards
             // 
-            this.crvAccessCards.ActiveViewIndex = 0;
+            this.crvAccessCards.ActiveViewIndex = -1;
             this.crvAccessCards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvAccessCards.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvAccessCards.Location = new System.Drawing.Point(774, 129);
@@ -207,7 +207,7 @@ namespace Users
             // swtxtUsername
             // 
             this.swtxtUsername.codiSW = null;
-            this.swtxtUsername.columnName = "CodeUser";
+            this.swtxtUsername.columnName = "Login";
             this.swtxtUsername.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtUsername.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtUsername.isForeignKey = false;
