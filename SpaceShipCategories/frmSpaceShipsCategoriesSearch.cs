@@ -16,7 +16,7 @@ namespace SpaceShipCategories
         public frmSpaceShipsCategoriesSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.title = "SpaceShips Categories Search";
+            this.title = "Search SpaceShips Categories";
             this.tableName = "SpaceShipCategories";
             this.controlId = controlId;
             this.originalForm = originalForm;

@@ -16,7 +16,7 @@ namespace Sectors
         public frmSectorsSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.title = "Sectors Planets Search";
+            this.title = "Search Sectors Planets";
             this.tableName = "Sectors";
             this.controlId = controlId;
             this.originalForm = originalForm;
