@@ -29,9 +29,9 @@ namespace Users
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblCode = new System.Windows.Forms.Label();
-            this.swtxtUserName = new CustomControls.SWTextBox();
+            this.swtxtName = new CustomControls.SWTextBox();
             this.swtxtCode = new CustomControls.SWTextBox();
             this.swcodRank = new CustomControls.SWCodi();
             this.swtxtRank = new CustomControls.SWTextBox();
@@ -39,19 +39,26 @@ namespace Users
             this.swUserCat = new CustomControls.SWCodi();
             this.swTxtUserCategory = new CustomControls.SWTextBox();
             this.lblUserCategory = new System.Windows.Forms.Label();
-            this.btnViwerUser = new System.Windows.Forms.Button();
+            this.btnPrintList = new System.Windows.Forms.Button();
+            this.crvAccessCards = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.swtxtUsername = new CustomControls.SWTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblUserName
+            // pbClose
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(75, 175);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(54, 20);
-            this.lblUserName.TabIndex = 37;
-            this.lblUserName.Text = "Name";
+            this.pbClose.Location = new System.Drawing.Point(1587, 0);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(75, 175);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(54, 20);
+            this.lblName.TabIndex = 37;
+            this.lblName.Text = "Name";
             // 
             // lblCode
             // 
@@ -63,18 +70,18 @@ namespace Users
             this.lblCode.TabIndex = 36;
             this.lblCode.Text = "Code";
             // 
-            // swtxtUserName
+            // swtxtName
             // 
-            this.swtxtUserName.codiSW = null;
-            this.swtxtUserName.columnName = "UserName";
-            this.swtxtUserName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swtxtUserName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtxtUserName.isForeignKey = false;
-            this.swtxtUserName.Location = new System.Drawing.Point(146, 171);
-            this.swtxtUserName.Name = "swtxtUserName";
-            this.swtxtUserName.required = false;
-            this.swtxtUserName.Size = new System.Drawing.Size(296, 29);
-            this.swtxtUserName.TabIndex = 33;
+            this.swtxtName.codiSW = null;
+            this.swtxtName.columnName = "UserName";
+            this.swtxtName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtName.isForeignKey = false;
+            this.swtxtName.Location = new System.Drawing.Point(146, 171);
+            this.swtxtName.Name = "swtxtName";
+            this.swtxtName.required = true;
+            this.swtxtName.Size = new System.Drawing.Size(468, 29);
+            this.swtxtName.TabIndex = 33;
             // 
             // swtxtCode
             // 
@@ -97,10 +104,9 @@ namespace Users
             this.swcodRank.descName = "DescRank";
             this.swcodRank.formCS = "frmUserRanksSearch";
             this.swcodRank.Location = new System.Drawing.Point(146, 218);
-            this.swcodRank.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swcodRank.Name = "swcodRank";
             this.swcodRank.nameId = "idUserRank";
-            this.swcodRank.Size = new System.Drawing.Size(402, 29);
+            this.swcodRank.Size = new System.Drawing.Size(468, 29);
             this.swcodRank.TabIndex = 38;
             this.swcodRank.tableName = "UserRanks";
             // 
@@ -136,10 +142,9 @@ namespace Users
             this.swUserCat.descName = "DescCategory";
             this.swUserCat.formCS = "frmUserCategoriesSearch";
             this.swUserCat.Location = new System.Drawing.Point(146, 266);
-            this.swUserCat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swUserCat.Name = "swUserCat";
             this.swUserCat.nameId = "idUserCategory";
-            this.swUserCat.Size = new System.Drawing.Size(402, 29);
+            this.swUserCat.Size = new System.Drawing.Size(468, 29);
             this.swUserCat.TabIndex = 41;
             this.swUserCat.tableName = "UserCategories";
             // 
@@ -167,47 +172,88 @@ namespace Users
             this.lblUserCategory.TabIndex = 42;
             this.lblUserCategory.Text = "Category";
             // 
-            // btnViwerUser
+            // btnPrintList
             // 
-            this.btnViwerUser.Location = new System.Drawing.Point(431, 644);
-            this.btnViwerUser.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViwerUser.Name = "btnViwerUser";
-            this.btnViwerUser.Size = new System.Drawing.Size(86, 38);
-            this.btnViwerUser.TabIndex = 44;
-            this.btnViwerUser.Text = "View";
-            this.btnViwerUser.UseVisualStyleBackColor = true;
+            this.btnPrintList.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintList.Location = new System.Drawing.Point(1479, 644);
+            this.btnPrintList.Name = "btnPrintList";
+            this.btnPrintList.Size = new System.Drawing.Size(102, 38);
+            this.btnPrintList.TabIndex = 44;
+            this.btnPrintList.Text = "Print List";
+            this.btnPrintList.UseVisualStyleBackColor = true;
+            this.btnPrintList.Click += new System.EventHandler(this.btnViwerUser_Click);
+            // 
+            // crvAccessCards
+            // 
+            this.crvAccessCards.ActiveViewIndex = -1;
+            this.crvAccessCards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvAccessCards.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvAccessCards.Location = new System.Drawing.Point(774, 129);
+            this.crvAccessCards.Name = "crvAccessCards";
+            this.crvAccessCards.Size = new System.Drawing.Size(807, 499);
+            this.crvAccessCards.TabIndex = 45;
+            this.crvAccessCards.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(364, 129);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(88, 20);
+            this.lblUsername.TabIndex = 46;
+            this.lblUsername.Text = "Username";
+            // 
+            // swtxtUsername
+            // 
+            this.swtxtUsername.codiSW = null;
+            this.swtxtUsername.columnName = "Login";
+            this.swtxtUsername.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtUsername.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtUsername.isForeignKey = false;
+            this.swtxtUsername.Location = new System.Drawing.Point(469, 125);
+            this.swtxtUsername.Name = "swtxtUsername";
+            this.swtxtUsername.required = true;
+            this.swtxtUsername.Size = new System.Drawing.Size(145, 29);
+            this.swtxtUsername.TabIndex = 47;
             // 
             // frmUserMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 706);
-            this.Controls.Add(this.btnViwerUser);
+            this.ClientSize = new System.Drawing.Size(1584, 706);
+            this.Controls.Add(this.swtxtUsername);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.btnPrintList);
             this.Controls.Add(this.swUserCat);
             this.Controls.Add(this.swTxtUserCategory);
             this.Controls.Add(this.lblUserCategory);
             this.Controls.Add(this.swcodRank);
             this.Controls.Add(this.swtxtRank);
             this.Controls.Add(this.lblRank);
-            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCode);
-            this.Controls.Add(this.swtxtUserName);
+            this.Controls.Add(this.swtxtName);
             this.Controls.Add(this.swtxtCode);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.crvAccessCards);
             this.Name = "frmUserMan";
             this.Text = "frmUserMan";
+            this.Load += new System.EventHandler(this.frmUserMan_Load);
+            this.Controls.SetChildIndex(this.crvAccessCards, 0);
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCode, 0);
-            this.Controls.SetChildIndex(this.swtxtUserName, 0);
+            this.Controls.SetChildIndex(this.swtxtName, 0);
             this.Controls.SetChildIndex(this.lblCode, 0);
-            this.Controls.SetChildIndex(this.lblUserName, 0);
+            this.Controls.SetChildIndex(this.lblName, 0);
             this.Controls.SetChildIndex(this.lblRank, 0);
             this.Controls.SetChildIndex(this.swtxtRank, 0);
             this.Controls.SetChildIndex(this.swcodRank, 0);
             this.Controls.SetChildIndex(this.lblUserCategory, 0);
             this.Controls.SetChildIndex(this.swTxtUserCategory, 0);
             this.Controls.SetChildIndex(this.swUserCat, 0);
-            this.Controls.SetChildIndex(this.btnViwerUser, 0);
+            this.Controls.SetChildIndex(this.btnPrintList, 0);
+            this.Controls.SetChildIndex(this.lblUsername, 0);
+            this.Controls.SetChildIndex(this.swtxtUsername, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -215,9 +261,9 @@ namespace Users
         }
 
         #endregion
-        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblCode;
-        private CustomControls.SWTextBox swtxtUserName;
+        private CustomControls.SWTextBox swtxtName;
         private CustomControls.SWTextBox swtxtCode;
         private CustomControls.SWCodi swcodRank;
         private CustomControls.SWTextBox swtxtRank;
@@ -225,6 +271,9 @@ namespace Users
         private CustomControls.SWCodi swUserCat;
         private CustomControls.SWTextBox swTxtUserCategory;
         private System.Windows.Forms.Label lblUserCategory;
-        private System.Windows.Forms.Button btnViwerUser;
+        private System.Windows.Forms.Button btnPrintList;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvAccessCards;
+        private System.Windows.Forms.Label lblUsername;
+        private CustomControls.SWTextBox swtxtUsername;
     }
 }

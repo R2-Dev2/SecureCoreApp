@@ -20,6 +20,12 @@
             This function gets the information for the connection and creates a new connection.
             </summary>
         </member>
+        <member name="M:DataAccess.AccesADades.GetStringConnectionBuilder">
+            <summary>
+            This function returns StringConnectionStringBuilder to use in Crystal Reports 
+            </summary>
+            <returns>StringConnectionStringBuilder with connection information</returns>
+        </member>
         <member name="M:DataAccess.AccesADades.PortarTaula(System.String)">
             <summary>
             This function returns all data contained in a table

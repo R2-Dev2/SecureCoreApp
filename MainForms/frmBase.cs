@@ -15,7 +15,7 @@ namespace MainForms
 {
     public partial class frmBase : Form
     {
-        private AccesADades accesADades;
+        protected AccesADades accesADades;
         private DataSet dts;
 
         protected string connectionString;
