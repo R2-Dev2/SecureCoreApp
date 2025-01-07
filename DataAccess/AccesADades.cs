@@ -36,6 +36,15 @@ namespace DataAccess
             conn = new SqlConnection(connectionString);
         }
         /// <summary>
+        /// This function returns StringConnectionStringBuilder to use in Crystal Reports 
+        /// </summary>
+        /// <returns>StringConnectionStringBuilder with connection information</returns>
+        public SqlConnectionStringBuilder GetStringConnectionBuilder()
+        {
+            return new SqlConnectionStringBuilder(connectionString);
+        }
+
+        /// <summary>
         /// This function returns all data contained in a table
         /// </summary>
         /// <param name="nomTaula">Name of the table to be consulted</param>

@@ -48,7 +48,7 @@ namespace Users
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(1567, 0);
+            this.pbClose.Location = new System.Drawing.Point(1587, 0);
             // 
             // lblName
             // 
@@ -185,7 +185,7 @@ namespace Users
             // 
             // crvAccessCards
             // 
-            this.crvAccessCards.ActiveViewIndex = -1;
+            this.crvAccessCards.ActiveViewIndex = 0;
             this.crvAccessCards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvAccessCards.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvAccessCards.Location = new System.Drawing.Point(774, 129);
