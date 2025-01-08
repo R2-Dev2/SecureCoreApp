@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmManUserOptions.cs">
+    <Compile Include="frmUserOptionsMan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManUserOptions.Designer.cs">
-      <DependentUpon>frmManUserOptions.cs</DependentUpon>
+    <Compile Include="frmUserOptionsMan.Designer.cs">
+      <DependentUpon>frmUserOptionsMan.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,8 +62,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmManUserOptions.resx">
-      <DependentUpon>frmManUserOptions.cs</DependentUpon>
+    <EmbeddedResource Include="frmUserOptionsMan.resx">
+      <DependentUpon>frmUserOptionsMan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

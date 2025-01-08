@@ -11,11 +11,11 @@ using MainForms;
 
 namespace UserOptions
 {
-    public partial class frmManUserOptions : frmBase
+    public partial class frmUserOptionsMan : frmBase
     {
-        public frmManUserOptions()
+        public frmUserOptionsMan()
         {
-            this.title = "User Options Manteniment";
+            this.title = "User Options Management";
             this.tableName = "UserOptions";
         }
         protected override void ConfigurarDataGrid()

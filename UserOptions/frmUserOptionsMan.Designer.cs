@@ -1,7 +1,7 @@
 ﻿
 namespace UserOptions
 {
-    partial class frmManUserOptions
+    partial class frmUserOptionsMan
     {
         /// <summary>
         /// Required designer variable.
