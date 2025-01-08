@@ -183,12 +183,12 @@ namespace MenuOptions
             this.swtxtImage.Location = new System.Drawing.Point(487, 281);
             this.swtxtImage.Name = "swtxtImage";
             this.swtxtImage.required = false;
-            this.swtxtImage.Size = new System.Drawing.Size(150, 29);
+            this.swtxtImage.Size = new System.Drawing.Size(243, 29);
             this.swtxtImage.TabIndex = 33;
             // 
             // pbImage
             // 
-            this.pbImage.Location = new System.Drawing.Point(487, 131);
+            this.pbImage.Location = new System.Drawing.Point(532, 112);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(150, 150);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
