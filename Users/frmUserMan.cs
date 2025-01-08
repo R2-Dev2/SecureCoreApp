@@ -32,8 +32,8 @@ namespace Users
             dtgDades.Columns["idUserRank"].Visible = false;
             dtgDades.Columns["idUserCategory"].Visible = false;
             dtgDades.Columns["CodeUser"].HeaderText = "Code";
-            dtgDades.Columns["UserName"].HeaderText = "User Name";
-            dtgDades.Columns["Login"].Visible = false;
+            dtgDades.Columns["UserName"].HeaderText = "Name";
+            dtgDades.Columns["Login"].HeaderText = "Username";
             dtgDades.Columns["Password"].Visible = false;
             dtgDades.Columns["Photo"].Visible = false;
             dtgDades.Columns["idPlanet"].Visible = false;
