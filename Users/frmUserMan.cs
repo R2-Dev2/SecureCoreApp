@@ -86,13 +86,18 @@ namespace Users
             }
         }
 
-        private void frmUserMan_Load(object sender, EventArgs e)
+        private void btnShow_Click(object sender, EventArgs e)
         {
             cryRpt = new ReportDocument();
             cryRpt.Load("AccessCardsReport.rpt");
             SetCredentialsInfo();
+            string id = dtgDades.SelectedRows[0].Cells[0].Value.ToString();
+            
+            cryRpt.RecordSelectionFormula = "{Users.idUser} = " + Convert.ToInt32(id);
+
             crvAccessCards.ReportSource = cryRpt;
             crvAccessCards.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None; 
+
             crvAccessCards.Refresh();
         }
     }

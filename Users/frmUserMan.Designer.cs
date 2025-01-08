@@ -43,12 +43,13 @@ namespace Users
             this.crvAccessCards = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.lblUsername = new System.Windows.Forms.Label();
             this.swtxtUsername = new CustomControls.SWTextBox();
+            this.btnShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(1587, 0);
+            this.pbClose.Location = new System.Drawing.Point(1867, 0);
             // 
             // lblName
             // 
@@ -217,11 +218,22 @@ namespace Users
             this.swtxtUsername.Size = new System.Drawing.Size(145, 29);
             this.swtxtUsername.TabIndex = 47;
             // 
+            // btnShow
+            // 
+            this.btnShow.Location = new System.Drawing.Point(1367, 644);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(106, 38);
+            this.btnShow.TabIndex = 48;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
             // frmUserMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 706);
+            this.Controls.Add(this.btnShow);
             this.Controls.Add(this.swtxtUsername);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnPrintList);
@@ -238,7 +250,6 @@ namespace Users
             this.Controls.Add(this.crvAccessCards);
             this.Name = "frmUserMan";
             this.Text = "frmUserMan";
-            this.Load += new System.EventHandler(this.frmUserMan_Load);
             this.Controls.SetChildIndex(this.crvAccessCards, 0);
             this.Controls.SetChildIndex(this.pbClose, 0);
             this.Controls.SetChildIndex(this.swtxtCode, 0);
@@ -254,6 +265,7 @@ namespace Users
             this.Controls.SetChildIndex(this.btnPrintList, 0);
             this.Controls.SetChildIndex(this.lblUsername, 0);
             this.Controls.SetChildIndex(this.swtxtUsername, 0);
+            this.Controls.SetChildIndex(this.btnShow, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -275,5 +287,6 @@ namespace Users
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvAccessCards;
         private System.Windows.Forms.Label lblUsername;
         private CustomControls.SWTextBox swtxtUsername;
+        private System.Windows.Forms.Button btnShow;
     }
 }
