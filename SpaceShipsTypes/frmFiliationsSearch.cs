@@ -16,7 +16,7 @@ namespace SpaceShipsTypes
         public frmFiliationsSearch(string controlId, Form originalForm)
         {
             InitializeComponent();
-            this.title = "Filiations Search";
+            this.title = "Search Filiations";
             this.tableName = "Filiations";
             this.controlId = controlId;
             this.originalForm = originalForm;

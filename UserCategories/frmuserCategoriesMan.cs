@@ -16,7 +16,7 @@ namespace UserCategories
         public frmUserCategoriesMan()
         {
             InitializeComponent();
-            this.title = "User Categories";
+            this.title = "User Categories Management";
             tableName = "UserCategories";
             query = $"SELECT * FROM {tableName}";
 

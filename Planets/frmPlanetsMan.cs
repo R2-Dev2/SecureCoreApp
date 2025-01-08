@@ -17,7 +17,7 @@ namespace Planets
         public frmPlanetsMan()
         {
             InitializeComponent();
-            this.title = "Planets Manteniment";
+            this.title = "Planets Management";
             this.tableName = "Planets";
             this.codeTable = "CodePlanet";
             swImagePlan.Leave += new System.EventHandler(this.LeaveImage);
