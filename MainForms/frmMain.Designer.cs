@@ -64,7 +64,7 @@ namespace MainForms
             this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStatus.Location = new System.Drawing.Point(0, 0);
             this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(880, 38);
+            this.pnlStatus.Size = new System.Drawing.Size(880, 60);
             this.pnlStatus.TabIndex = 2;
             // 
             // pbUsari
@@ -73,9 +73,9 @@ namespace MainForms
             this.pbUsari.BackColor = System.Drawing.Color.DarkCyan;
             this.pbUsari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbUsari.Image = global::MainForms.Properties.Resources.userImg;
-            this.pbUsari.Location = new System.Drawing.Point(648, 0);
+            this.pbUsari.Location = new System.Drawing.Point(616, 0);
             this.pbUsari.Name = "pbUsari";
-            this.pbUsari.Size = new System.Drawing.Size(38, 38);
+            this.pbUsari.Size = new System.Drawing.Size(60, 60);
             this.pbUsari.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUsari.TabIndex = 3;
             this.pbUsari.TabStop = false;
@@ -86,9 +86,9 @@ namespace MainForms
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbClose.Image = global::MainForms.Properties.Resources.icon_cerrar_ventana;
-            this.pbClose.Location = new System.Drawing.Point(832, 0);
+            this.pbClose.Location = new System.Drawing.Point(820, 0);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(48, 38);
+            this.pbClose.Size = new System.Drawing.Size(60, 60);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 1;
             this.pbClose.TabStop = false;
@@ -98,10 +98,10 @@ namespace MainForms
             // 
             this.lblUsuari.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuari.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblUsuari.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuari.Location = new System.Drawing.Point(694, 0);
+            this.lblUsuari.Font = new System.Drawing.Font("Cambria", 16F, System.Drawing.FontStyle.Bold);
+            this.lblUsuari.Location = new System.Drawing.Point(682, 0);
             this.lblUsuari.Name = "lblUsuari";
-            this.lblUsuari.Size = new System.Drawing.Size(132, 38);
+            this.lblUsuari.Size = new System.Drawing.Size(132, 60);
             this.lblUsuari.TabIndex = 0;
             this.lblUsuari.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblUsuari.Click += new System.EventHandler(this.lblUsuari_Click);
@@ -109,21 +109,23 @@ namespace MainForms
             // pnlMenu
             // 
             this.pnlMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.pnlMenu.AutoScroll = true;
             this.pnlMenu.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 38);
+            this.pnlMenu.Location = new System.Drawing.Point(0, 60);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(233, 469);
+            this.pnlMenu.Size = new System.Drawing.Size(280, 447);
             this.pnlMenu.TabIndex = 3;
+            this.pnlMenu.WrapContents = false;
             // 
             // pnlPpal
             // 
             this.pnlPpal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPpal.Location = new System.Drawing.Point(233, 38);
+            this.pnlPpal.Location = new System.Drawing.Point(280, 60);
             this.pnlPpal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPpal.Name = "pnlPpal";
-            this.pnlPpal.Size = new System.Drawing.Size(647, 469);
+            this.pnlPpal.Size = new System.Drawing.Size(600, 447);
             this.pnlPpal.TabIndex = 1;
             // 
             // frmMain
