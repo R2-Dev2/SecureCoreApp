@@ -174,5 +174,10 @@ namespace CustomControls
                 OpenCS();
             }
         }
+
+        private void txtCodi_DoubleClick(object sender, EventArgs e)
+        {
+            OpenCS();
+        }
     }
 }

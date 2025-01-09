@@ -29,8 +29,8 @@ namespace MainForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBase));
             this.dtgDades = new System.Windows.Forms.DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -38,6 +38,7 @@ namespace MainForms
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.lblSave = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
@@ -46,23 +47,23 @@ namespace MainForms
             // 
             this.dtgDades.AllowUserToAddRows = false;
             this.dtgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgDades.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDades.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgDades.Location = new System.Drawing.Point(54, 359);
             this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
@@ -71,7 +72,8 @@ namespace MainForms
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(676, 269);
-            this.dtgDades.TabIndex = 1;
+            this.dtgDades.StandardTab = true;
+            this.dtgDades.TabIndex = 100;
             this.dtgDades.CurrentCellChanged += new System.EventHandler(this.dtgDades_CurrentCellChanged);
             this.dtgDades.SelectionChanged += new System.EventHandler(this.dtgDades_SelectionChanged);
             // 
@@ -133,6 +135,16 @@ namespace MainForms
             this.lblError.Text = "One or more mandatory fields are blank or incorrect";
             this.lblError.Visible = false;
             // 
+            // lblSave
+            // 
+            this.lblSave.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSave.Location = new System.Drawing.Point(226, 653);
+            this.lblSave.Name = "lblSave";
+            this.lblSave.Size = new System.Drawing.Size(300, 20);
+            this.lblSave.TabIndex = 23;
+            this.lblSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblSave.Visible = false;
+            // 
             // frmBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +152,7 @@ namespace MainForms
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(786, 706);
+            this.Controls.Add(this.lblSave);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.lblTitle);
@@ -164,5 +177,6 @@ namespace MainForms
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblError;
         protected System.Windows.Forms.PictureBox pbClose;
+        private System.Windows.Forms.Label lblSave;
     }
 }

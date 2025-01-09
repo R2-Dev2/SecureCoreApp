@@ -37,10 +37,14 @@ namespace Utils
         }
         public static bool VerifyPassword(string password, string salt, string passwordHash)
         {
-            byte[] saltByte = salt.Split('-').Select(s => byte.Parse(s, System.Globalization.NumberStyles.HexNumber)).ToArray();
-            byte[] computedHash = ComputeHash(password, saltByte);
-            string userPasswordHash = BitConverter.ToString(computedHash);
-            return passwordHash == userPasswordHash;
+            try
+            {
+                byte[] saltByte = salt.Split('-').Select(s => byte.Parse(s, System.Globalization.NumberStyles.HexNumber)).ToArray();
+                byte[] computedHash = ComputeHash(password, saltByte);
+                string userPasswordHash = BitConverter.ToString(computedHash);
+                return passwordHash == userPasswordHash;
+            }
+            catch (Exception) { return false; }
         }
 
     }

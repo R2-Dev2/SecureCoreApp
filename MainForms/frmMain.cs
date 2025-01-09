@@ -66,7 +66,7 @@ namespace MainForms
 
         private void GetOptions()
         {
-            dtsOptions = accesADades.PortarPerConsulta($"Select * FROM userOptions WHERE rangeOption <= {rangeOption}");
+            dtsOptions = accesADades.PortarPerConsulta($"Select * FROM userOptions WHERE rangeOption <= {rangeOption} ORDER BY description");
         }
 
         private void LoginOptions()
