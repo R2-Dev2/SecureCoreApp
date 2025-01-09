@@ -49,7 +49,7 @@ namespace Users
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(2368, 0);
+            this.pbClose.Location = new System.Drawing.Point(1604, -1);
             // 
             // lblName
             // 
