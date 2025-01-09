@@ -88,11 +88,7 @@ namespace LoginForms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtPwd.Text) || string.IsNullOrWhiteSpace(txtPasswordValidacio.Text))
-            {
-                lblIncorrect.Visible = true;
-            }
-            else if (txtPwd.Text == txtPasswordValidacio.Text)
+            if (txtPwd.Text == txtPasswordValidacio.Text)
             {
                 password = txtPwd.Text;
                 string passwordCheckError = verificarContrasenyaNova(password);

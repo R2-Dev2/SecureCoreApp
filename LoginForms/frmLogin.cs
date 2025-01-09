@@ -43,6 +43,7 @@ namespace LoginForms
         {
             tries++;
             bool isValid = false;
+            bool isChangeOfPassword = false;
             dict.Clear();
             dict.Add("Login", txtUser.Text);
             
@@ -57,12 +58,14 @@ namespace LoginForms
                 string savedPassword = dts.Tables[0].Rows[0]["password"].ToString();
                 if (userPassword == DEFAULT_PWD && savedPassword == DEFAULT_PWD)
                 {
+                    isChangeOfPassword = true;
                     frmLoginChangePass frm = new frmLoginChangePass();
                     frm.idUser = idUser;
                     txtPwd.Clear();
                     tries = 0;
                     lblIncorrect.Visible = false;
                     lblTriesLeft.Visible = false;
+                    txtPwd.Focus();
                     frm.ShowDialog();
                 }
                 else
@@ -84,7 +87,7 @@ namespace LoginForms
                 }
             }
 
-            if (!isValid)
+            if (!isValid && !isChangeOfPassword)
             {
                 txtPwd.Clear();
                 lblIncorrect.Visible = true;
