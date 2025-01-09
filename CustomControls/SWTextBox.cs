@@ -57,7 +57,13 @@ namespace CustomControls
         public bool isForeignKey
         {
             get { return _isForeignKey; }
-            set { _isForeignKey = value; }
+            set {
+                _isForeignKey = value;
+                if (isForeignKey)
+                {
+                    this.TabStop = false;
+                }
+            }
         }
 
         private bool _required;

@@ -54,7 +54,7 @@
             </summary>
             <param name="query">Original DataSet SQL query in plain Text</param>
             <param name="dts">DataSet with changes</param>
-            <returns>Number of rows affected</returns>
+            <returns>Number of rows affected or -1 if exception ocurred</returns>
         </member>
         <member name="M:DataAccess.AccesADades.Executa(System.String)">
             <summary>
@@ -119,6 +119,7 @@
             This function executes a SQL Query that returns a number (Example: Count).
             </summary>
             <param name="command">Structured SQL Query</param>
+            <returns>Transaction result </returns>
         </member>
     </members>
 </doc>

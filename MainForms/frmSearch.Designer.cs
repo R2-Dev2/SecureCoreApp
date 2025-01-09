@@ -70,8 +70,10 @@ namespace MainForms
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
             this.dtgDades.Size = new System.Drawing.Size(588, 270);
+            this.dtgDades.StandardTab = true;
             this.dtgDades.TabIndex = 1;
-            this.dtgDades.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDades_CellContentDoubleClick);
+            this.dtgDades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDades_CellDoubleClick);
+            this.dtgDades.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgDades_KeyDown);
             // 
             // lblTitle
             // 

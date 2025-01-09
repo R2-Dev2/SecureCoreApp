@@ -79,7 +79,7 @@ namespace Users
             this.btnSave.Location = new System.Drawing.Point(467, 295);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(88, 40);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -90,7 +90,7 @@ namespace Users
             this.btnSelectImage.Location = new System.Drawing.Point(229, 307);
             this.btnSelectImage.Name = "btnSelectImage";
             this.btnSelectImage.Size = new System.Drawing.Size(43, 28);
-            this.btnSelectImage.TabIndex = 7;
+            this.btnSelectImage.TabIndex = 2;
             this.btnSelectImage.Text = "...";
             this.btnSelectImage.UseVisualStyleBackColor = true;
             this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
@@ -140,6 +140,7 @@ namespace Users
             this.swtxtUsername.required = true;
             this.swtxtUsername.Size = new System.Drawing.Size(162, 29);
             this.swtxtUsername.TabIndex = 1;
+            this.swtxtUsername.TabStop = false;
             // 
             // swtxtName
             // 
@@ -153,6 +154,7 @@ namespace Users
             this.swtxtName.required = true;
             this.swtxtName.Size = new System.Drawing.Size(139, 29);
             this.swtxtName.TabIndex = 0;
+            this.swtxtName.TabStop = false;
             // 
             // frmUserProfile
             // 

@@ -111,18 +111,25 @@ namespace DataAccess
         /// </summary>
         /// <param name="query">Original DataSet SQL query in plain Text</param>
         /// <param name="dts">DataSet with changes</param>
-        /// <returns>Number of rows affected</returns>
+        /// <returns>Number of rows affected or -1 if exception ocurred</returns>
         public int Actualitzar(string query, DataSet dts)
         {
-            int modificats = -1;
+            int modificats = 0;
             conn.Open();
 
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
-
+            
             if (dts.HasChanges())
             {
-                modificats = adapter.Update(dts.Tables[0]);
+                try
+                {
+                    modificats = adapter.Update(dts.Tables[0]);
+                }
+                catch (Exception)
+                {
+                    modificats = -1;
+                }
             }
 
             conn.Close();
@@ -138,9 +145,16 @@ namespace DataAccess
             conn.Open();
             SqlCommand cmd;
             cmd = new SqlCommand(query, conn);
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            conn.Close();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception) { }
+            finally
+            {
+                cmd.Dispose();
+                conn.Close();
+            }   
         }
         /// <summary>
         /// This function generates a SqlCommand query that returns all values from the table matching the parameters
@@ -278,7 +292,8 @@ namespace DataAccess
         /// This function executes a SQL Query that returns a number (Example: Count).
         /// </summary>
         /// <param name="command">Structured SQL Query</param>
-        private void ExecutaTransaccioEscalar(SqlCommand command)
+        /// <returns>Transaction result </returns>
+        private int ExecutaTransaccioEscalar(SqlCommand command)
         {
             int result = -1;
             conn.Open();
@@ -298,6 +313,7 @@ namespace DataAccess
             {
                 conn.Close();
             }
+            return result;
         }
 
     }

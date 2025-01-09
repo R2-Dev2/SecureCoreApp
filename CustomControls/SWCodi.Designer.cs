@@ -43,6 +43,7 @@ namespace CustomControls
             this.txtCodi.Name = "txtCodi";
             this.txtCodi.Size = new System.Drawing.Size(66, 29);
             this.txtCodi.TabIndex = 0;
+            this.txtCodi.DoubleClick += new System.EventHandler(this.txtCodi_DoubleClick);
             this.txtCodi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodi_KeyDown);
             this.txtCodi.Leave += new System.EventHandler(this.txtCodi_Leave);
             // 

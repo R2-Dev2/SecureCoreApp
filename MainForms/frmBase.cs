@@ -165,6 +165,25 @@ namespace MainForms
             }
         }
 
+        private void ShowSaveLabel(bool isSuccessful, string message)
+        {
+            if (isSuccessful)
+            {
+                lblSave.Text = message;
+                lblSave.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                lblSave.Text = message;
+                lblSave.ForeColor = Color.Red;
+            }
+            lblSave.Visible = true;
+            Task.Delay(3000).ContinueWith(_ =>
+            {
+                Invoke(new MethodInvoker(() => { lblSave.Visible = false; }));
+            });
+        }
+
         private void frmAccesDades_Load(object sender, EventArgs e)
         {
             if (DesignMode) return;
@@ -175,6 +194,7 @@ namespace MainForms
             dtgDades.SelectionChanged -= this.dtgDades_SelectionChanged;
             PortarDades();
             ConfigurarDataGrid();
+            FocusOnCodeTable();
         }
 
         private void btnDesar_Click(object sender, EventArgs e)
@@ -189,7 +209,24 @@ namespace MainForms
                 AddNewRow(e);
             }
 
-            accesADades.Actualitzar(query, dts);
+            int updatedRows = accesADades.Actualitzar(query, dts);
+
+            if(updatedRows == -1)
+            {
+                ShowSaveLabel(false, "Couldn't save changes");
+                PortarDades();
+            }
+            else
+            {
+                if(updatedRows == 0)
+                {
+                    ShowSaveLabel(true, "No changes to save");
+                }
+                else
+                {
+                    ShowSaveLabel(true, $"Changes to {updatedRows} entries saved");
+                }
+            }
 
             if (isRowAdded)
             {

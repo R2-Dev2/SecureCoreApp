@@ -126,7 +126,7 @@ namespace MainForms
             selectAndClose();
         }
 
-        private void dtgDades_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgDades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             selectAndClose();
         }
@@ -135,6 +135,14 @@ namespace MainForms
         {
             dts = null;
             this.Close();
+        }
+
+        private void dtgDades_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                selectAndClose();
+            }
         }
     }
 }

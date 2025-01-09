@@ -49,7 +49,7 @@ namespace Users
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(1867, 0);
+            this.pbClose.Location = new System.Drawing.Point(1916, 0);
             // 
             // lblName
             // 
@@ -82,7 +82,7 @@ namespace Users
             this.swtxtName.Name = "swtxtName";
             this.swtxtName.required = true;
             this.swtxtName.Size = new System.Drawing.Size(468, 29);
-            this.swtxtName.TabIndex = 33;
+            this.swtxtName.TabIndex = 2;
             // 
             // swtxtCode
             // 
@@ -95,7 +95,7 @@ namespace Users
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = true;
             this.swtxtCode.Size = new System.Drawing.Size(186, 29);
-            this.swtxtCode.TabIndex = 32;
+            this.swtxtCode.TabIndex = 0;
             // 
             // swcodRank
             // 
@@ -108,7 +108,7 @@ namespace Users
             this.swcodRank.Name = "swcodRank";
             this.swcodRank.nameId = "idUserRank";
             this.swcodRank.Size = new System.Drawing.Size(468, 29);
-            this.swcodRank.TabIndex = 38;
+            this.swcodRank.TabIndex = 3;
             this.swcodRank.tableName = "UserRanks";
             // 
             // swtxtRank
@@ -124,6 +124,7 @@ namespace Users
             this.swtxtRank.required = true;
             this.swtxtRank.Size = new System.Drawing.Size(70, 16);
             this.swtxtRank.TabIndex = 40;
+            this.swtxtRank.TabStop = false;
             // 
             // lblRank
             // 
@@ -146,7 +147,7 @@ namespace Users
             this.swUserCat.Name = "swUserCat";
             this.swUserCat.nameId = "idUserCategory";
             this.swUserCat.Size = new System.Drawing.Size(468, 29);
-            this.swUserCat.TabIndex = 41;
+            this.swUserCat.TabIndex = 4;
             this.swUserCat.tableName = "UserCategories";
             // 
             // swTxtUserCategory
@@ -162,6 +163,7 @@ namespace Users
             this.swTxtUserCategory.required = true;
             this.swTxtUserCategory.Size = new System.Drawing.Size(70, 16);
             this.swTxtUserCategory.TabIndex = 43;
+            this.swTxtUserCategory.TabStop = false;
             // 
             // lblUserCategory
             // 
@@ -179,7 +181,7 @@ namespace Users
             this.btnPrintList.Location = new System.Drawing.Point(1479, 644);
             this.btnPrintList.Name = "btnPrintList";
             this.btnPrintList.Size = new System.Drawing.Size(102, 38);
-            this.btnPrintList.TabIndex = 44;
+            this.btnPrintList.TabIndex = 5;
             this.btnPrintList.Text = "Print List";
             this.btnPrintList.UseVisualStyleBackColor = true;
             this.btnPrintList.Click += new System.EventHandler(this.btnViwerUser_Click);
@@ -216,14 +218,15 @@ namespace Users
             this.swtxtUsername.Name = "swtxtUsername";
             this.swtxtUsername.required = true;
             this.swtxtUsername.Size = new System.Drawing.Size(145, 29);
-            this.swtxtUsername.TabIndex = 47;
+            this.swtxtUsername.TabIndex = 1;
             // 
             // btnShow
             // 
+            this.btnShow.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShow.Location = new System.Drawing.Point(1367, 644);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(106, 38);
-            this.btnShow.TabIndex = 48;
+            this.btnShow.TabIndex = 4;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
@@ -232,7 +235,7 @@ namespace Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 706);
+            this.ClientSize = new System.Drawing.Size(1942, 706);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.swtxtUsername);
             this.Controls.Add(this.lblUsername);

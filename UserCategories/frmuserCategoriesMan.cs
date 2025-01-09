@@ -17,9 +17,8 @@ namespace UserCategories
         {
             InitializeComponent();
             this.title = "User Categories Management";
-            tableName = "UserCategories";
-            query = $"SELECT * FROM {tableName}";
-
+            this.tableName = "UserCategories";
+            this.codeTable = "CodeCategory";
         }
 
         private void frmuserCategories_Load(object sender, EventArgs e)
