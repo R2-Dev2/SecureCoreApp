@@ -246,7 +246,7 @@ namespace MainForms
             else
             {
                 incorrectRowIndex = -1;
-                if (!isBinded)
+                if (!isBinded && !isNewRow)
                 {
                     dtgDades.ClearSelection();
                     dtgDades.Rows[e.RowIndex].Selected = true;
@@ -263,7 +263,10 @@ namespace MainForms
 
         private void dtgDades_CurrentCellChanged(object sender, EventArgs e)
         {
-            dtgDades_SelectionChanged(sender, e);
+            if (incorrectRowIndex == -1)
+            {
+                dtgDades_SelectionChanged(sender, e);
+            }
         }
     }
 }
