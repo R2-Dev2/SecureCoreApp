@@ -49,7 +49,7 @@ namespace MenuOptions
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(775, 0);
+            this.pbClose.Location = new System.Drawing.Point(1162, 0);
             // 
             // swtxtNamespace
             // 
@@ -58,10 +58,11 @@ namespace MenuOptions
             this.swtxtNamespace.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtNamespace.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtNamespace.isForeignKey = false;
-            this.swtxtNamespace.Location = new System.Drawing.Point(178, 281);
+            this.swtxtNamespace.Location = new System.Drawing.Point(267, 439);
+            this.swtxtNamespace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtNamespace.Name = "swtxtNamespace";
             this.swtxtNamespace.required = true;
-            this.swtxtNamespace.Size = new System.Drawing.Size(225, 29);
+            this.swtxtNamespace.Size = new System.Drawing.Size(336, 41);
             this.swtxtNamespace.TabIndex = 23;
             // 
             // swtxtTableName
@@ -71,23 +72,25 @@ namespace MenuOptions
             this.swtxtTableName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtTableName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtTableName.isForeignKey = false;
-            this.swtxtTableName.Location = new System.Drawing.Point(178, 188);
+            this.swtxtTableName.Location = new System.Drawing.Point(267, 294);
+            this.swtxtTableName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtTableName.Name = "swtxtTableName";
             this.swtxtTableName.required = true;
-            this.swtxtTableName.Size = new System.Drawing.Size(225, 29);
+            this.swtxtTableName.Size = new System.Drawing.Size(336, 41);
             this.swtxtTableName.TabIndex = 2;
             // 
             // swtxtFormName
             // 
             this.swtxtFormName.codiSW = null;
             this.swtxtFormName.columnName = "formName";
-            this.swtxtFormName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtFormName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtFormName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtFormName.isForeignKey = false;
-            this.swtxtFormName.Location = new System.Drawing.Point(178, 142);
+            this.swtxtFormName.Location = new System.Drawing.Point(267, 222);
+            this.swtxtFormName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtFormName.Name = "swtxtFormName";
             this.swtxtFormName.required = true;
-            this.swtxtFormName.Size = new System.Drawing.Size(225, 29);
+            this.swtxtFormName.Size = new System.Drawing.Size(336, 41);
             this.swtxtFormName.TabIndex = 0;
             // 
             // swtxtDescription
@@ -97,10 +100,11 @@ namespace MenuOptions
             this.swtxtDescription.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtDescription.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtDescription.isForeignKey = false;
-            this.swtxtDescription.Location = new System.Drawing.Point(178, 97);
+            this.swtxtDescription.Location = new System.Drawing.Point(267, 152);
+            this.swtxtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtDescription.Name = "swtxtDescription";
             this.swtxtDescription.required = true;
-            this.swtxtDescription.Size = new System.Drawing.Size(225, 29);
+            this.swtxtDescription.Size = new System.Drawing.Size(336, 41);
             this.swtxtDescription.TabIndex = 0;
             // 
             // swtxtRangeOption
@@ -110,19 +114,21 @@ namespace MenuOptions
             this.swtxtRangeOption.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.swtxtRangeOption.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtRangeOption.isForeignKey = false;
-            this.swtxtRangeOption.Location = new System.Drawing.Point(178, 233);
+            this.swtxtRangeOption.Location = new System.Drawing.Point(267, 364);
+            this.swtxtRangeOption.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtRangeOption.Name = "swtxtRangeOption";
             this.swtxtRangeOption.required = true;
-            this.swtxtRangeOption.Size = new System.Drawing.Size(225, 29);
+            this.swtxtRangeOption.Size = new System.Drawing.Size(336, 41);
             this.swtxtRangeOption.TabIndex = 23;
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblDescription.Location = new System.Drawing.Point(57, 101);
+            this.lblDescription.Location = new System.Drawing.Point(86, 158);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(100, 20);
+            this.lblDescription.Size = new System.Drawing.Size(167, 33);
             this.lblDescription.TabIndex = 24;
             this.lblDescription.Text = "Description";
             // 
@@ -130,9 +136,10 @@ namespace MenuOptions
             // 
             this.lblFormName.AutoSize = true;
             this.lblFormName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblFormName.Location = new System.Drawing.Point(58, 146);
+            this.lblFormName.Location = new System.Drawing.Point(87, 228);
+            this.lblFormName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormName.Name = "lblFormName";
-            this.lblFormName.Size = new System.Drawing.Size(99, 20);
+            this.lblFormName.Size = new System.Drawing.Size(163, 33);
             this.lblFormName.TabIndex = 26;
             this.lblFormName.Text = "Form Name";
             // 
@@ -140,26 +147,29 @@ namespace MenuOptions
             // 
             this.lblTableName.AutoSize = true;
             this.lblTableName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblTableName.Location = new System.Drawing.Point(56, 192);
+            this.lblTableName.Location = new System.Drawing.Point(84, 300);
+            this.lblTableName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTableName.Name = "lblTableName";
-            this.lblTableName.Size = new System.Drawing.Size(101, 20);
+            this.lblTableName.Size = new System.Drawing.Size(167, 33);
             this.lblTableName.TabIndex = 28;
             this.lblTableName.Text = "Table Name";
             // 
             // lblRangeOption
             // 
             this.lblRangeOption.Location = new System.Drawing.Point(0, 0);
+            this.lblRangeOption.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRangeOption.Name = "lblRangeOption";
-            this.lblRangeOption.Size = new System.Drawing.Size(100, 23);
+            this.lblRangeOption.Size = new System.Drawing.Size(150, 36);
             this.lblRangeOption.TabIndex = 31;
             // 
             // lblNamespace
             // 
             this.lblNamespace.AutoSize = true;
             this.lblNamespace.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblNamespace.Location = new System.Drawing.Point(59, 285);
+            this.lblNamespace.Location = new System.Drawing.Point(88, 445);
+            this.lblNamespace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNamespace.Name = "lblNamespace";
-            this.lblNamespace.Size = new System.Drawing.Size(98, 20);
+            this.lblNamespace.Size = new System.Drawing.Size(162, 33);
             this.lblNamespace.TabIndex = 30;
             this.lblNamespace.Text = "Namespace";
             // 
@@ -167,9 +177,10 @@ namespace MenuOptions
             // 
             this.lblAccessLevel.AutoSize = true;
             this.lblAccessLevel.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblAccessLevel.Location = new System.Drawing.Point(51, 237);
+            this.lblAccessLevel.Location = new System.Drawing.Point(76, 370);
+            this.lblAccessLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccessLevel.Name = "lblAccessLevel";
-            this.lblAccessLevel.Size = new System.Drawing.Size(106, 20);
+            this.lblAccessLevel.Size = new System.Drawing.Size(174, 33);
             this.lblAccessLevel.TabIndex = 32;
             this.lblAccessLevel.Text = "Access Level";
             // 
@@ -180,17 +191,19 @@ namespace MenuOptions
             this.swtxtImage.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtImage.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtImage.isForeignKey = false;
-            this.swtxtImage.Location = new System.Drawing.Point(487, 281);
+            this.swtxtImage.Location = new System.Drawing.Point(730, 439);
+            this.swtxtImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.swtxtImage.Name = "swtxtImage";
             this.swtxtImage.required = false;
-            this.swtxtImage.Size = new System.Drawing.Size(243, 29);
+            this.swtxtImage.Size = new System.Drawing.Size(362, 41);
             this.swtxtImage.TabIndex = 33;
             // 
             // pbImage
             // 
-            this.pbImage.Location = new System.Drawing.Point(532, 112);
+            this.pbImage.Location = new System.Drawing.Point(798, 175);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(150, 150);
+            this.pbImage.Size = new System.Drawing.Size(225, 234);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 34;
             this.pbImage.TabStop = false;
@@ -199,17 +212,18 @@ namespace MenuOptions
             // 
             this.lblImage.AutoSize = true;
             this.lblImage.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblImage.Location = new System.Drawing.Point(424, 285);
+            this.lblImage.Location = new System.Drawing.Point(636, 445);
+            this.lblImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(57, 20);
+            this.lblImage.Size = new System.Drawing.Size(95, 33);
             this.lblImage.TabIndex = 35;
             this.lblImage.Text = "Image";
             // 
             // frmMenuOptionsMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 686);
+            this.ClientSize = new System.Drawing.Size(1200, 1072);
             this.Controls.Add(this.lblImage);
             this.Controls.Add(this.pbImage);
             this.Controls.Add(this.swtxtImage);
@@ -224,6 +238,7 @@ namespace MenuOptions
             this.Controls.Add(this.swtxtFormName);
             this.Controls.Add(this.swtxtTableName);
             this.Controls.Add(this.swtxtNamespace);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "frmMenuOptionsMan";
             this.Text = "z";
             this.Controls.SetChildIndex(this.pbClose, 0);

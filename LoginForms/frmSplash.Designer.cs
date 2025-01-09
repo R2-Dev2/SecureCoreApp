@@ -30,6 +30,7 @@ namespace LoginForms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.Percentatge = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -49,9 +50,10 @@ namespace LoginForms
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(157, 322);
+            this.progressBar.Location = new System.Drawing.Point(236, 503);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(429, 23);
+            this.progressBar.Size = new System.Drawing.Size(644, 36);
             this.progressBar.TabIndex = 0;
             this.progressBar.Visible = false;
             // 
@@ -61,9 +63,10 @@ namespace LoginForms
             this.Percentatge.BackColor = System.Drawing.Color.Transparent;
             this.Percentatge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Percentatge.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Percentatge.Location = new System.Drawing.Point(347, 369);
+            this.Percentatge.Location = new System.Drawing.Point(520, 577);
+            this.Percentatge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Percentatge.Name = "Percentatge";
-            this.Percentatge.Size = new System.Drawing.Size(35, 20);
+            this.Percentatge.Size = new System.Drawing.Size(55, 31);
             this.Percentatge.TabIndex = 1;
             this.Percentatge.Text = "0%";
             // 
@@ -77,9 +80,10 @@ namespace LoginForms
             // 
             this.pctboxPistola.BackColor = System.Drawing.Color.Transparent;
             this.pctboxPistola.Image = global::LoginForms.Properties.Resources.pistolaLaserEdit;
-            this.pctboxPistola.Location = new System.Drawing.Point(42, 294);
+            this.pctboxPistola.Location = new System.Drawing.Point(63, 459);
+            this.pctboxPistola.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pctboxPistola.Name = "pctboxPistola";
-            this.pctboxPistola.Size = new System.Drawing.Size(123, 92);
+            this.pctboxPistola.Size = new System.Drawing.Size(184, 144);
             this.pctboxPistola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctboxPistola.TabIndex = 2;
             this.pctboxPistola.TabStop = false;
@@ -88,9 +92,10 @@ namespace LoginForms
             // 
             this.pbProgress.BackColor = System.Drawing.Color.Transparent;
             this.pbProgress.Image = global::LoginForms.Properties.Resources.projectilLaserEditat;
-            this.pbProgress.Location = new System.Drawing.Point(171, 304);
+            this.pbProgress.Location = new System.Drawing.Point(256, 475);
+            this.pbProgress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbProgress.Name = "pbProgress";
-            this.pbProgress.Size = new System.Drawing.Size(113, 50);
+            this.pbProgress.Size = new System.Drawing.Size(170, 78);
             this.pbProgress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProgress.TabIndex = 3;
             this.pbProgress.TabStop = false;
@@ -101,8 +106,9 @@ namespace LoginForms
             this.pctboxBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctboxBackground.Image = global::LoginForms.Properties.Resources.SecureCoreSplash;
             this.pctboxBackground.Location = new System.Drawing.Point(0, 0);
+            this.pctboxBackground.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pctboxBackground.Name = "pctboxBackground";
-            this.pctboxBackground.Size = new System.Drawing.Size(731, 414);
+            this.pctboxBackground.Size = new System.Drawing.Size(1096, 647);
             this.pctboxBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctboxBackground.TabIndex = 4;
             this.pctboxBackground.TabStop = false;
@@ -111,9 +117,10 @@ namespace LoginForms
             // 
             this.pbProgress2.BackColor = System.Drawing.Color.Transparent;
             this.pbProgress2.Image = global::LoginForms.Properties.Resources.projectilLaserEditat;
-            this.pbProgress2.Location = new System.Drawing.Point(290, 304);
+            this.pbProgress2.Location = new System.Drawing.Point(435, 475);
+            this.pbProgress2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbProgress2.Name = "pbProgress2";
-            this.pbProgress2.Size = new System.Drawing.Size(103, 50);
+            this.pbProgress2.Size = new System.Drawing.Size(154, 78);
             this.pbProgress2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProgress2.TabIndex = 5;
             this.pbProgress2.TabStop = false;
@@ -123,9 +130,10 @@ namespace LoginForms
             // 
             this.pbProgress3.BackColor = System.Drawing.Color.Transparent;
             this.pbProgress3.Image = global::LoginForms.Properties.Resources.projectilLaserEditat;
-            this.pbProgress3.Location = new System.Drawing.Point(399, 304);
+            this.pbProgress3.Location = new System.Drawing.Point(598, 475);
+            this.pbProgress3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbProgress3.Name = "pbProgress3";
-            this.pbProgress3.Size = new System.Drawing.Size(103, 50);
+            this.pbProgress3.Size = new System.Drawing.Size(154, 78);
             this.pbProgress3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProgress3.TabIndex = 6;
             this.pbProgress3.TabStop = false;
@@ -135,9 +143,10 @@ namespace LoginForms
             // 
             this.pbProgress4.BackColor = System.Drawing.Color.Transparent;
             this.pbProgress4.Image = global::LoginForms.Properties.Resources.projectilLaserEditat;
-            this.pbProgress4.Location = new System.Drawing.Point(509, 304);
+            this.pbProgress4.Location = new System.Drawing.Point(764, 475);
+            this.pbProgress4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbProgress4.Name = "pbProgress4";
-            this.pbProgress4.Size = new System.Drawing.Size(103, 50);
+            this.pbProgress4.Size = new System.Drawing.Size(154, 78);
             this.pbProgress4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProgress4.TabIndex = 7;
             this.pbProgress4.TabStop = false;
@@ -145,11 +154,11 @@ namespace LoginForms
             // 
             // frmSplash
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LoginForms.Properties.Resources.SecureCoreSplash;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(731, 414);
+            this.ClientSize = new System.Drawing.Size(1096, 647);
             this.Controls.Add(this.pbProgress4);
             this.Controls.Add(this.pbProgress3);
             this.Controls.Add(this.pbProgress2);
@@ -159,6 +168,8 @@ namespace LoginForms
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.pctboxBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
