@@ -50,22 +50,22 @@ namespace Users
             this.swSpecies = new CustomControls.SWCodi();
             this.swTxtSpecies = new CustomControls.SWTextBox();
             this.lblSpecies = new System.Windows.Forms.Label();
-            this.btnResetPassword = new System.Windows.Forms.Button();
-            this.lblPwdReset = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pbClose
             // 
-            this.pbClose.Location = new System.Drawing.Point(1545, 0);
+            this.pbClose.Location = new System.Drawing.Point(2318, 0);
+            this.pbClose.Size = new System.Drawing.Size(28, 29);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(75, 175);
+            this.lblName.Location = new System.Drawing.Point(108, 246);
+            this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(54, 20);
+            this.lblName.Size = new System.Drawing.Size(89, 33);
             this.lblName.TabIndex = 37;
             this.lblName.Text = "Name";
             // 
@@ -73,9 +73,10 @@ namespace Users
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(81, 129);
+            this.lblCode.Location = new System.Drawing.Point(118, 190);
+            this.lblCode.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(48, 20);
+            this.lblCode.Size = new System.Drawing.Size(79, 33);
             this.lblCode.TabIndex = 36;
             this.lblCode.Text = "Code";
             // 
@@ -86,10 +87,11 @@ namespace Users
             this.swtxtName.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtName.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtName.isForeignKey = false;
-            this.swtxtName.Location = new System.Drawing.Point(146, 171);
+            this.swtxtName.Location = new System.Drawing.Point(266, 241);
+            this.swtxtName.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swtxtName.Name = "swtxtName";
             this.swtxtName.required = true;
-            this.swtxtName.Size = new System.Drawing.Size(468, 29);
+            this.swtxtName.Size = new System.Drawing.Size(700, 41);
             this.swtxtName.TabIndex = 2;
             // 
             // swtxtCode
@@ -99,10 +101,11 @@ namespace Users
             this.swtxtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtCode.isForeignKey = false;
-            this.swtxtCode.Location = new System.Drawing.Point(146, 125);
+            this.swtxtCode.Location = new System.Drawing.Point(268, 179);
+            this.swtxtCode.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swtxtCode.Name = "swtxtCode";
             this.swtxtCode.required = true;
-            this.swtxtCode.Size = new System.Drawing.Size(186, 29);
+            this.swtxtCode.Size = new System.Drawing.Size(277, 41);
             this.swtxtCode.TabIndex = 0;
             // 
             // swcodRank
@@ -112,10 +115,11 @@ namespace Users
             this.swcodRank.controlId = "swtxtRank";
             this.swcodRank.descName = "DescRank";
             this.swcodRank.formCS = "frmUserRanksSearch";
-            this.swcodRank.Location = new System.Drawing.Point(146, 218);
+            this.swcodRank.Location = new System.Drawing.Point(264, 302);
+            this.swcodRank.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.swcodRank.Name = "swcodRank";
             this.swcodRank.nameId = "idUserRank";
-            this.swcodRank.Size = new System.Drawing.Size(468, 29);
+            this.swcodRank.Size = new System.Drawing.Size(702, 45);
             this.swcodRank.TabIndex = 3;
             this.swcodRank.tableName = "UserRanks";
             // 
@@ -127,10 +131,11 @@ namespace Users
             this.swtxtRank.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.swtxtRank.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtRank.isForeignKey = true;
-            this.swtxtRank.Location = new System.Drawing.Point(469, 227);
+            this.swtxtRank.Location = new System.Drawing.Point(839, 308);
+            this.swtxtRank.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swtxtRank.Name = "swtxtRank";
             this.swtxtRank.required = true;
-            this.swtxtRank.Size = new System.Drawing.Size(70, 16);
+            this.swtxtRank.Size = new System.Drawing.Size(105, 25);
             this.swtxtRank.TabIndex = 40;
             this.swtxtRank.TabStop = false;
             // 
@@ -138,9 +143,10 @@ namespace Users
             // 
             this.lblRank.AutoSize = true;
             this.lblRank.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRank.Location = new System.Drawing.Point(80, 223);
+            this.lblRank.Location = new System.Drawing.Point(114, 302);
+            this.lblRank.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblRank.Name = "lblRank";
-            this.lblRank.Size = new System.Drawing.Size(49, 20);
+            this.lblRank.Size = new System.Drawing.Size(83, 33);
             this.lblRank.TabIndex = 39;
             this.lblRank.Text = "Rank";
             // 
@@ -151,10 +157,11 @@ namespace Users
             this.swUserCat.controlId = "swTxtUserCategory";
             this.swUserCat.descName = "DescCategory";
             this.swUserCat.formCS = "frmUserCategoriesSearch";
-            this.swUserCat.Location = new System.Drawing.Point(146, 266);
+            this.swUserCat.Location = new System.Drawing.Point(264, 358);
+            this.swUserCat.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.swUserCat.Name = "swUserCat";
             this.swUserCat.nameId = "idUserCategory";
-            this.swUserCat.Size = new System.Drawing.Size(468, 29);
+            this.swUserCat.Size = new System.Drawing.Size(702, 45);
             this.swUserCat.TabIndex = 4;
             this.swUserCat.tableName = "UserCategories";
             // 
@@ -166,10 +173,11 @@ namespace Users
             this.swTxtUserCategory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.swTxtUserCategory.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtUserCategory.isForeignKey = true;
-            this.swTxtUserCategory.Location = new System.Drawing.Point(421, 275);
+            this.swTxtUserCategory.Location = new System.Drawing.Point(839, 369);
+            this.swTxtUserCategory.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swTxtUserCategory.Name = "swTxtUserCategory";
             this.swTxtUserCategory.required = true;
-            this.swTxtUserCategory.Size = new System.Drawing.Size(70, 16);
+            this.swTxtUserCategory.Size = new System.Drawing.Size(105, 25);
             this.swTxtUserCategory.TabIndex = 43;
             this.swTxtUserCategory.TabStop = false;
             // 
@@ -177,18 +185,20 @@ namespace Users
             // 
             this.lblUserCategory.AutoSize = true;
             this.lblUserCategory.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserCategory.Location = new System.Drawing.Point(50, 271);
+            this.lblUserCategory.Location = new System.Drawing.Point(67, 358);
+            this.lblUserCategory.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUserCategory.Name = "lblUserCategory";
-            this.lblUserCategory.Size = new System.Drawing.Size(79, 20);
+            this.lblUserCategory.Size = new System.Drawing.Size(130, 33);
             this.lblUserCategory.TabIndex = 42;
             this.lblUserCategory.Text = "Category";
             // 
             // btnPrintList
             // 
             this.btnPrintList.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintList.Location = new System.Drawing.Point(1467, 644);
+            this.btnPrintList.Location = new System.Drawing.Point(2200, 1006);
+            this.btnPrintList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPrintList.Name = "btnPrintList";
-            this.btnPrintList.Size = new System.Drawing.Size(102, 38);
+            this.btnPrintList.Size = new System.Drawing.Size(153, 59);
             this.btnPrintList.TabIndex = 5;
             this.btnPrintList.Text = "Print List";
             this.btnPrintList.UseVisualStyleBackColor = true;
@@ -200,9 +210,10 @@ namespace Users
             this.crvAccessCards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvAccessCards.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvAccessCards.DisplayToolbar = false;
-            this.crvAccessCards.Location = new System.Drawing.Point(763, 129);
+            this.crvAccessCards.Location = new System.Drawing.Point(1144, 202);
+            this.crvAccessCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.crvAccessCards.Name = "crvAccessCards";
-            this.crvAccessCards.Size = new System.Drawing.Size(807, 499);
+            this.crvAccessCards.Size = new System.Drawing.Size(1210, 779);
             this.crvAccessCards.TabIndex = 45;
             this.crvAccessCards.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crvAccessCards.ToolPanelWidth = 300;
@@ -211,9 +222,10 @@ namespace Users
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(364, 129);
+            this.lblUsername.Location = new System.Drawing.Point(577, 190);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(88, 20);
+            this.lblUsername.Size = new System.Drawing.Size(147, 33);
             this.lblUsername.TabIndex = 46;
             this.lblUsername.Text = "Username";
             // 
@@ -224,18 +236,20 @@ namespace Users
             this.swtxtUsername.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
             this.swtxtUsername.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtxtUsername.isForeignKey = false;
-            this.swtxtUsername.Location = new System.Drawing.Point(469, 125);
+            this.swtxtUsername.Location = new System.Drawing.Point(752, 179);
+            this.swtxtUsername.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swtxtUsername.Name = "swtxtUsername";
             this.swtxtUsername.required = true;
-            this.swtxtUsername.Size = new System.Drawing.Size(145, 29);
+            this.swtxtUsername.Size = new System.Drawing.Size(216, 41);
             this.swtxtUsername.TabIndex = 1;
             // 
             // btnShow
             // 
             this.btnShow.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShow.Location = new System.Drawing.Point(1355, 644);
+            this.btnShow.Location = new System.Drawing.Point(2032, 1006);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(106, 38);
+            this.btnShow.Size = new System.Drawing.Size(159, 59);
             this.btnShow.TabIndex = 4;
             this.btnShow.Text = "Show";
             this.btnShow.UseVisualStyleBackColor = true;
@@ -248,8 +262,8 @@ namespace Users
             this.swPlanets.controlId = "swTxtPlanets";
             this.swPlanets.descName = "DescPlanet";
             this.swPlanets.formCS = "frmPlanetsSearch";
-            this.swPlanets.Location = new System.Drawing.Point(221, 408);
-            this.swPlanets.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.swPlanets.Location = new System.Drawing.Point(264, 414);
+            this.swPlanets.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.swPlanets.Name = "swPlanets";
             this.swPlanets.nameId = "idPlanet";
             this.swPlanets.Size = new System.Drawing.Size(702, 45);
@@ -264,11 +278,11 @@ namespace Users
             this.swTxtPlanets.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.swTxtPlanets.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtPlanets.isForeignKey = true;
-            this.swTxtPlanets.Location = new System.Drawing.Point(634, 422);
-            this.swTxtPlanets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTxtPlanets.Location = new System.Drawing.Point(808, 420);
+            this.swTxtPlanets.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swTxtPlanets.Name = "swTxtPlanets";
             this.swTxtPlanets.required = true;
-            this.swTxtPlanets.Size = new System.Drawing.Size(105, 25);
+            this.swTxtPlanets.Size = new System.Drawing.Size(158, 25);
             this.swTxtPlanets.TabIndex = 103;
             this.swTxtPlanets.TabStop = false;
             // 
@@ -276,8 +290,8 @@ namespace Users
             // 
             this.lblPlanets.AutoSize = true;
             this.lblPlanets.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlanets.Location = new System.Drawing.Point(77, 415);
-            this.lblPlanets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPlanets.Location = new System.Drawing.Point(86, 414);
+            this.lblPlanets.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPlanets.Name = "lblPlanets";
             this.lblPlanets.Size = new System.Drawing.Size(111, 33);
             this.lblPlanets.TabIndex = 102;
@@ -290,8 +304,8 @@ namespace Users
             this.swSpecies.controlId = "swTxtSpecies";
             this.swSpecies.descName = "DescSpecie";
             this.swSpecies.formCS = "frmSpeciesSearch";
-            this.swSpecies.Location = new System.Drawing.Point(221, 472);
-            this.swSpecies.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.swSpecies.Location = new System.Drawing.Point(264, 470);
+            this.swSpecies.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.swSpecies.Name = "swSpecies";
             this.swSpecies.nameId = "idSpecie";
             this.swSpecies.Size = new System.Drawing.Size(702, 45);
@@ -306,11 +320,11 @@ namespace Users
             this.swTxtSpecies.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
             this.swTxtSpecies.Font = new System.Drawing.Font("Cambria", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swTxtSpecies.isForeignKey = true;
-            this.swTxtSpecies.Location = new System.Drawing.Point(636, 491);
-            this.swTxtSpecies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.swTxtSpecies.Location = new System.Drawing.Point(767, 476);
+            this.swTxtSpecies.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.swTxtSpecies.Name = "swTxtSpecies";
             this.swTxtSpecies.required = true;
-            this.swTxtSpecies.Size = new System.Drawing.Size(105, 25);
+            this.swTxtSpecies.Size = new System.Drawing.Size(158, 25);
             this.swTxtSpecies.TabIndex = 106;
             this.swTxtSpecies.TabStop = false;
             // 
@@ -318,8 +332,8 @@ namespace Users
             // 
             this.lblSpecies.AutoSize = true;
             this.lblSpecies.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.Location = new System.Drawing.Point(79, 484);
-            this.lblSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSpecies.Location = new System.Drawing.Point(86, 470);
+            this.lblSpecies.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblSpecies.Name = "lblSpecies";
             this.lblSpecies.Size = new System.Drawing.Size(111, 33);
             this.lblSpecies.TabIndex = 105;
@@ -327,9 +341,9 @@ namespace Users
             // 
             // frmUserMan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2500, 1103);
+            this.ClientSize = new System.Drawing.Size(3270, 1723);
             this.Controls.Add(this.swSpecies);
             this.Controls.Add(this.swTxtSpecies);
             this.Controls.Add(this.lblSpecies);
@@ -351,6 +365,7 @@ namespace Users
             this.Controls.Add(this.swtxtName);
             this.Controls.Add(this.swtxtCode);
             this.Controls.Add(this.crvAccessCards);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "frmUserMan";
             this.Text = "frmUserMan";
             this.Controls.SetChildIndex(this.crvAccessCards, 0);
@@ -375,8 +390,6 @@ namespace Users
             this.Controls.SetChildIndex(this.lblSpecies, 0);
             this.Controls.SetChildIndex(this.swTxtSpecies, 0);
             this.Controls.SetChildIndex(this.swSpecies, 0);
-            this.Controls.SetChildIndex(this.btnResetPassword, 0);
-            this.Controls.SetChildIndex(this.lblPwdReset, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,13 +412,13 @@ namespace Users
         private System.Windows.Forms.Label lblUsername;
         private CustomControls.SWTextBox swtxtUsername;
         private System.Windows.Forms.Button btnShow;
-        private System.Windows.Forms.Button btnResetPassword;
-        private System.Windows.Forms.Label lblPwdReset;
         private CustomControls.SWCodi swPlanets;
         private CustomControls.SWTextBox swTxtPlanets;
         private System.Windows.Forms.Label lblPlanets;
         private CustomControls.SWCodi swSpecies;
         private CustomControls.SWTextBox swTxtSpecies;
         private System.Windows.Forms.Label lblSpecies;
+        private System.Windows.Forms.Button btnResetPassword;
+        private System.Windows.Forms.Label lblPwdReset;
     }
 }

@@ -119,6 +119,11 @@ namespace Users
                 Invoke(new MethodInvoker(() => { lblPwdReset.Visible = false; }));
             });
         }
+
+        private void frmUserMan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
