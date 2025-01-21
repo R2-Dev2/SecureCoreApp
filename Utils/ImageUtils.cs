@@ -28,7 +28,6 @@ namespace Utils
             {
                 Console.WriteLine(e.Message);
             }
-
             return img;
         }
 
