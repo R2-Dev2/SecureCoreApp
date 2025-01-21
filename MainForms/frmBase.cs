@@ -16,7 +16,7 @@ namespace MainForms
     public partial class frmBase : Form
     {
         protected AccesADades accesADades;
-        private DataSet dts;
+        protected DataSet dts;
 
         protected string connectionString;
         protected string tableName;
@@ -165,6 +165,49 @@ namespace MainForms
             }
         }
 
+        protected bool SaveChanges(EventArgs e)
+        {
+            bool isSaved = true;
+            if (!ValidateAllControls(e))
+            {
+                return false;
+            }
+
+            if (isNewRow)
+            {
+                AddNewRow(e);
+            }
+
+            int updatedRows = accesADades.Actualitzar(query, dts);
+
+            if (updatedRows == -1)
+            {
+                ShowSaveLabel(false, "Couldn't save changes");
+                PortarDades();
+                isSaved = false;
+            }
+            else
+            {
+                if (updatedRows == 0)
+                {
+                    ShowSaveLabel(true, "No changes to save");
+                }
+                else
+                {
+                    ShowSaveLabel(true, $"Changes to {updatedRows} entries saved");
+                }
+            }
+
+            if (isRowAdded)
+            {
+                PortarDades();
+                BindDades();
+                isRowAdded = false;
+            }
+
+            return isSaved;
+        }
+
         private void ShowSaveLabel(bool isSuccessful, string message)
         {
             if (isSuccessful)
@@ -191,7 +234,6 @@ namespace MainForms
             this.accesADades = new AccesADades(this.connectionString);
             this.query = $"SELECT * FROM {this.tableName}";
 
-            dtgDades.SelectionChanged -= this.dtgDades_SelectionChanged;
             PortarDades();
             ConfigurarDataGrid();
             FocusOnCodeTable();
@@ -199,41 +241,7 @@ namespace MainForms
 
         private void btnDesar_Click(object sender, EventArgs e)
         {
-            if (!ValidateAllControls(e))
-            {
-                return;
-            }
-
-            if (isNewRow)
-            {
-                AddNewRow(e);
-            }
-
-            int updatedRows = accesADades.Actualitzar(query, dts);
-
-            if(updatedRows == -1)
-            {
-                ShowSaveLabel(false, "Couldn't save changes");
-                PortarDades();
-            }
-            else
-            {
-                if(updatedRows == 0)
-                {
-                    ShowSaveLabel(true, "No changes to save");
-                }
-                else
-                {
-                    ShowSaveLabel(true, $"Changes to {updatedRows} entries saved");
-                }
-            }
-
-            if (isRowAdded)
-            {
-                PortarDades();
-                BindDades();
-                isRowAdded = false;
-            }
+            SaveChanges(e);
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -261,9 +269,8 @@ namespace MainForms
             if(incorrectRowIndex != -1)
             {
                 shouldValidate = false;
-                dtgDades.CurrentCell = dtgDades.Rows[incorrectRowIndex].Cells[1];
                 dtgDades.Rows[incorrectRowIndex].Selected = true;
-                
+                dtgDades.CurrentCell = dtgDades.Rows[incorrectRowIndex].Cells[1];
             }
             shouldValidate = true;
             if (isNewRow)

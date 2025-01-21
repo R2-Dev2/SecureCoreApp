@@ -100,6 +100,25 @@ namespace Users
 
             crvAccessCards.Refresh();
         }
+        
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            string message = "Couldn't reset password";
+            if (SaveChanges(e))
+            {
+                dtgDades.SelectedRows[0].Cells["Salt"].Value = null;
+                dtgDades.SelectedRows[0].Cells["Password"].Value = "12345aA";
+                if (accesADades.Actualitzar(this.query, dts) > 0)
+                {
+                    message = "Password reseted to default";
+                }
+            }
+            lblPwdReset.Text = message;
+            Task.Delay(3000).ContinueWith(_ =>
+            {
+                Invoke(new MethodInvoker(() => { lblPwdReset.Visible = false; }));
+            });
+        }
     }
 }
 
