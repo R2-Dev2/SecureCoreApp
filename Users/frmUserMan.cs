@@ -62,7 +62,7 @@ namespace Users
             }
         }
 
-        private void btnViwerUser_Click(object sender, EventArgs e)
+        private void btnPrintList_Click(object sender, EventArgs e)
         {
             string printer = "Microsoft to PDF";
             foreach(string str in PrinterSettings.InstalledPrinters)
