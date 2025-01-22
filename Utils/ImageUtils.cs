@@ -29,6 +29,7 @@ namespace Utils
                 Console.WriteLine(e.Message);
             }
             return img;
+
         }
 
         public static Image GetImageFromDataBase(object image)
