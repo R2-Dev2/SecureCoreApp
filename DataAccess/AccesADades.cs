@@ -86,6 +86,27 @@ namespace DataAccess
             return dts;
         }
         /// <summary>
+        /// This function overloads PortarPerConsulta(string query) in order to add the name that the returned DataTable will have
+        /// </summary>
+        /// <param name="query">SQL Query in plain text</param>
+        /// <param name="nomTaula">Name that the returned table will have</param>
+        /// <returns>DataSet with the DataTable</returns>
+        public DataSet PortarPerConsulta(string query, string nomTaula)
+        {
+            SqlDataAdapter adapter;
+            DataSet dts = new DataSet();
+
+            adapter = new SqlDataAdapter(query, conn);
+
+            conn.Open();
+
+            adapter.Fill(dts, nomTaula);
+
+            conn.Close();
+
+            return dts;
+        }
+        /// <summary>
         /// This function updates the database with the modified DataSet. 
         /// </summary>
         /// <param name="query">Original DataSet SQL query in plain Text</param>
@@ -107,13 +128,33 @@ namespace DataAccess
                 }
                 catch (Exception)
                 {
-                    modificats = -1;//perquè poses -1?
+                    modificats = -1;
                 }
             }
 
             conn.Close();
 
             return modificats;
+        }
+        /// <summary>
+        /// This function executes the query received as parameter
+        /// </summary>
+        /// <param name="query">SQL Query in plain text</param>
+        public void Executa(string query)
+        {
+            conn.Open();
+            SqlCommand cmd;
+            cmd = new SqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception) { }
+            finally
+            {
+                cmd.Dispose();
+                conn.Close();
+            }   
         }
         /// <summary>
         /// This function generates a SqlCommand query that returns all values from the table matching the parameters
@@ -211,6 +252,15 @@ namespace DataAccess
             return dts;
         }
         /// <summary>
+        /// This function executes a procedure that is stored in the database.
+        /// </summary>
+        /// <param name="procedure">Name of the procedure stored in the DB</param>
+        public void ExecutaStoredProcedure(string procedure)
+        {
+            SqlCommand command = GeneraConsultaStoredProcedure(procedure);
+            ExecutaTransaccioNonQuery(command);
+        }
+        /// <summary>
         /// This function executes a SQL Query and returns the number of rows affected.
         /// </summary>
         /// <param name="command">Structured SQL Query</param>
@@ -238,6 +288,34 @@ namespace DataAccess
             }
             return modificats;
         }
+        /// <summary>
+        /// This function executes a SQL Query that returns a number (Example: Count).
+        /// </summary>
+        /// <param name="command">Structured SQL Query</param>
+        /// <returns>Transaction result </returns>
+        private int ExecutaTransaccioEscalar(SqlCommand command)
+        {
+            int result = -1;
+            conn.Open();
+            SqlTransaction sqlTran = conn.BeginTransaction();
+            
+            command.Transaction = sqlTran;
+            try
+            {
+                result = (int) command.ExecuteScalar();
+                sqlTran.Commit();
+            }
+            catch (Exception)
+            {
+                sqlTran.Rollback();
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return result;
+        }
+
     }
 }
 

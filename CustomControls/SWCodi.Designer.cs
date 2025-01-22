@@ -39,10 +39,9 @@ namespace CustomControls
             this.txtCodi.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtCodi.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodi.Location = new System.Drawing.Point(0, 0);
-            this.txtCodi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodi.MaxLength = 4;
             this.txtCodi.Name = "txtCodi";
-            this.txtCodi.Size = new System.Drawing.Size(97, 41);
+            this.txtCodi.Size = new System.Drawing.Size(66, 29);
             this.txtCodi.TabIndex = 0;
             this.txtCodi.DoubleClick += new System.EventHandler(this.txtCodi_DoubleClick);
             this.txtCodi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodi_KeyDown);
@@ -53,21 +52,19 @@ namespace CustomControls
             this.txtDesc.Dock = System.Windows.Forms.DockStyle.Right;
             this.txtDesc.Enabled = false;
             this.txtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesc.Location = new System.Drawing.Point(129, 0);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDesc.Location = new System.Drawing.Point(85, 0);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(474, 41);
+            this.txtDesc.Size = new System.Drawing.Size(317, 29);
             this.txtDesc.TabIndex = 1;
             // 
             // SWCodi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCodi);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SWCodi";
-            this.Size = new System.Drawing.Size(603, 45);
+            this.Size = new System.Drawing.Size(402, 29);
             this.Load += new System.EventHandler(this.SWCodi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
