@@ -60,6 +60,7 @@ namespace MainForms
                     pnlMenu.Controls.Add(swLaunchForm);
                 }
                 catch (Exception) { }
+
             };
         }
 

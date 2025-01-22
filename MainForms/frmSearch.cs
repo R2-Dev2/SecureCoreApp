@@ -109,7 +109,7 @@ namespace MainForms
 
         private void frmSearch_Load(object sender, EventArgs e)
         {
-            if (DesignMode) return;//Necessari perquè funcioni
+            if (DesignMode) return;
             this.connectionString = "SecureCore";
             this.accesADades = new AccesADades(this.connectionString);
             PortarDadesInicials();
