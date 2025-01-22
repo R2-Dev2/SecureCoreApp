@@ -28,8 +28,8 @@ namespace Utils
             {
                 Console.WriteLine(e.Message);
             }
-            return img;
 
+            return img;
         }
 
         public static Image GetImageFromDataBase(object image)
