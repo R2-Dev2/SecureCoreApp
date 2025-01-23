@@ -114,6 +114,7 @@ namespace Users
                 }
             }
             lblPwdReset.Text = message;
+            lblPwdReset.Visible = true;
             Task.Delay(3000).ContinueWith(_ =>
             {
                 Invoke(new MethodInvoker(() => { lblPwdReset.Visible = false; }));

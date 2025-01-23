@@ -257,7 +257,7 @@ namespace Users
             this.lblPwdReset.AutoSize = true;
             this.lblPwdReset.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPwdReset.ForeColor = System.Drawing.Color.Black;
-            this.lblPwdReset.Location = new System.Drawing.Point(34, 199);
+            this.lblPwdReset.Location = new System.Drawing.Point(51, 653);
             this.lblPwdReset.Name = "lblPwdReset";
             this.lblPwdReset.Size = new System.Drawing.Size(0, 20);
             this.lblPwdReset.TabIndex = 102;

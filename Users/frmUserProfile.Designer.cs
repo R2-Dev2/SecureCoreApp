@@ -39,6 +39,7 @@ namespace Users
             this.pbProfile = new System.Windows.Forms.PictureBox();
             this.swtxtUsername = new CustomControls.SWTextBox();
             this.swtxtName = new CustomControls.SWTextBox();
+            this.lblSave = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             this.SuspendLayout();
@@ -156,12 +157,21 @@ namespace Users
             this.swtxtName.TabIndex = 0;
             this.swtxtName.TabStop = false;
             // 
+            // lblSave
+            // 
+            this.lblSave.AutoSize = true;
+            this.lblSave.Location = new System.Drawing.Point(341, 340);
+            this.lblSave.Name = "lblSave";
+            this.lblSave.Size = new System.Drawing.Size(0, 17);
+            this.lblSave.TabIndex = 10;
+            // 
             // frmUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(606, 376);
+            this.Controls.Add(this.lblSave);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btnSelectImage);
@@ -196,5 +206,6 @@ namespace Users
         private System.Windows.Forms.Button btnSelectImage;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label lblSave;
     }
 }
