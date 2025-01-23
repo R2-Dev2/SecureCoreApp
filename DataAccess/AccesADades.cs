@@ -78,8 +78,11 @@ namespace DataAccess
             adapter = new SqlDataAdapter(query, conn);
 
             conn.Open();
-
-            adapter.Fill(dts);
+            try
+            {
+                adapter.Fill(dts);
+            }
+            catch (Exception) { };
 
             conn.Close();
 
@@ -99,8 +102,11 @@ namespace DataAccess
             adapter = new SqlDataAdapter(query, conn);
 
             conn.Open();
-
-            adapter.Fill(dts, nomTaula);
+            try
+            {
+                adapter.Fill(dts, nomTaula);
+            }
+            catch (Exception) { };
 
             conn.Close();
 

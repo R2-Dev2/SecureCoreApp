@@ -86,6 +86,34 @@ namespace Users
                 LoadImage();
             }
         }
+        private void ShowSaveLabel(bool isSuccessful, string message)
+        {
+            if (isSuccessful)
+            {
+                lblSave.Text = message;
+                lblSave.ForeColor = Color.DarkGreen;
+            }
+            else
+            {
+                lblSave.Text = message;
+                lblSave.ForeColor = Color.Red;
+            }
+            lblSave.Visible = true;
+            Task.Delay(3000).ContinueWith(_ =>
+            {
+                try
+                {
+                    Invoke(new MethodInvoker(() => { lblSave.Visible = false; }));
+                }
+                catch (Exception) { };
+            });
+        }
+
+        private void PortarDades()
+        {
+            dts = accesADades.PortarPerConsulta(query);
+            BindDades();
+        }
 
         private void frmUserProfile_Load(object sender, EventArgs e)
         {
@@ -93,13 +121,28 @@ namespace Users
             this.connectionString = "SecureCore";
             this.accesADades = new AccesADades(this.connectionString);
             this.query = $"SELECT * FROM users WHERE idUser = '{this.idUser}'";
-            dts = accesADades.PortarPerConsulta(query);
-            BindDades();
+            PortarDades();
         }        
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-           accesADades.Actualitzar(query, dts);
+            int updatedRows = accesADades.Actualitzar(query, dts);
+            if (updatedRows == -1)
+            {
+                ShowSaveLabel(false, "Couldn't save changes");
+                PortarDades();
+            }
+            else
+            {
+                if (updatedRows == 0)
+                {
+                    ShowSaveLabel(true, "No changes to save");
+                }
+                else
+                {
+                    ShowSaveLabel(true, $"Changes to {updatedRows} entries saved");
+                }
+            }
         }
 
         private void btnSelectImage_Click(object sender, EventArgs e)

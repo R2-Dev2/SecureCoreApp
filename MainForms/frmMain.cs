@@ -17,7 +17,7 @@ namespace MainForms
     public partial class frmMain : Form
     {
         private AccesADades accesADades;
-        string rangeOption;
+        private string rangeOption;
         private DataSet dtsOptions;
         private DataSet dtsUser;
 

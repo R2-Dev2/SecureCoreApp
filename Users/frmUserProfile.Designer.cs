@@ -35,6 +35,7 @@ namespace Users
             this.btnSave = new System.Windows.Forms.Button();
             this.btnSelectImage = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.lblSave = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.pbProfile = new System.Windows.Forms.PictureBox();
             this.swtxtUsername = new CustomControls.SWTextBox();
@@ -105,6 +106,15 @@ namespace Users
             this.lblMessage.TabIndex = 9;
             this.lblMessage.Text = "Edit your profile information";
             // 
+            // lblSave
+            // 
+            this.lblSave.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSave.Location = new System.Drawing.Point(271, 338);
+            this.lblSave.Name = "lblSave";
+            this.lblSave.Size = new System.Drawing.Size(284, 20);
+            this.lblSave.TabIndex = 10;
+            this.lblSave.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // pbClose
             // 
             this.pbClose.Image = global::Users.Properties.Resources.close;
@@ -162,6 +172,7 @@ namespace Users
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(606, 376);
+            this.Controls.Add(this.lblSave);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btnSelectImage);
@@ -196,5 +207,6 @@ namespace Users
         private System.Windows.Forms.Button btnSelectImage;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label lblSave;
     }
 }

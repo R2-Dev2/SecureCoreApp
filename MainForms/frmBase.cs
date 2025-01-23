@@ -223,7 +223,11 @@ namespace MainForms
             lblSave.Visible = true;
             Task.Delay(3000).ContinueWith(_ =>
             {
-                Invoke(new MethodInvoker(() => { lblSave.Visible = false; }));
+                try
+                {
+                    Invoke(new MethodInvoker(() => { lblSave.Visible = false; }));
+                }
+                catch (Exception) { };
             });
         }
 

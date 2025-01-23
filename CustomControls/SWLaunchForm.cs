@@ -64,25 +64,29 @@ namespace CustomControls
 
         private void SWLaunchForm_Click(object sender, EventArgs e)
         {
-            Assembly ensamblat = Assembly.LoadFrom($@"{this.Library}.dll");
-            Object dllBD;
-            Type tipus;
-
-            tipus = ensamblat.GetType($"{this.Library}.{this.Form}");
-            
-            Form form = ActiveForm(panel, tipus);
-
-            if (form == null)
+            try
             {
-                dllBD = Activator.CreateInstance(tipus);
-                form = ((Form)dllBD);
-                form.TopLevel = false;
-                form.Dock = DockStyle.Fill;
-                panel.Controls.Add(form);
-                form.Show();
+                Assembly ensamblat = Assembly.LoadFrom($@"{this.Library}.dll");
+                Object dllBD;
+                Type tipus;
+                tipus = ensamblat.GetType($"{this.Library}.{this.Form}");
+                Form form = ActiveForm(panel, tipus);
+                if(form == null)
+            {
+                    dllBD = Activator.CreateInstance(tipus);
+                    form = ((Form)dllBD);
+                    form.TopLevel = false;
+                    form.Dock = DockStyle.Fill;
+                    panel.Controls.Add(form);
+                    form.Show();
+                }
+                form.BringToFront();
+                SetActiveColor();
             }
-            form.BringToFront();
-            SetActiveColor();
+            catch (Exception)
+            {
+                MessageBox.Show($"Couldn't find form: {this.Form}");
+            }
         }
 
         private Form ActiveForm(Control father, Type tipus)

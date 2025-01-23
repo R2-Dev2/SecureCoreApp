@@ -29,8 +29,6 @@ namespace LoginForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPwd = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -40,7 +38,7 @@ namespace LoginForms
             this.lblTriesLeft = new System.Windows.Forms.Label();
             this.pbBackground = new System.Windows.Forms.PictureBox();
             this.pbvalidacio = new System.Windows.Forms.PictureBox();
-            this.timerValidating = new System.Windows.Forms.Timer(this.components);
+            this.timerValidating = new System.Windows.Forms.Timer();
             this.lblVerificantNivell = new System.Windows.Forms.Label();
             this.lblBenvinguda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
@@ -53,10 +51,9 @@ namespace LoginForms
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(634, 123);
-            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUser.Location = new System.Drawing.Point(423, 79);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(164, 37);
+            this.lblUser.Size = new System.Drawing.Size(103, 23);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "username";
             // 
@@ -66,39 +63,35 @@ namespace LoginForms
             this.lblPwd.BackColor = System.Drawing.Color.Transparent;
             this.lblPwd.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPwd.ForeColor = System.Drawing.Color.White;
-            this.lblPwd.Location = new System.Drawing.Point(634, 228);
-            this.lblPwd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPwd.Location = new System.Drawing.Point(423, 146);
             this.lblPwd.Name = "lblPwd";
-            this.lblPwd.Size = new System.Drawing.Size(160, 37);
+            this.lblPwd.Size = new System.Drawing.Size(99, 23);
             this.lblPwd.TabIndex = 1;
             this.lblPwd.Text = "password";
             // 
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(634, 164);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUser.Location = new System.Drawing.Point(423, 105);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(240, 41);
+            this.txtUser.Size = new System.Drawing.Size(161, 29);
             this.txtUser.TabIndex = 2;
             // 
             // txtPwd
             // 
             this.txtPwd.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPwd.Location = new System.Drawing.Point(634, 269);
-            this.txtPwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPwd.Location = new System.Drawing.Point(423, 172);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(240, 41);
+            this.txtPwd.Size = new System.Drawing.Size(161, 29);
             this.txtPwd.TabIndex = 3;
             this.txtPwd.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(682, 442);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(455, 283);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(146, 58);
+            this.btnLogin.Size = new System.Drawing.Size(97, 37);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Log in";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -110,10 +103,9 @@ namespace LoginForms
             this.lblIncorrect.BackColor = System.Drawing.Color.Transparent;
             this.lblIncorrect.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncorrect.ForeColor = System.Drawing.Color.Red;
-            this.lblIncorrect.Location = new System.Drawing.Point(586, 341);
-            this.lblIncorrect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIncorrect.Location = new System.Drawing.Point(391, 218);
             this.lblIncorrect.Name = "lblIncorrect";
-            this.lblIncorrect.Size = new System.Drawing.Size(347, 34);
+            this.lblIncorrect.Size = new System.Drawing.Size(230, 22);
             this.lblIncorrect.TabIndex = 6;
             this.lblIncorrect.Text = "Incorrect user or password";
             this.lblIncorrect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,10 +117,9 @@ namespace LoginForms
             this.lblTriesLeft.BackColor = System.Drawing.Color.Transparent;
             this.lblTriesLeft.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTriesLeft.ForeColor = System.Drawing.Color.Red;
-            this.lblTriesLeft.Location = new System.Drawing.Point(692, 375);
-            this.lblTriesLeft.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTriesLeft.Location = new System.Drawing.Point(461, 240);
             this.lblTriesLeft.Name = "lblTriesLeft";
-            this.lblTriesLeft.Size = new System.Drawing.Size(140, 34);
+            this.lblTriesLeft.Size = new System.Drawing.Size(91, 22);
             this.lblTriesLeft.TabIndex = 9;
             this.lblTriesLeft.Text = "3 tries left";
             this.lblTriesLeft.Visible = false;
@@ -140,9 +131,8 @@ namespace LoginForms
             this.pbBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbBackground.Image = global::LoginForms.Properties.Resources.FonsLogin;
             this.pbBackground.Location = new System.Drawing.Point(0, 0);
-            this.pbBackground.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbBackground.Name = "pbBackground";
-            this.pbBackground.Size = new System.Drawing.Size(994, 650);
+            this.pbBackground.Size = new System.Drawing.Size(663, 416);
             this.pbBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBackground.TabIndex = 10;
             this.pbBackground.TabStop = false;
@@ -151,10 +141,9 @@ namespace LoginForms
             // 
             this.pbvalidacio.BackColor = System.Drawing.Color.Transparent;
             this.pbvalidacio.Image = global::LoginForms.Properties.Resources.validacioEstatPrevi;
-            this.pbvalidacio.Location = new System.Drawing.Point(105, 208);
-            this.pbvalidacio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pbvalidacio.Location = new System.Drawing.Point(70, 133);
             this.pbvalidacio.Name = "pbvalidacio";
-            this.pbvalidacio.Size = new System.Drawing.Size(208, 212);
+            this.pbvalidacio.Size = new System.Drawing.Size(139, 136);
             this.pbvalidacio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbvalidacio.TabIndex = 11;
             this.pbvalidacio.TabStop = false;
@@ -170,10 +159,9 @@ namespace LoginForms
             this.lblVerificantNivell.BackColor = System.Drawing.Color.Transparent;
             this.lblVerificantNivell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.lblVerificantNivell.ForeColor = System.Drawing.Color.White;
-            this.lblVerificantNivell.Location = new System.Drawing.Point(51, 425);
-            this.lblVerificantNivell.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVerificantNivell.Location = new System.Drawing.Point(34, 272);
             this.lblVerificantNivell.Name = "lblVerificantNivell";
-            this.lblVerificantNivell.Size = new System.Drawing.Size(0, 31);
+            this.lblVerificantNivell.Size = new System.Drawing.Size(0, 20);
             this.lblVerificantNivell.TabIndex = 6;
             // 
             // lblBenvinguda
@@ -182,19 +170,18 @@ namespace LoginForms
             this.lblBenvinguda.BackColor = System.Drawing.Color.Transparent;
             this.lblBenvinguda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.lblBenvinguda.ForeColor = System.Drawing.Color.White;
-            this.lblBenvinguda.Location = new System.Drawing.Point(75, 145);
-            this.lblBenvinguda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBenvinguda.Location = new System.Drawing.Point(50, 93);
             this.lblBenvinguda.Name = "lblBenvinguda";
-            this.lblBenvinguda.Size = new System.Drawing.Size(0, 36);
+            this.lblBenvinguda.Size = new System.Drawing.Size(0, 24);
             this.lblBenvinguda.TabIndex = 12;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::LoginForms.Properties.Resources.FonsLogin;
-            this.ClientSize = new System.Drawing.Size(994, 650);
+            this.ClientSize = new System.Drawing.Size(663, 416);
             this.Controls.Add(this.lblBenvinguda);
             this.Controls.Add(this.lblVerificantNivell);
             this.Controls.Add(this.txtUser);
@@ -207,8 +194,6 @@ namespace LoginForms
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pbBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
