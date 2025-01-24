@@ -22,7 +22,7 @@ namespace Users
         {
             InitializeComponent();
             this.title = "Users Management";
-            this.tableName = "Users SpaceShipTypes";
+            this.tableName = "Users";
             this.codeTable = "CodeUser";
         }
         protected override void ConfigurarDataGrid()
