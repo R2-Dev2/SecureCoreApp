@@ -85,7 +85,7 @@ namespace CustomControls
             }
             catch (Exception)
             {
-                MessageBox.Show($"Couldn't find form: {this.Form}");
+                MessageBox.Show($"Couldn't open form: {this.Form}");
             }
         }
 

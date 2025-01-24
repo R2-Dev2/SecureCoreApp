@@ -144,16 +144,23 @@ namespace CustomControls
 
         private void OpenCS()
         {
-            Assembly assembly = Assembly.LoadFrom($@"{this.classeCS}.dll");
-            Object dllBD;
-            Type type;
+            try
+            {
+                Assembly assembly = Assembly.LoadFrom($@"{this.classeCS}.dll");
+                Object dllBD;
+                Type type;
 
-            type = assembly.GetType($"{this.classeCS}.{this.formCS}");
-            Object[] args = { this.Name, this.FindForm() };
-            dllBD = Activator.CreateInstance(type, args);
-            Form frm = (Form)dllBD;
+                type = assembly.GetType($"{this.classeCS}.{this.formCS}");
+                Object[] args = { this.Name, this.FindForm() };
+                dllBD = Activator.CreateInstance(type, args);
+                Form frm = (Form)dllBD;
 
-            frm.ShowDialog();
+                frm.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"Couldn't open form: {this.formCS}");
+            }
         }
 
         private void SWCodi_Load(object sender, EventArgs e)
