@@ -30,8 +30,8 @@ namespace Factories
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFactoriesMan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSave = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
@@ -41,8 +41,8 @@ namespace Factories
             this.dtgFactories = new System.Windows.Forms.DataGridView();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtDesc = new CustomControls.SWTextBox();
+            this.txtCode = new CustomControls.SWTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgFactories)).BeginInit();
             this.SuspendLayout();
@@ -123,23 +123,23 @@ namespace Factories
             // 
             this.dtgFactories.AllowUserToAddRows = false;
             this.dtgFactories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgFactories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgFactories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgFactories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgFactories.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgFactories.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgFactories.Location = new System.Drawing.Point(60, 418);
             this.dtgFactories.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtgFactories.MultiSelect = false;
@@ -151,6 +151,7 @@ namespace Factories
             this.dtgFactories.Size = new System.Drawing.Size(1014, 420);
             this.dtgFactories.StandardTab = true;
             this.dtgFactories.TabIndex = 107;
+            this.dtgFactories.SelectionChanged += new System.EventHandler(this.dtgFactories_SelectionChanged);
             this.dtgFactories.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtgFactories_KeyDown);
             // 
             // lblCode
@@ -175,21 +176,33 @@ namespace Factories
             this.lblDesc.TabIndex = 109;
             this.lblDesc.Text = "Description";
             // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(140, 204);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(272, 31);
-            this.txtCode.TabIndex = 110;
-            this.txtCode.Tag = "codeFactory";
-            // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(270, 289);
+            this.txtDesc.codiSW = null;
+            this.txtDesc.columnName = null;
+            this.txtDesc.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.txtDesc.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesc.isForeignKey = false;
+            this.txtDesc.Location = new System.Drawing.Point(228, 272);
+            this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(278, 31);
-            this.txtDesc.TabIndex = 111;
-            this.txtDesc.Tag = "DescFactory";
+            this.txtDesc.required = false;
+            this.txtDesc.Size = new System.Drawing.Size(246, 31);
+            this.txtDesc.TabIndex = 113;
+            // 
+            // txtCode
+            // 
+            this.txtCode.codiSW = null;
+            this.txtCode.columnName = null;
+            this.txtCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.txtCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.isForeignKey = false;
+            this.txtCode.Location = new System.Drawing.Point(140, 193);
+            this.txtCode.Multiline = true;
+            this.txtCode.Name = "txtCode";
+            this.txtCode.required = false;
+            this.txtCode.Size = new System.Drawing.Size(238, 31);
+            this.txtCode.TabIndex = 112;
             // 
             // frmFactoriesMan
             // 
@@ -229,7 +242,7 @@ namespace Factories
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.TextBox txtDesc;
+        private CustomControls.SWTextBox txtCode;
+        private CustomControls.SWTextBox txtDesc;
     }
 }
