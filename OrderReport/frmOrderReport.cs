@@ -64,7 +64,6 @@ namespace OrderReport
             cryRpt.Load("CrystalLlistatComandes.rpt");
             SetCredentialsInfo();
             string codeOrder = txtOrderNumber.Text;
-            //order.codeOrder = priorities.Find(p => p.CodePriority == codePriority).idPriority;
 
             cryRpt.RecordSelectionFormula = $"{{Orders.codeOrder}} = \"{codeOrder}\"";
 
@@ -76,7 +75,6 @@ namespace OrderReport
             {
                 crvOrder.ReportSource = null;
             }
-            //crvOrder.Refresh();
         }
     }
 }
