@@ -105,6 +105,7 @@ namespace OrderReport
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnShowReport);
             this.Controls.Add(this.pbClose);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOrderReport";
             this.Text = "frmEDI";
             this.Load += new System.EventHandler(this.frmEDI_Load);
