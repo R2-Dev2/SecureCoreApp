@@ -41,6 +41,7 @@ namespace Factories
             this.dtgFactories = new System.Windows.Forms.DataGridView();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblDesc = new System.Windows.Forms.Label();
+            this.lblFactories = new System.Windows.Forms.Label();
             this.txtDesc = new CustomControls.SWTextBox();
             this.txtCode = new CustomControls.SWTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
@@ -83,6 +84,7 @@ namespace Factories
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 102;
             this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // lblTitle
             // 
@@ -176,6 +178,16 @@ namespace Factories
             this.lblDesc.TabIndex = 109;
             this.lblDesc.Text = "Description";
             // 
+            // lblFactories
+            // 
+            this.lblFactories.AutoSize = true;
+            this.lblFactories.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold);
+            this.lblFactories.Location = new System.Drawing.Point(47, 58);
+            this.lblFactories.Name = "lblFactories";
+            this.lblFactories.Size = new System.Drawing.Size(248, 62);
+            this.lblFactories.TabIndex = 114;
+            this.lblFactories.Text = "Factories";
+            // 
             // txtDesc
             // 
             this.txtDesc.codiSW = null;
@@ -209,6 +221,7 @@ namespace Factories
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1151, 1038);
+            this.Controls.Add(this.lblFactories);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.lblDesc);
@@ -220,6 +233,7 @@ namespace Factories
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dtgFactories);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFactoriesMan";
             this.Text = "frmFactoriesMan";
             this.Load += new System.EventHandler(this.frmFactoriesMan_Load);
@@ -244,5 +258,6 @@ namespace Factories
         private System.Windows.Forms.TextBox textBox2;
         private CustomControls.SWTextBox txtCode;
         private CustomControls.SWTextBox txtDesc;
+        private System.Windows.Forms.Label lblFactories;
     }
 }
