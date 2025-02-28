@@ -59,7 +59,9 @@
     <Compile Include="Factory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="frmOrderMan.cs" />
+    <Compile Include="frmOrderMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOrderMan.Designer.cs">
       <DependentUpon>frmOrderMan.cs</DependentUpon>
     </Compile>

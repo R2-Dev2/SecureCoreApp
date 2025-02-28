@@ -32,7 +32,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuOptions", "MenuOptions\MenuOptions.csproj", "{ED84C06A-4819-4015-8D6B-770C3254ACAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factories", "Factories\Factories.csproj", "{7A2BF55F-F0E9-41B1-936A-14034C018709}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDI", "EDI\EDI.csproj", "{D612DBAE-8378-43B8-ABF8-4CA17DD194E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderReport", "OrderReport\OrderReport.csproj", "{9FFE5C3B-90F2-4C3A-A849-DFBEB8A7DA9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +107,10 @@ Global
 		{D612DBAE-8378-43B8-ABF8-4CA17DD194E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D612DBAE-8378-43B8-ABF8-4CA17DD194E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D612DBAE-8378-43B8-ABF8-4CA17DD194E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFE5C3B-90F2-4C3A-A849-DFBEB8A7DA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFE5C3B-90F2-4C3A-A849-DFBEB8A7DA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFE5C3B-90F2-4C3A-A849-DFBEB8A7DA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFE5C3B-90F2-4C3A-A849-DFBEB8A7DA9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
