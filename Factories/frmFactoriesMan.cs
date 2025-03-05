@@ -28,10 +28,13 @@ namespace Factories
 
         private void RemoveBinding()
         {
-            txtCode.DataBindings.Clear();
-            txtCode.Clear();
-            txtDesc.DataBindings.Clear();
-            txtDesc.Clear();
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox swTextBox)
+                {
+                    swTextBox.Clear();
+                }
+            }
         }
 
         private void LoadData()
@@ -66,11 +69,32 @@ namespace Factories
             txtCode.Focus();
         }
 
+        private bool ValidateAllControls()
+        {
+            bool isValid = true;
+            lblError.Visible = false;
+
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is TextBox textBox) 
+                {
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        lblError.Visible = true;
+                        isValid = false;
+                    }
+                }
+            }
+            return isValid;
+        }
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtCode.Text) && string.IsNullOrEmpty(txtDesc.Text))
+            // Comprovar si txtCode està buit
+            if (string.IsNullOrWhiteSpace(txtCode.Text))
             {
-                MessageBox.Show("Por favor, complete todos los campos antes de guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblError.Visible = true;
                 return;
             }
 
@@ -81,7 +105,7 @@ namespace Factories
                     codeFactory = txtCode.Text,
                     DescFactory = txtDesc.Text,
                 };
-                db.Factories.Add(factorySeleccionada); 
+                db.Factories.Add(factorySeleccionada);
             }
             else
             {
@@ -89,12 +113,13 @@ namespace Factories
                 {
                     factorySeleccionada.codeFactory = txtCode.Text;
                     factorySeleccionada.DescFactory = txtDesc.Text;
-                    db.Entry(factorySeleccionada).State = EntityState.Modified; 
+                    db.Entry(factorySeleccionada).State = EntityState.Modified;
                 }
             }
 
             db.SaveChanges();
-            LoadData(); 
+
+            LoadData();
             EsNou = false;
         }
 

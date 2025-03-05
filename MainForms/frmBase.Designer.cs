@@ -64,14 +64,14 @@ namespace MainForms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgDades.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgDades.Location = new System.Drawing.Point(55, 354);
+            this.dtgDades.Location = new System.Drawing.Point(82, 553);
             this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
             this.dtgDades.ReadOnly = true;
             this.dtgDades.RowHeadersVisible = false;
             this.dtgDades.RowHeadersWidth = 51;
             this.dtgDades.RowTemplate.Height = 24;
-            this.dtgDades.Size = new System.Drawing.Size(676, 269);
+            this.dtgDades.Size = new System.Drawing.Size(1014, 420);
             this.dtgDades.StandardTab = true;
             this.dtgDades.TabIndex = 100;
             this.dtgDades.CurrentCellChanged += new System.EventHandler(this.dtgDades_CurrentCellChanged);
@@ -81,9 +81,9 @@ namespace MainForms
             // 
             this.btnUpdate.CausesValidation = false;
             this.btnUpdate.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(635, 644);
+            this.btnUpdate.Location = new System.Drawing.Point(952, 1006);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(97, 39);
+            this.btnUpdate.Size = new System.Drawing.Size(146, 61);
             this.btnUpdate.TabIndex = 98;
             this.btnUpdate.Text = "Save";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@ namespace MainForms
             // btnNew
             // 
             this.btnNew.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Location = new System.Drawing.Point(532, 644);
+            this.btnNew.Location = new System.Drawing.Point(798, 1006);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(97, 39);
+            this.btnNew.Size = new System.Drawing.Size(146, 61);
             this.btnNew.TabIndex = 99;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@ namespace MainForms
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(67, 39);
+            this.lblTitle.Location = new System.Drawing.Point(100, 61);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(0, 38);
+            this.lblTitle.Size = new System.Drawing.Size(0, 62);
             this.lblTitle.TabIndex = 20;
             // 
             // pbClose
@@ -114,10 +114,10 @@ namespace MainForms
             this.pbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClose.BackColor = System.Drawing.Color.Transparent;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(761, 0);
+            this.pbClose.Location = new System.Drawing.Point(1142, 0);
             this.pbClose.Margin = new System.Windows.Forms.Padding(0);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(25, 23);
+            this.pbClose.Size = new System.Drawing.Size(38, 36);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 21;
             this.pbClose.TabStop = false;
@@ -128,9 +128,9 @@ namespace MainForms
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.Red;
-            this.lblError.Location = new System.Drawing.Point(51, 331);
+            this.lblError.Location = new System.Drawing.Point(76, 517);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(387, 20);
+            this.lblError.Size = new System.Drawing.Size(646, 33);
             this.lblError.TabIndex = 22;
             this.lblError.Text = "One or more mandatory fields are blank or incorrect";
             this.lblError.Visible = false;
@@ -138,20 +138,20 @@ namespace MainForms
             // lblSave
             // 
             this.lblSave.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSave.Location = new System.Drawing.Point(226, 653);
+            this.lblSave.Location = new System.Drawing.Point(339, 1020);
             this.lblSave.Name = "lblSave";
-            this.lblSave.Size = new System.Drawing.Size(300, 20);
+            this.lblSave.Size = new System.Drawing.Size(450, 31);
             this.lblSave.TabIndex = 23;
             this.lblSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblSave.Visible = false;
             // 
             // frmBase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(786, 706);
+            this.ClientSize = new System.Drawing.Size(1179, 1103);
             this.Controls.Add(this.lblSave);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.pbClose);
