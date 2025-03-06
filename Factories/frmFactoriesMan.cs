@@ -47,7 +47,9 @@ namespace Factories
             dtgFactories.Refresh();
             dtgFactories.Update();
             dtgFactories.Columns["idFactory"].Visible = false;
+            dtgFactories.Columns["codeFactory"].HeaderText = "Code";
             dtgFactories.Columns["codeFactory"].Visible = true;
+            dtgFactories.Columns["DescFactory"].HeaderText = "Description";
             dtgFactories.Columns["DescFactory"].Visible = true;
 
             dtgFactories.Refresh();
@@ -69,29 +71,9 @@ namespace Factories
             txtCode.Focus();
         }
 
-        private bool ValidateAllControls()
-        {
-            bool isValid = true;
-            lblError.Visible = false;
-
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is TextBox textBox) 
-                {
-                    if (string.IsNullOrWhiteSpace(textBox.Text))
-                    {
-                        lblError.Visible = true;
-                        isValid = false;
-                    }
-                }
-            }
-            return isValid;
-        }
-
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Comprovar si txtCode està buit
             if (string.IsNullOrWhiteSpace(txtCode.Text))
             {
                 lblError.Visible = true;
