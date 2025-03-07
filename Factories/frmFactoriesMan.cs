@@ -1,25 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.Entity;
-using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Factories
 {
     public partial class frmFactoriesMan : Form
     {
-        SecureCoreG7Entities db;
-        List<Factory> factory;
-        protected string codeTable;
-        bool EsNou = false;
+        private SecureCoreG7Entities db;
+        private List<Factory> factory;
+        private bool EsNou = false;
         private Factory factorySeleccionada;
-        private Factory factoryAnterior;
 
         public frmFactoriesMan()
         {
@@ -28,11 +21,11 @@ namespace Factories
 
         private void RemoveBinding()
         {
-            foreach (Control ctrl in this.Controls)
+            foreach (Control ctrl in Controls)
             {
-                if (ctrl is TextBox swTextBox)
+                if (ctrl is TextBox textBox)
                 {
-                    swTextBox.Clear();
+                    textBox.Clear();
                 }
             }
         }
@@ -40,37 +33,30 @@ namespace Factories
         private void LoadData()
         {
             db = new SecureCoreG7Entities();
-
             factory = db.Factories.ToList();
-
             dtgFactories.DataSource = factory;
+            ConfigureGrid();
+        }
+
+        private void ConfigureGrid()
+        {
             dtgFactories.Refresh();
             dtgFactories.Update();
             dtgFactories.Columns["idFactory"].Visible = false;
             dtgFactories.Columns["codeFactory"].HeaderText = "Code";
-            dtgFactories.Columns["codeFactory"].Visible = true;
             dtgFactories.Columns["DescFactory"].HeaderText = "Description";
-            dtgFactories.Columns["DescFactory"].Visible = true;
-
-            dtgFactories.Refresh();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            if (factorySeleccionada != null)
+            if (!string.IsNullOrWhiteSpace(txtCode.Text))
             {
-                factoryAnterior = new Factory
-                {
-                    codeFactory = factorySeleccionada.codeFactory,
-                    DescFactory = factorySeleccionada.DescFactory
-                };
+                btnSave_Click(sender, e);
             }
-
             EsNou = true;
             RemoveBinding();
             txtCode.Focus();
         }
-
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -89,18 +75,14 @@ namespace Factories
                 };
                 db.Factories.Add(factorySeleccionada);
             }
-            else
+            else if (factorySeleccionada != null)
             {
-                if (factorySeleccionada != null)
-                {
-                    factorySeleccionada.codeFactory = txtCode.Text;
-                    factorySeleccionada.DescFactory = txtDesc.Text;
-                    db.Entry(factorySeleccionada).State = EntityState.Modified;
-                }
+                factorySeleccionada.codeFactory = txtCode.Text;
+                factorySeleccionada.DescFactory = txtDesc.Text;
+                db.Entry(factorySeleccionada).State = EntityState.Modified;
             }
 
             db.SaveChanges();
-
             LoadData();
             EsNou = false;
         }
@@ -111,15 +93,13 @@ namespace Factories
             {
                 foreach (DataGridViewRow row in dtgFactories.SelectedRows)
                 {
-                    int valor = Convert.ToInt32(row.Cells["idFactory"].Value);
-                    var proDel = db.Factories.FirstOrDefault(x => x.idFactory == valor);
-
+                    int id = Convert.ToInt32(row.Cells["idFactory"].Value);
+                    var proDel = db.Factories.FirstOrDefault(x => x.idFactory == id);
                     if (proDel != null)
                     {
-                        db.Factories.Remove(proDel);  
+                        db.Factories.Remove(proDel);
                     }
                 }
-
                 db.SaveChanges();
                 LoadData();
             }
@@ -128,19 +108,14 @@ namespace Factories
         private void frmFactoriesMan_Load(object sender, EventArgs e)
         {
             LoadData();
-            dtgFactories.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void dtgFactories_SelectionChanged(object sender, EventArgs e)
         {
             if (dtgFactories.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dtgFactories.SelectedRows[0];
-
-                int idFactory = Convert.ToInt32(selectedRow.Cells["idFactory"].Value);
-
-                factorySeleccionada = db.Factories.FirstOrDefault(f => f.idFactory == idFactory);
-
+                int id = Convert.ToInt32(dtgFactories.SelectedRows[0].Cells["idFactory"].Value);
+                factorySeleccionada = db.Factories.FirstOrDefault(f => f.idFactory == id);
                 if (factorySeleccionada != null)
                 {
                     txtCode.Text = factorySeleccionada.codeFactory;
@@ -151,7 +126,7 @@ namespace Factories
 
         private void pbClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
