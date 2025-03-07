@@ -53,6 +53,11 @@
     <Compile Include="frmUpdateCredentials.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmFTP.cs" />
+    <Compile Include="frmFTP.Designer.cs">
+      <DependentUpon>frmFTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCredentials.cs" />
     <Compile Include="frmUpdateCredentials.Designer.cs">
       <DependentUpon>frmUpdateCredentials.cs</DependentUpon>
     </Compile>

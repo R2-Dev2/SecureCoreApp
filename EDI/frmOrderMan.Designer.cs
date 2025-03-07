@@ -32,8 +32,8 @@ namespace EDI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrderMan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.lblPriority = new System.Windows.Forms.Label();
             this.lblAgency = new System.Windows.Forms.Label();
@@ -57,13 +57,14 @@ namespace EDI
             this.lblTo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDeliveryDate = new System.Windows.Forms.DateTimePicker();
-            this.swTextBox4 = new CustomControls.SWTextBox();
+            this.swtxtFactoryCode = new CustomControls.SWTextBox();
             this.swtxtDescReference = new CustomControls.SWTextBox();
             this.swtxtPlanet = new CustomControls.SWTextBox();
-            this.swTextBox3 = new CustomControls.SWTextBox();
-            this.swTextBox2 = new CustomControls.SWTextBox();
-            this.swTextBox1 = new CustomControls.SWTextBox();
+            this.swtxtOrderDate = new CustomControls.SWTextBox();
+            this.swtxtOperationalArea = new CustomControls.SWTextBox();
+            this.swtxtDescFactory = new CustomControls.SWTextBox();
             this.swtxtQuantity = new CustomControls.SWTextBox();
+            this.btnCarregarEdi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDades)).BeginInit();
             this.SuspendLayout();
@@ -138,23 +139,23 @@ namespace EDI
             this.dtgDades.AllowUserToAddRows = false;
             this.dtgDades.AllowUserToDeleteRows = false;
             this.dtgDades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgDades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgDades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgDades.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgDades.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgDades.Location = new System.Drawing.Point(53, 526);
             this.dtgDades.MultiSelect = false;
             this.dtgDades.Name = "dtgDades";
@@ -166,6 +167,7 @@ namespace EDI
             this.dtgDades.Size = new System.Drawing.Size(805, 269);
             this.dtgDades.StandardTab = true;
             this.dtgDades.TabIndex = 102;
+            this.dtgDades.CurrentCellChanged += new System.EventHandler(this.dtgDades_CurrentCellChanged);
             // 
             // btnUpdate
             // 
@@ -196,7 +198,7 @@ namespace EDI
             this.btnSearch.Font = new System.Drawing.Font("Cambria", 10.2F);
             this.btnSearch.Location = new System.Drawing.Point(372, 118);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(122, 37);
+            this.btnSearch.Size = new System.Drawing.Size(132, 37);
             this.btnSearch.TabIndex = 113;
             this.btnSearch.Text = "Search Order";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -330,20 +332,21 @@ namespace EDI
             this.dtpDeliveryDate.Size = new System.Drawing.Size(154, 27);
             this.dtpDeliveryDate.TabIndex = 135;
             this.dtpDeliveryDate.Tag = "DeliveryDate";
+            this.dtpDeliveryDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpDeliveryDate_Validating);
             // 
-            // swTextBox4
+            // swtxtFactoryCode
             // 
-            this.swTextBox4.codiSW = null;
-            this.swTextBox4.columnName = "codeFactory";
-            this.swTextBox4.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swTextBox4.Enabled = false;
-            this.swTextBox4.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox4.isForeignKey = false;
-            this.swTextBox4.Location = new System.Drawing.Point(570, 268);
-            this.swTextBox4.Name = "swTextBox4";
-            this.swTextBox4.required = false;
-            this.swTextBox4.Size = new System.Drawing.Size(284, 29);
-            this.swTextBox4.TabIndex = 131;
+            this.swtxtFactoryCode.codiSW = null;
+            this.swtxtFactoryCode.columnName = "codeFactory";
+            this.swtxtFactoryCode.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtFactoryCode.Enabled = false;
+            this.swtxtFactoryCode.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtFactoryCode.isForeignKey = false;
+            this.swtxtFactoryCode.Location = new System.Drawing.Point(570, 268);
+            this.swtxtFactoryCode.Name = "swtxtFactoryCode";
+            this.swtxtFactoryCode.required = false;
+            this.swtxtFactoryCode.Size = new System.Drawing.Size(284, 29);
+            this.swtxtFactoryCode.TabIndex = 131;
             // 
             // swtxtDescReference
             // 
@@ -373,47 +376,47 @@ namespace EDI
             this.swtxtPlanet.Size = new System.Drawing.Size(392, 29);
             this.swtxtPlanet.TabIndex = 127;
             // 
-            // swTextBox3
+            // swtxtOrderDate
             // 
-            this.swTextBox3.codiSW = null;
-            this.swTextBox3.columnName = "dateOrder";
-            this.swTextBox3.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
-            this.swTextBox3.Enabled = false;
-            this.swTextBox3.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox3.isForeignKey = false;
-            this.swTextBox3.Location = new System.Drawing.Point(599, 178);
-            this.swTextBox3.Name = "swTextBox3";
-            this.swTextBox3.required = false;
-            this.swTextBox3.Size = new System.Drawing.Size(112, 29);
-            this.swTextBox3.TabIndex = 123;
+            this.swtxtOrderDate.codiSW = null;
+            this.swtxtOrderDate.columnName = "dateOrder";
+            this.swtxtOrderDate.dadaPermesa = CustomControls.SWTextBox.TipusDada.Nombre;
+            this.swtxtOrderDate.Enabled = false;
+            this.swtxtOrderDate.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtOrderDate.isForeignKey = false;
+            this.swtxtOrderDate.Location = new System.Drawing.Point(599, 178);
+            this.swtxtOrderDate.Name = "swtxtOrderDate";
+            this.swtxtOrderDate.required = false;
+            this.swtxtOrderDate.Size = new System.Drawing.Size(112, 29);
+            this.swtxtOrderDate.TabIndex = 123;
             // 
-            // swTextBox2
+            // swtxtOperationalArea
             // 
-            this.swTextBox2.codiSW = null;
-            this.swTextBox2.columnName = "DescOperationalArea";
-            this.swTextBox2.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swTextBox2.Enabled = false;
-            this.swTextBox2.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox2.isForeignKey = false;
-            this.swTextBox2.Location = new System.Drawing.Point(118, 311);
-            this.swTextBox2.Name = "swTextBox2";
-            this.swTextBox2.required = false;
-            this.swTextBox2.Size = new System.Drawing.Size(158, 29);
-            this.swTextBox2.TabIndex = 122;
+            this.swtxtOperationalArea.codiSW = null;
+            this.swtxtOperationalArea.columnName = "DescOperationalArea";
+            this.swtxtOperationalArea.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtOperationalArea.Enabled = false;
+            this.swtxtOperationalArea.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtOperationalArea.isForeignKey = false;
+            this.swtxtOperationalArea.Location = new System.Drawing.Point(118, 311);
+            this.swtxtOperationalArea.Name = "swtxtOperationalArea";
+            this.swtxtOperationalArea.required = false;
+            this.swtxtOperationalArea.Size = new System.Drawing.Size(158, 29);
+            this.swtxtOperationalArea.TabIndex = 122;
             // 
-            // swTextBox1
+            // swtxtDescFactory
             // 
-            this.swTextBox1.codiSW = null;
-            this.swTextBox1.columnName = "DescFactory";
-            this.swTextBox1.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
-            this.swTextBox1.Enabled = false;
-            this.swTextBox1.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swTextBox1.isForeignKey = false;
-            this.swTextBox1.Location = new System.Drawing.Point(502, 311);
-            this.swTextBox1.Name = "swTextBox1";
-            this.swTextBox1.required = false;
-            this.swTextBox1.Size = new System.Drawing.Size(352, 29);
-            this.swTextBox1.TabIndex = 121;
+            this.swtxtDescFactory.codiSW = null;
+            this.swtxtDescFactory.columnName = "DescFactory";
+            this.swtxtDescFactory.dadaPermesa = CustomControls.SWTextBox.TipusDada.Text;
+            this.swtxtDescFactory.Enabled = false;
+            this.swtxtDescFactory.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtxtDescFactory.isForeignKey = false;
+            this.swtxtDescFactory.Location = new System.Drawing.Point(502, 311);
+            this.swtxtDescFactory.Name = "swtxtDescFactory";
+            this.swtxtDescFactory.required = false;
+            this.swtxtDescFactory.Size = new System.Drawing.Size(352, 29);
+            this.swtxtDescFactory.TabIndex = 121;
             // 
             // swtxtQuantity
             // 
@@ -427,6 +430,18 @@ namespace EDI
             this.swtxtQuantity.required = true;
             this.swtxtQuantity.Size = new System.Drawing.Size(154, 29);
             this.swtxtQuantity.TabIndex = 28;
+            this.swtxtQuantity.Validating += new System.ComponentModel.CancelEventHandler(this.swtxtQuantity_Validating);
+            // 
+            // btnCarregarEdi
+            // 
+            this.btnCarregarEdi.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregarEdi.Location = new System.Drawing.Point(757, 113);
+            this.btnCarregarEdi.Name = "btnCarregarEdi";
+            this.btnCarregarEdi.Size = new System.Drawing.Size(97, 37);
+            this.btnCarregarEdi.TabIndex = 136;
+            this.btnCarregarEdi.Text = "Load EDI";
+            this.btnCarregarEdi.UseVisualStyleBackColor = true;
+            this.btnCarregarEdi.Click += new System.EventHandler(this.btnCarregarEdi_Click);
             // 
             // frmOrderMan
             // 
@@ -435,20 +450,21 @@ namespace EDI
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1222, 904);
+            this.Controls.Add(this.btnCarregarEdi);
             this.Controls.Add(this.dtpDeliveryDate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
-            this.Controls.Add(this.swTextBox4);
+            this.Controls.Add(this.swtxtFactoryCode);
             this.Controls.Add(this.swtxtDescReference);
             this.Controls.Add(this.lblReference);
             this.Controls.Add(this.swtxtPlanet);
             this.Controls.Add(this.lblPlanet);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblOrderDate);
-            this.Controls.Add(this.swTextBox3);
-            this.Controls.Add(this.swTextBox2);
-            this.Controls.Add(this.swTextBox1);
+            this.Controls.Add(this.swtxtOrderDate);
+            this.Controls.Add(this.swtxtOperationalArea);
+            this.Controls.Add(this.swtxtDescFactory);
             this.Controls.Add(this.lblWarFactory);
             this.Controls.Add(this.lblOperationalArea);
             this.Controls.Add(this.cbAgency);
@@ -494,19 +510,20 @@ namespace EDI
         private System.Windows.Forms.ComboBox cbAgency;
         private System.Windows.Forms.Label lblOperationalArea;
         private System.Windows.Forms.Label lblWarFactory;
-        private CustomControls.SWTextBox swTextBox1;
-        private CustomControls.SWTextBox swTextBox2;
-        private CustomControls.SWTextBox swTextBox3;
+        private CustomControls.SWTextBox swtxtDescFactory;
+        private CustomControls.SWTextBox swtxtOperationalArea;
+        private CustomControls.SWTextBox swtxtOrderDate;
         private System.Windows.Forms.Label lblOrderDate;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblPlanet;
         private CustomControls.SWTextBox swtxtPlanet;
         private System.Windows.Forms.Label lblReference;
         private CustomControls.SWTextBox swtxtDescReference;
-        private CustomControls.SWTextBox swTextBox4;
+        private CustomControls.SWTextBox swtxtFactoryCode;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpDeliveryDate;
+        private System.Windows.Forms.Button btnCarregarEdi;
     }
 }

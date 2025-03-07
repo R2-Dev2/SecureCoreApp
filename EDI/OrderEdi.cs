@@ -9,7 +9,7 @@ using System.Globalization;
 
 namespace EDI
 {
-    class OrderEdi
+    public class OrderEdi
     {
         SecureCoreG7Orders db;
         List<Priority> priorities;
@@ -19,7 +19,7 @@ namespace EDI
         List<Planet> planets;
         List<Reference> references;
 
-        private void CarregarDades()
+        public void LoadData()
         {
             db = new SecureCoreG7Orders();
 
@@ -31,7 +31,7 @@ namespace EDI
             references = db.References.ToList();
         }
 
-        private void FitxerEdi()
+        public void LoadEDI()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Archivos EDI|*.edi;";

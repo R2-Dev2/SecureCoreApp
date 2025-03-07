@@ -22,7 +22,7 @@ namespace EDI
         List<Order> orders;
         List<OrdersDetail> ordersDetails;
         OrderInfo orderInfo;
-        Order selectedOrder = new Order();
+        Order selectedOrder;
 
         public frmOrderMan()
         {
@@ -40,20 +40,13 @@ namespace EDI
         
         private void ConfigureDataGrid()
         {
-
             dtgDades.Columns["idOrderDetail"].Visible = false;
-            dtgDades.Columns["codeReference"].HeaderText = "Code";
-            dtgDades.Columns["descReference"].HeaderText = "Desccription";
-            dtgDades.Columns["idPriority"].Visible = false;
-            dtgDades.Columns["descPlanet"].Visible = false;
-            dtgDades.Columns["dateOrder"].Visible = false;
-            dtgDades.Columns["idAgency"].Visible = false;
-            dtgDades.Columns["CodeAgency"].Visible = false;
-            dtgDades.Columns["DescAgency"].Visible = false;
-            dtgDades.Columns["codeFactory"].Visible = false;
-            dtgDades.Columns["DescFactory"].Visible = false;
-            dtgDades.Columns["CodeOperationalArea"].Visible = false;
-            dtgDades.Columns["DescOperationalArea"].Visible = false;
+            dtgDades.Columns["idOrder"].Visible = false;
+            dtgDades.Columns["idPlanet"].Visible = false;
+            dtgDades.Columns["idReference"].Visible = false;
+            dtgDades.Columns["Planet"].Visible = false;
+            dtgDades.Columns["Order"].Visible = false;
+            dtgDades.Columns["Reference"].Visible = false;
         }
 
         private void LoadOrder()
@@ -63,7 +56,6 @@ namespace EDI
             {
                 lblError.Text = "The order has not been found.";
                 lblError.Visible = true;
-                ClearBindings();
                 return;
             }
 
@@ -71,38 +63,22 @@ namespace EDI
 
             lblError.Visible = false;
 
-            short idOrder = GetOrderIdByCode(txtOrderCode.Text);
+            short idOrder = selectedOrder.idOrder;
 
-            Agency agency = GetAgencyByOrder(idOrder);
-            OperationalArea operationalArea = GetOperationalAreaByOrder(idOrder);
+            ordersDetails = db.OrdersDetails.Where(OrderDetails => OrderDetails.idOrder == idOrder).ToList(); 
 
-            var singleOrderDetails = db.OrdersDetails
-                              .Where(OrderDetails => OrderDetails.idOrder == idOrder)
-                              .Select(OrderDetails => new
-                              {
-                                  OrderDetails.idOrderDetail,
-                                  OrderDetails.Reference.codeReference,
-                                  OrderDetails.Reference.descReference,
-                                  OrderDetails.Quantity,
-                                  OrderDetails.DeliveryDate,
-                                  OrderDetails.Order.IdPriority,
-                                  OrderDetails.Planet.DescPlanet,
-                                  OrderDetails.Order.dateOrder,
-                                  OrderDetails.Order.Factory.codeFactory,
-                                  OrderDetails.Order.Factory.DescFactory,
-                                  agency.idAgency,
-                                  agency.CodeAgency,
-                                  agency.DescAgency,
-                                  operationalArea.CodeOperationalArea,
-                                  operationalArea.DescOperationalArea
-
-                              }).ToList();
-
-            dtgDades.DataSource = singleOrderDetails;
+            dtgDades.DataSource = ordersDetails;
+            dtgDades.Rows[0].Selected = true;
             ConfigureDataGrid();
 
             dtgDades.Refresh();
 
+            SetInfo();
+            BindDades();
+        }
+
+        private void SetInfo()
+        {
             cbPriority.DataSource = priorities;
             cbPriority.DisplayMember = "descPriority";
             cbPriority.ValueMember = "idPriority";
@@ -111,37 +87,14 @@ namespace EDI
             cbAgency.DisplayMember = "descAgency";
             cbAgency.ValueMember = "idAgency";
 
-            //BindDades();
-        }
-
-        private short GetOrderIdByCode(string codeOrder)
-        {
-            var order = db.Orders
-                          .Where(o => o.codeOrder == codeOrder)
-                          .Select(o => o.idOrder)
-                          .FirstOrDefault();
-
-            return order;
-        }
-
-        private Agency GetAgencyByOrder(short idOrder)
-        {
-            Agency agency = db.OrderInfoes
-                         .Where(oi => oi.idOrder == idOrder)
-                         .Select(oi => oi.Agency)
-                         .FirstOrDefault();
-
-            return agency;
-        }
-
-        private OperationalArea GetOperationalAreaByOrder(short idOrder)
-        {
-            OperationalArea operationalArea = db.OrderInfoes
-                         .Where(oi => oi.idOrder == idOrder)
-                         .Select(oi => oi.OperationalArea)
-                         .FirstOrDefault();
-
-            return operationalArea;
+            swtxtDescFactory.Text = selectedOrder.Factory.DescFactory;
+            swtxtFactoryCode.Text = selectedOrder.Factory.codeFactory;
+            swtxtOrderDate.Text = selectedOrder.dateOrder.ToString();
+            swtxtOperationalArea.Text = orderInfo.OperationalArea.DescOperationalArea;
+            swtxtDescReference.Text = ordersDetails[0].Reference.descReference;
+            swtxtPlanet.Text = ordersDetails[0].Planet.DescPlanet;
+            cbAgency.SelectedValue = orderInfo.idAgency;
+            cbPriority.SelectedValue = selectedOrder.IdPriority;
         }
 
         private OrderInfo GetOrderInfoAreaByOrder(short idOrder)
@@ -153,45 +106,12 @@ namespace EDI
             return orderInfo;
         }
 
-        //private void BindDades()
-        //{
-        //    foreach (Control ctrl in this.Controls)
-        //    {
-        //        if (ctrl is SWTextBox swTxt)
-        //        {
-        //            swTxt.DataBindings.Clear();
-        //            swTxt.DataBindings.Add("Text", dtgDades.DataSource, swTxt.columnName);
-        //            swTxt.Validated += new EventHandler(this.ValidateTextBox);
-        //        }
-        //        else if(ctrl is ComboBox cb)
-        //        {
-        //            cb.DataBindings.Clear();
-        //            cb.DataBindings.Add("SelectedValue", dtgDades.DataSource, cb.Tag.ToString());
-        //        }
-        //        else if (ctrl is DateTimePicker dtp)
-        //        {
-        //            dtp.DataBindings.Clear();
-        //            dtp.DataBindings.Add("Value", dtgDades.DataSource, dtp.Tag.ToString());
-        //        }
-        //    }
-        //}
-
-        private void ClearBindings()
-        {
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is SWTextBox swTxt)
-                {
-                    swTxt.DataBindings.Clear();
-                    swTxt.Text = "";
-                    swTxt.Validated -= new EventHandler(this.ValidateTextBox);
-                }
-                else if (ctrl is ComboBox cb)
-                {
-                    cb.DataBindings.Clear();
-                    //TODO limpiar selección
-                }
-            }
+        private void BindDades()
+        {         
+            swtxtQuantity.DataBindings.Clear();
+            swtxtQuantity.DataBindings.Add("Text", dtgDades.DataSource, swtxtQuantity.columnName);
+            dtpDeliveryDate.DataBindings.Clear();
+            dtpDeliveryDate.DataBindings.Add("Value", dtgDades.DataSource, dtpDeliveryDate.Tag.ToString());
         }
 
         private void ValidateTextBox(object sender, EventArgs e)
@@ -204,16 +124,15 @@ namespace EDI
         {
             if (string.IsNullOrEmpty(swtxtQuantity.Text))
             {
-                lblError.Text = "The order has not been found.";
+                lblError.Text = "Quantity can't be null.";
                 lblError.Visible = true;
                 return;
             }
 
-            selectedOrder.IdFactory = short.Parse(cbPriority.SelectedValue.ToString());
-            db.SaveChanges();
-
+            if (selectedOrder is null) return;
+            selectedOrder.IdPriority = short.Parse(cbPriority.SelectedValue.ToString());
             orderInfo.idAgency = short.Parse(cbAgency.SelectedValue.ToString());
-
+            
             db.SaveChanges();
             LoadData();
         }
@@ -233,6 +152,47 @@ namespace EDI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadOrder();
+        }
+
+        private void dtgDades_CurrentCellChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedRowIndex = dtgDades.SelectedRows[0].Index;
+                swtxtDescReference.Text = ordersDetails[selectedRowIndex].Reference.descReference;
+                swtxtPlanet.Text = ordersDetails[selectedRowIndex].Planet.DescPlanet;
+            }
+            catch (Exception) { };
+            
+        }
+
+        private void swtxtQuantity_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                int selectedRowIndex = dtgDades.SelectedRows[0].Index;
+                ordersDetails[selectedRowIndex].Quantity = short.Parse(swtxtQuantity.Text);
+            }
+            catch (Exception) { };
+        }
+
+        private void dtpDeliveryDate_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                int selectedRowIndex = dtgDades.SelectedRows[0].Index;
+                ordersDetails[selectedRowIndex].DeliveryDate = dtpDeliveryDate.Value;
+            }
+            catch(Exception) { };
+        }
+
+        private void btnCarregarEdi_Click(object sender, EventArgs e)
+        {
+            OrderEdi orderEdi = new OrderEdi();
+            orderEdi.LoadData();
+            orderEdi.LoadEDI();
+
+            LoadData();
         }
     }
 }
