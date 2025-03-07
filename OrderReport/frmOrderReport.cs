@@ -70,10 +70,12 @@ namespace OrderReport
             if (cryRpt.HasRecords)
             {
                 crvOrder.ReportSource = cryRpt;
+                lblError.Visible = false;
             }
             else
             {
                 crvOrder.ReportSource = null;
+                lblError.Visible = true;
             }
         }
     }
